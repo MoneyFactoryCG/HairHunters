@@ -1,69 +1,20 @@
 .masters-page {
-  height: 952px;
+  min-height: 957px;
   width: 100%;
   background: #fff;
   position: relative;
-  .master-card-wrapper {
-    display: flex;
-    width: 1110px;
-    justify-content: space-between;
-    .master-card {
-      width: 350px;
-      height: 632px;
-      position: relative;
-      z-index: 2;
-      background: #2F2F2F;
-      .avatar {
-        height: 352px;
-        img {
-          height: 352px;
-          width: 350px;
-        }
-      }
-      .info {
-        background: #2F2F2F;
-        .lable {
-          height: 56px;
-          width: 324px;
-          position: absolute;
-          top: 330px;
-          right: 0;
-          color: #000;
-          font-size: 18px;
-          font-weight: 600;
-          font-family: montserrat, sans-serif;
-          background: #fff;
-          p {
-            margin-left: 30px;
-            text-indent: 20px;
-            margin-top: 5px;
-          }
-        }
-        .name {
-          margin-top: 30px;
-          color: #fff;
-          font-size: 25px;
-          font-weight: 600;
-          font-family: montserrat, sans-serif;
-        }
-        .quote {
-          color: #fff;
-          font-size: 18px;
-          font-weight: 400;
-          font-family: montserrat, sans-serif;
-        }
-      }
-    }
-
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
   .bg {
     position: absolute;
     width: 100%;
     top: -300px;
     img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
     }
     .mask {
       position: absolute;
@@ -71,6 +22,128 @@
       height: 100%;
       background: rgba(255, 255, 255, 1);
       opacity: 0.85;
+    }
+  }
+  .masters-page-container {
+    max-width: 1110px;
+    .title {
+      font-family: montserrat, sans-serif;
+      font-size: 36px;
+      font-weight: 600px;
+      color: #414141;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+    }
+    .master-card-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-flow: row wrap;
+      .master-card {
+        height: 632px;
+        width: 350px;
+        margin: 12px 10px;
+        box-sizing: border-box;
+        background: #2f2f2f;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .photo {
+          img {
+            height: 348px;
+          }
+        }
+        .lable {
+          height: 56px;
+          width: 324px;
+          position: absolute;
+          right: 0;
+          top: 310px;
+          .container {
+            display: flex;
+            position: absolute;
+            z-index: 0;
+            right: 0;
+            top: 0;
+            .triangle {
+              height: 0;
+              width: 0;
+              border-bottom: 56px solid #fff;
+              border-left: 17px solid transparent;
+            }
+            .rectangle {
+              //width: 307px;
+              height: 56px;
+              background: #fff;
+              .text {
+                margin-left: 7px;
+                margin-right: 20px;
+                position: relative;
+                z-index: 1;
+                font-family: montserrat, sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: 5px;
+                text-indent: 15px;
+                span {
+                  color: #942fe5;
+                }
+              }
+            }
+          }
+        }
+        .info {
+          position: relative;
+          z-index: 1;
+          width: 299px;
+          .name {
+            font-family: montserrat, sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            color: #fff;
+            margin-top: 35px;
+            margin-bottom: 17px;
+            white-space: nowrap;
+            letter-spacing: -0.03em;
+          }
+          .text {
+            font-family: montserrat, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #fff;
+          }
+        }
+        button {
+          cursor: pointer;
+          position: absolute;
+          bottom: 30px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          background: #942fe5;
+          border-radius: 3px;
+          border: none;
+          width: 200px;
+          height: 50px;
+          font-family: montserrat, sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+          transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+          &:hover {
+            transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+            background: #9a35ec;
+          }
+        }
+      }
     }
   }
 }
