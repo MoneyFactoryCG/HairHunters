@@ -12,6 +12,8 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { MastersPageComponent } from './masters-page/masters-page.component';
 import { ProfitOnePageComponent } from './profit-one-page/profit-one-page.component';
+import { OurHairsPageComponent } from './our-hairs-page/our-hairs-page.component';
+import { ProfitTwoPageComponent } from './profit-two-page/profit-two-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 };
@@ -23,7 +25,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WorksPageComponent,
     CarouselComponent,
     MastersPageComponent,
-    ProfitOnePageComponent
+    ProfitOnePageComponent,
+    OurHairsPageComponent,
+    ProfitTwoPageComponent
   ],
   imports: [
     SwiperModule,

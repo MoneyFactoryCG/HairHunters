@@ -20,18 +20,22 @@ export class CarouselComponent implements OnInit {
     "Third slide",
     "Fourth slide",
     "Fifth slide",
-    "Sixth slide"
+    "Sixth slide",
+    "7 slide",
+    "8 slide"
   ];
 
   public index = 1;
 
   public config: SwiperConfigInterface = {
     //a11y: true,
-    // effect: 'coverflow',
+    //effect: 'coverflow',
     spaceBetween: 20,
     navigation: false,
-    slidesPerView: 3,
+    slidesPerGroup: 3,
+    slidesPerView: 'auto',
     centeredSlides: true,
+    initialSlide: 3,
     // coverflowEffect: {
     //   rotate: 0,
     //   stretch: 0,

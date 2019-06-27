@@ -25,7 +25,7 @@
     }
   }
   .masters-page-container {
-    max-width: 1110px;
+    max-width: 1140px;
     .title {
       font-family: montserrat, sans-serif;
       font-size: 36px;
@@ -34,6 +34,7 @@
       position: relative;
       z-index: 1;
       margin-bottom: 30px;
+      margin-left: 15px;
     }
     .master-card-container {
       width: 100%;
@@ -47,7 +48,7 @@
       .master-card {
         height: 632px;
         width: 350px;
-        margin: 12px 10px;
+        margin: 15px;
         box-sizing: border-box;
         background: #2f2f2f;
         position: relative;

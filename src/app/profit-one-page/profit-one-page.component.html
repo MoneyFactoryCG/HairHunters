@@ -1,15 +1,28 @@
 <section class="profit-one-page">
-  <img class="bg" src="../../assets/imgs/profit-one-page/bg.png" alt="" />
+  <object
+    class="bg"
+    type="image/svg+xml"
+    data="../../assets/imgs/profit-one-page/bg2.svg"
+  >
+    Your browser does not support SVG
+  </object>
+  <!-- <img class="bg" src="../../assets/imgs/profit-one-page/bg2.svg" alt="" /> -->
 
-  <div class="profit-card-container">
-    <div class="profit-card" *ngFor="let profit of profits; index as i">
-      <div class="title">
-        <span>{{ i + 1 }}</span>
-        <h3>{{ profit.title }}</h3>
+  <div class="profit-one-page-container">
+    <div class="title">Выгоды</div>
+    <div class="profit-card-container">
+      <div class="profit-card" *ngFor="let profit of profits; index as i">
+        <img [src]="profit.img" alt="" class="cover" />
+        <div class="lable">
+          <div class="rectangle">
+            <p [innerHTML]="profit.title"></p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+        <p class="text" [innerHTML]="profit.text">
+          
+        </p>
       </div>
-      <p class="text">
-        {{ profit.text }}
-      </p>
     </div>
   </div>
 

@@ -1,0 +1,16 @@
+<section class="profit-two-page">
+  <div class="bg">
+    <div class="mask"></div>
+    <img src="../../assets/imgs/masters-page/bg.png" alt="" />
+  </div>
+
+  <div class="profit-two-page-container">
+    <div class="title">Выгоды</div>
+    <div class="profit-card-container">
+      <div class="profit-card" *ngFor="let profit of profits">
+        <img [src]="profit.img" class="icon"/>
+        <p class="text" [innerHTML]="profit.text"></p>
+      </div>
+    </div>
+  </div>
+</section>

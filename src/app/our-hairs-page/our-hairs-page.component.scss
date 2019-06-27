@@ -1,0 +1,47 @@
+.our-hairs-page {
+  min-height: 800px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .bg {
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -5%;
+  }
+  .our-hairs-page-container {
+    margin: auto auto;
+    max-width: 1110px;
+    .title {
+      z-index: 2;
+      position: relative;
+      font-family: montserrat, sans-serif;
+      font-weight: 600;
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+    .about-container {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      .text {
+        font-family: montserrat, sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        max-width: 589px;
+        max-height: 452px;
+        line-height: 27px;
+      }
+      .video {
+        margin-left: 33px;
+        width: 490px;
+        height: 364px;
+        background: #c4c4c4;
+      }
+    }
+  }
+}
