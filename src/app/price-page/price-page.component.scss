@@ -1,0 +1,42 @@
+.price-page {
+  width: 100%;
+  min-height: 1875px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100px;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 1);
+      opacity: 0.85;
+    }
+  }
+  .price-container {
+    position: relative;
+    z-index: 2;
+    .left-col {
+      .table {
+        table {
+          border-collapse: collapse;
+          td {
+            border-bottom: 1px solid #000;
+            border-left: 
+          }
+        }
+      }
+    }
+  }
+}

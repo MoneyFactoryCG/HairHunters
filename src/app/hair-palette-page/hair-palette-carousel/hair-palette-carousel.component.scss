@@ -1,0 +1,44 @@
+.hair-palette-carousel {
+  max-width: 1920px;
+  swiper {
+    .swiper-slide {
+      width: 334px;
+      height: 503px;
+      //transition: height 0.4s;
+      img {
+        display: block;
+        object-fit: cover;
+        width: 334px;
+        height: 503px;
+        transition: transform 0.3s;
+        transform: translate3d(0,-40px,-180px);
+      }
+    }
+    .swiper-slide-active {
+      width: 334px;
+      height: 503px;
+      img {
+        width: 334px;
+        height: 503px;
+        transform: translate3d(0,0,0);
+      }
+    }
+    .nav {
+      width: 500px;
+      height: 50px;
+      position: relative;
+      margin: 0 auto;
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: unset;
+        bottom: 50px;
+      }
+      .swiper-button-next {
+        background: url(../../../assets/imgs/hair-palette-page/carousel/right-arrow.svg) no-repeat;
+      }
+      .swiper-button-prev {
+        background: url(../../../assets/imgs/hair-palette-page/carousel/left-arrow.svg) no-repeat;
+      }
+    }
+  }
+}
