@@ -1,0 +1,31 @@
+<section class="how-work-page">
+  <object
+    class="bg"
+    type="image/svg+xml"
+    data="../../assets/imgs/how-work-page/bg.svg"
+  >
+    Your browser does not support SVG
+  </object>
+
+  <div class="how-work-page-container">
+    <p class="title">Как мы работаем:</p>
+    <div class="row">
+      <div class="left-col">
+        <div class="step" *ngFor="let step of leftText; index as i">
+          <span class="num">{{ i + 1 }}</span>
+          <p class="text" [innerHTML]="step.text"></p>
+        </div>
+      </div>
+      <div class="right-col">
+        <div class="step" *ngFor="let step of rightText; index as i">
+          <span class="num">{{ i + 7 }}</span>
+          <p class="text" [innerHTML]="step.text"></p>
+        </div>
+      </div>
+    </div>
+    <div class="free-consultation">
+      <p class="text">Записаться на бесплатную консультацию</p>
+      <button>Записаться</button>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperComponent } from 'angular2-useful-swiper';
-import { SwiperOptions } from 'swiper';
-
+import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
+  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-hair-palette-carousel',
@@ -10,8 +9,9 @@ import { SwiperOptions } from 'swiper';
 })
 export class HairPaletteCarouselComponent implements OnInit {
 
-  config: SwiperOptions = {
+  config: SwiperConfigInterface = {
     //pagination: { el: '.swiper-pagination', clickable: true },
+    a11y: true,
     effect: 'coverflow',
     navigation: {
       nextEl: '.swiper-button-next',

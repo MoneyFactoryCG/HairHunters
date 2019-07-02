@@ -1,18 +1,20 @@
 .stock-carousel {
-    max-width: 1920px;
-    swiper {
-      .swiper-slide {
-        width: 334px;
-        height: 503px;
-        //transition: height 0.4s;
-        img {
-          display: block;
-          object-fit: cover;
-          width: 334px;
-          height: 503px;
-          transition: transform 0.3s;
-          transform: translate3d(0,-40px,-180px);
-        }
+  max-width: 1920px;
+  .swiper-container {
+    .swiper-slide {
+      width: 350px;
+      height: 567px;
+      //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      //transition: height 0.4s;
+      background: #555;
+      img {
+        object-fit: cover;
+        width: 350px;
+        height: 567px;
+        border-radius: 3px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
       }
     }
   }
+}
