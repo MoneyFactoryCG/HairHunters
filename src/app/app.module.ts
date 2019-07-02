@@ -12,9 +12,11 @@ import { OurHairsPageComponent } from "./our-hairs-page/our-hairs-page.component
 import { ProfitTwoPageComponent } from "./profit-two-page/profit-two-page.component";
 import { HairPalettePageComponent } from "./hair-palette-page/hair-palette-page.component";
 import { HairPaletteCarouselComponent } from "./hair-palette-page/hair-palette-carousel/hair-palette-carousel.component";
+import { PricePageComponent } from "./price-page/price-page.component";
+import { StockCarouselComponent } from "./price-page/stock-carousel/stock-carousel.component";
 
-import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
-import { PricePageComponent } from './price-page/price-page.component';
+import { Angular2UsefulSwiperModule } from "angular2-useful-swiper";
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PricePageComponent } from './price-page/price-page.component';
     ProfitTwoPageComponent,
     HairPalettePageComponent,
     HairPaletteCarouselComponent,
-    PricePageComponent
+    PricePageComponent,
+    StockCarouselComponent
   ],
   imports: [BrowserModule, AppRoutingModule, Angular2UsefulSwiperModule],
   providers: [],

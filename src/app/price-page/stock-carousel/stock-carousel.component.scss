@@ -1,0 +1,18 @@
+.stock-carousel {
+    max-width: 1920px;
+    swiper {
+      .swiper-slide {
+        width: 334px;
+        height: 503px;
+        //transition: height 0.4s;
+        img {
+          display: block;
+          object-fit: cover;
+          width: 334px;
+          height: 503px;
+          transition: transform 0.3s;
+          transform: translate3d(0,-40px,-180px);
+        }
+      }
+    }
+  }

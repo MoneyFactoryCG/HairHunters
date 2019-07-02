@@ -1,0 +1,7 @@
+<div class="stock-carousel">
+  <swiper [config]="stockConfig" #stockSwiper>
+    <div class="swiper-slide" *ngFor="let slide of slides; index as i">
+      <img [src]="slide.img" alt="" />
+    </div>
+  </swiper>
+</div>

@@ -1,5 +1,5 @@
 <div class="hair-palette-carousel">
-  <swiper [config]="config">
+  <swiper [config]="config" #hairPaletteSwiper>
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let slide of slides; index as i">
         <img [src]="slide.img" alt="" />

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperComponent } from 'angular2-useful-swiper';
 import { SwiperOptions } from 'swiper';
 
+
 @Component({
   selector: 'app-hair-palette-carousel',
   templateUrl: './hair-palette-carousel.component.html',
