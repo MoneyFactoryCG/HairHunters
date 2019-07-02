@@ -27,13 +27,42 @@
   .price-container {
     position: relative;
     z-index: 2;
-    .left-col {
-      .table {
-        table {
-          border-collapse: collapse;
-          td {
-            border-bottom: 1px solid #000;
-            border-left: 
+    .row {
+      display: flex;
+      .left-col {
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        .table {
+          padding: 10px;
+          background: #fff;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+          border-radius: 3px;
+          table {
+            border-collapse: collapse;
+            border-style: hidden;
+            td {
+              border-collapse: collapse;
+              border: 1px solid #000;
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+      .right-col {
+        .table {
+          padding: 10px;
+          background: #fff;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+          border-radius: 3px;
+          table {
+            border-collapse: collapse;
+            border-style: hidden;
+            td {
+              border-collapse: collapse;
+              border: 1px solid #000;
+              padding: 5px 10px;
+            }
           }
         }
       }
