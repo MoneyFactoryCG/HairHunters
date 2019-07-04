@@ -18,15 +18,16 @@
       <div class="need-know-container">
         <div class="block block-1">
           <div class="header" (click)="handleClick($event)">
-            <h1 >Как отличить хорошие волосы от плохих?</h1>
-            
-            <object
-              class="arrow"
-              type="image/svg+xml"
-              data="../../assets/imgs/reviews-page/arrow.svg"
-            >
-              Your browser does not support SVG
-            </object>
+            <h1>
+              Как отличить хорошие волосы от плохих?
+            </h1>
+            <div class="arrow-wrapper">
+              <img
+                class="arrow"
+                src="../../assets/imgs/reviews-page/arrow.svg"
+                alt=""
+              />
+            </div>
           </div>
           <div class="content">
             <div class="info">
@@ -51,8 +52,11 @@
         </div>
         <div class="block block-2">
           <div class="header" (click)="handleClick($event)">
-            <h1>Как правильно подобрать волосы?</h1>
+            <h1 (click)="handleClick($event)">
+              Как правильно подобрать волосы?
+            </h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -86,8 +90,11 @@
         </div>
         <div class="block block-3">
           <div class="header" (click)="handleClick($event)">
-            <h1>Как при правильном уходе отрастить свои волосы?</h1>
+            <h1 (click)="handleClick($event)">
+              Как при правильном уходе отрастить свои волосы?
+            </h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -113,8 +120,11 @@
         </div>
         <div class="block block-4">
           <div class="header" (click)="handleClick($event)">
-            <h1>Какие капсулы выбрать: Стандарт, Микро или Нано?</h1>
+            <h1 (click)="handleClick($event)">
+              Какие капсулы выбрать: Стандарт, Микро или Нано?
+            </h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -150,10 +160,13 @@
             <img src="../../assets/imgs/reviews-page/need-know/4.png" alt="" />
           </div>
         </div>
-        <div class="block block-5" >
+        <div class="block block-5">
           <div class="header" (click)="handleClick($event)">
-            <h1>Холодное наращиванием биогелем - Достоинства и Опасность</h1>
+            <h1 (click)="handleClick($event)">
+              Холодное наращиванием биогелем - Достоинства и Опасность
+            </h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -207,8 +220,9 @@
         </div>
         <div class="block block-6">
           <div class="header" (click)="handleClick($event)">
-            <h1>Гарантия на волосы и работу!</h1>
+            <h1 (click)="handleClick($event)">Гарантия на волосы и работу!</h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -233,13 +247,13 @@
                 <button>Узнать подробнее</button>
               </div>
             </div>
-            
           </div>
         </div>
         <div class="block block-7">
           <div class="header" (click)="handleClick($event)">
-            <h1>Опыт работы</h1>
+            <h1 (click)="handleClick($event)">Опыт работы</h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
@@ -267,8 +281,9 @@
         </div>
         <div class="block block-8">
           <div class="header" (click)="handleClick($event)">
-            <h1>Профессиональная консультация</h1>
+            <h1 (click)="handleClick($event)">Профессиональная консультация</h1>
             <object
+              (click)="handleClick($event)"
               class="arrow"
               type="image/svg+xml"
               data="../../assets/imgs/reviews-page/arrow.svg"
