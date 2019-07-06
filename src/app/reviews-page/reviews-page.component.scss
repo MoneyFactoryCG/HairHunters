@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 350px 0;
   box-sizing: border-box;
+  transition: height 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   .bg {
     width: 110%;
     height: 100%;
@@ -51,9 +52,12 @@
         flex-direction: column;
         .block {
           overflow: hidden;
+          position: relative;
+          width: 100%;
           margin-bottom: 20px;
           border-radius: 3px;
           .header {
+            cursor: pointer;
             position: relative;
             z-index: 2;
             height: 60px;
@@ -75,6 +79,7 @@
               width: 26px;
               height: 13px;
               transition: transform 0.3s ease;
+              cursor: pointer;
               &.active {
                 transform: rotate(180deg);
                 transform-origin: center center;
@@ -82,13 +87,19 @@
             }
           }
           .content {
-            position: relative;
+            position: relative !important;
+            overflow: hidden;
             z-index: 1;
-            display: none;
+            display: flex;
+            width: 1110px;
+            box-sizing: border-box;
+            max-height: 0;
             background: #fff;
             padding: 32px 70px 50px 70px;
+            margin-top: -82px;
             border-radius: 0 0 3px 3px;
-            margin-top: -2px;
+            // transition: max-height 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95), margin-top 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            transition: max-height 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95), margin-top 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
             .info {
               display: flex;
               flex-direction: column;
@@ -116,6 +127,11 @@
             img {
               width: 355px;
             }
+          }
+          .content.toggle {
+            max-height: 1000px;
+            margin-top: -2px;
+            opacity: 1;
           }
         }
         .block-1 {
@@ -174,6 +190,11 @@
                 margin-right: 30px;
               }
               .two {
+                .text {
+                  font-family: montserrat, sans-serif;
+                  font-weight: 500;
+                  font-size: 18px;
+                }
               }
             }
           }
@@ -199,10 +220,10 @@
 
 @keyframes harmonic {
   0% {
-    transform: scale(1, 0);
+    height: 0px;
   }
 
   100% {
-    transform: scale(1, 1);
+    height: auto;
   }
 }

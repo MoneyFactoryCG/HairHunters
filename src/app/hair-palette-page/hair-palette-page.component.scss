@@ -49,7 +49,7 @@
       font-weight: 600;
       color: #fff;
     }
-    button {
+    .btn-choose {
       margin-top: 25px;
       cursor: pointer;
       bottom: 30px;
@@ -68,6 +68,29 @@
         transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
         background: #9a35ec;
+      }
+    }
+    .btn-all {
+      margin-top: 25px;
+      cursor: pointer;
+      bottom: 30px;
+      margin-right: 70px;
+      //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background: none;
+      border-radius: 3px;
+      border: 2px solid #fff;
+      width: 200px;
+      height: 50px;
+      font-family: montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+      &:hover {
+        transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+        background: #fff;
+        color: #000;
       }
     }
   }

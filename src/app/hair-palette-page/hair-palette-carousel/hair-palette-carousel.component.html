@@ -1,6 +1,6 @@
 
 <div class="hair-palette-carousel">
-  <div class="swiper-container" [swiper]="config" [(index)]="index">
+  <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let slide of slides; index as i">
         <img [src]="slide.img" alt="" />
@@ -9,10 +9,11 @@
 
     <!-- <div class="swiper-scrollbar"></div>
     <div class="swiper-pagination"></div> -->
-    <div class="nav">
+    
+    
+  </div>
+  <div class="nav">
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-    
-  </div>
 </div>

@@ -10,23 +10,24 @@ import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
 export class HairPaletteCarouselComponent implements OnInit {
 
   config: SwiperConfigInterface = {
-    //pagination: { el: '.swiper-pagination', clickable: true },
+    pagination: { el: '.swiper-pagination', clickable: true },
     a11y: true,
-    effect: 'coverflow',
+    //effect: 'coverflow',
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    coverflowEffect: {
-      depth: 100,
-      rotate: 0,
-      stretch: -100,
-      slideShadows: false
-    },
-    spaceBetween: 0,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    initialSlide: 3
+    // coverflowEffect: {
+    //   depth: 100,
+    //   rotate: 0,
+    //   stretch: -100,
+    //   slideShadows: false
+    // },
+    spaceBetween: 30,
+    slidesPerView: 3,
+    freeMode: true,
+    preloadImages: false,
+    lazy: true
   };
 
   slides = [];

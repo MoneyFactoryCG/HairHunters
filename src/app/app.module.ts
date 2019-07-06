@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -44,7 +45,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ReviewsPageComponent,
     ReviewsCarouselComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, SwiperModule, BrowserAnimationsModule],
   providers: [
     {
       provide: SWIPER_CONFIG,
