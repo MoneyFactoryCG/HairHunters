@@ -22,6 +22,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { HowWorkPageComponent } from './how-work-page/how-work-page.component';
 import { ReviewsPageComponent } from './reviews-page/reviews-page.component';
 import { ReviewsCarouselComponent } from './reviews-page/reviews-carousel/reviews-carousel.component';
+import { WorksCarouselComponent } from './works-page/works-carousel/works-carousel.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -43,7 +44,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     StockCarouselComponent,
     HowWorkPageComponent,
     ReviewsPageComponent,
-    ReviewsCarouselComponent
+    ReviewsCarouselComponent,
+    WorksCarouselComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule, BrowserAnimationsModule],
   providers: [

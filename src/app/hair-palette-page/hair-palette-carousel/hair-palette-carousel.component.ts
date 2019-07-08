@@ -27,7 +27,8 @@ export class HairPaletteCarouselComponent implements OnInit {
     slidesPerView: 3,
     freeMode: true,
     preloadImages: false,
-    lazy: true
+    lazy: true,
+    loop: true
   };
 
   slides = [];
