@@ -77,5 +77,56 @@
   </div>
   <div class="stock-container">
     <!-- <app-stock-carousel></app-stock-carousel> -->
+    <app-stock-card deadline="2019-07-12" counterId="counter1">
+      <div class="stock-card without-price">
+        <img src="" alt="" class="cover" />
+        <div class="info">
+          <p class="title"></p>
+          <div class="counter" id="counter1">
+            <div class="days"></div>
+            <div class="hours"></div>
+            <div class="minutes"></div>
+          </div>
+        </div>
+      </div>
+    </app-stock-card>
+
+    <app-stock-card deadline="2019-07-11" counterId="counter2">
+      <div class="stock-card with-price">
+        <div class="cover">
+          <img src="" alt="" />
+          <div class="lable">
+            <div class="triangle"></div>
+            <p class="">Наращивание волос</p>
+          </div>
+        </div>
+        <div class="stock-info">
+          <div class="info">
+            <p class="title">Мастер категории Стандарт+</p>
+            <div class="price">
+              <p class="old-price"><span class="line"></span>1000 <span class="grn">грн</span>/p>
+              <p class="new-price">800 <span class="grn">грн</span></p>
+            </div>
+          </div>
+          <div class="counter-container">
+            <div class="counter" id="counter2">
+              <div class="days wrapper">
+                <span class="days"></span>
+                <p class="lable">День</p>
+              </div>
+              <div class="hours wrapper">
+                <span class="hours"></span>
+                <p class="lable">Часы</p>
+              </div>
+              <div class="minutes wrapper">
+                <span class="minutes"></span>
+                <p class="lable">Минуты</p>
+              </div>
+            </div>
+            <button>Записаться</button>
+          </div>
+        </div>
+      </div>
+    </app-stock-card>
   </div>
 </section>

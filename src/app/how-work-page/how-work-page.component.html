@@ -13,13 +13,13 @@
       <div class="left-col">
         <div class="step" *ngFor="let step of leftText; index as i">
           <span class="num">{{ i + 1 }}</span>
-          <p class="text" [innerHTML]="step.text"></p>
+          <p class="text" >{{step.text}}</p>
         </div>
       </div>
       <div class="right-col">
         <div class="step" *ngFor="let step of rightText; index as i">
           <span class="num">{{ i + 7 }}</span>
-          <p class="text" [innerHTML]="step.text"></p>
+          <p class="text" >{{step.text}}</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,60 @@
+.contacts-page {
+  width: 100%;
+  min-height: 589px;
+  font-family: montserrat, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  .contacts-page-container {
+    max-width: 1110px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .contacts {
+      height: 100%;
+      .title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 68px;
+      }
+      .info {
+        font-size: 22px;
+        font-weight: 300;
+        color: #333;
+        .adress {
+          margin-bottom: 30px;
+        }
+        .work-time {
+          margin-bottom: 30px;
+        }
+        .p-number {
+          margin-bottom: 30px;
+        }
+        .inst {
+          display: flex;
+          color: #333;
+          text-decoration: none;
+          .inst-ico {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+    .map {
+      height: 589px;
+      width: 843px;
+      position: relative;
+      .img {
+        top: -111px;
+        height: 700px;
+        width: 900px;
+        position: absolute;
+        background: url(../../assets/imgs/contacts-page/map.png) no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}

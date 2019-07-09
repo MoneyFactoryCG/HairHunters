@@ -15,21 +15,16 @@ import {
 })
 export class WorksCarouselComponent implements OnInit {
   config: SwiperConfigInterface = {
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   type: 'custom',
-    //   renderCustom: (swiper, current, total) => {
-    //     return this.customProgressBar(current, total);
-    //   }
-    // },
+    pagination: {
+      el: ".works-swiper-pagination",
+      clickable: true
+    },
     a11y: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
-    spaceBetween: 30,
-    slidesPerView: 2
-    //centeredSlides: true
+    slidesPerView: 3
   };
 
   slides = [];
@@ -37,10 +32,8 @@ export class WorksCarouselComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    for (let i = 1; i <= 3; i++) {
-      for (let j = 1; j <= 3; j++) {
-        this.slides.push({ img: `../../../assets/imgs/works-page/${j}.png` });
-      }
+    for (let i = 1; i <= 10; i++) {
+      this.slides.push({ img: `../../../assets/imgs/works-page/${i}.JPG` });
     }
   }
 }

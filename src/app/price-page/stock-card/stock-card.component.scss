@@ -1,0 +1,57 @@
+.stock-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 183px;
+  font-family: montserrat, sans-serif;
+  color: #fff;
+}
+
+.stock-card.with-price {
+  .cover {
+
+  }
+  .stock-info {
+    display: flex;
+    .info {
+      .title {
+        font-size: 24px;
+      }
+      .price {
+        display: flex;
+        .old-price {
+          position: relative;
+          font-size: 24px;
+          .grn {
+            font-size: 18px;
+          }
+          .line {
+            color: #942FE5;
+            position: absolute;
+            height: 1px;
+            width: 105%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+          }
+        }
+        .new-price {
+          font-size: 48px;
+          .grn {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .counter-container {
+      .counter {
+        
+      }
+    }
+  }
+}
+
+.stock-card.without-price {
+  
+}

@@ -23,6 +23,10 @@ import { HowWorkPageComponent } from './how-work-page/how-work-page.component';
 import { ReviewsPageComponent } from './reviews-page/reviews-page.component';
 import { ReviewsCarouselComponent } from './reviews-page/reviews-carousel/reviews-carousel.component';
 import { WorksCarouselComponent } from './works-page/works-carousel/works-carousel.component';
+import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { StockCardComponent } from './price-page/stock-card/stock-card.component';
+
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -45,7 +49,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HowWorkPageComponent,
     ReviewsPageComponent,
     ReviewsCarouselComponent,
-    WorksCarouselComponent
+    WorksCarouselComponent,
+    ContactsPageComponent,
+    FooterComponent,
+    StockCardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule, BrowserAnimationsModule],
   providers: [

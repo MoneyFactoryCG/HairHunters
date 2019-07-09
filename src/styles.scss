@@ -6,3 +6,22 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.works-swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  width: 54px;
+  height: 3px;
+  border-radius: 1.5px;
+  margin-left: 12px;
+  opacity: 1;
+}
+
+.works-swiper-pagination .swiper-pagination-bullet-active {
+  background: #942FE5;
+  width: 54px;
+  height: 3px;
+}

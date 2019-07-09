@@ -1,8 +1,11 @@
 .works-page {
   width: 100%;
-  height: 652px;
+  height: 664px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .bg {
     position: absolute;
     z-index: 1;
@@ -10,5 +13,20 @@
     left: -5%;
     height: 100%;
     object-fit: fill;
+  }
+  .works-page-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      color: #fff;
+      margin-bottom: 20px;
+      font-family: montserrat, sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+    }
+
   }
 }

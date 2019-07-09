@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SwiperOptions } from 'swiper';
-import { SwiperComponent } from 'angular2-useful-swiper';
 
 @Component({
   selector: 'app-stock-carousel',
