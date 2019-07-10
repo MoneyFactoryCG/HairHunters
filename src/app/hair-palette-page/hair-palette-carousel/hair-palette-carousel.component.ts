@@ -11,7 +11,6 @@ export class HairPaletteCarouselComponent implements OnInit {
 
   config: SwiperConfigInterface = {
     pagination: { el: '.swiper-pagination', clickable: true },
-    a11y: true,
     //effect: 'coverflow',
     navigation: {
       nextEl: '.swiper-button-next',
@@ -27,8 +26,8 @@ export class HairPaletteCarouselComponent implements OnInit {
     slidesPerView: 3,
     freeMode: true,
     preloadImages: false,
-    lazy: true,
-    loop: true
+    lazy: false,
+    loop: false
   };
 
   slides = [];

@@ -77,48 +77,49 @@
   </div>
   <div class="stock-container">
     <!-- <app-stock-carousel></app-stock-carousel> -->
-    <app-stock-card deadline="2019-07-12" counterId="counter1">
+    <p class="title">Акции</p>
+    <app-stock-card
+      deadline="2019-07-12"
+      cookieDeadline=""
+      counterId="counter1"
+    >
       <div class="stock-card without-price">
-        <img src="" alt="" class="cover" />
-        <div class="info">
-          <p class="title"></p>
-          <div class="counter" id="counter1">
-            <div class="days"></div>
-            <div class="hours"></div>
-            <div class="minutes"></div>
-          </div>
-        </div>
-      </div>
-    </app-stock-card>
-
-    <app-stock-card deadline="2019-07-11" counterId="counter2">
-      <div class="stock-card with-price">
         <div class="cover">
           <img src="" alt="" />
-          <div class="lable">
-            <div class="triangle"></div>
-            <p class="">Наращивание волос</p>
-          </div>
         </div>
         <div class="stock-info">
           <div class="info">
-            <p class="title">Мастер категории Стандарт+</p>
-            <div class="price">
-              <p class="old-price"><span class="line"></span>1000 <span class="grn">грн</span>/p>
-              <p class="new-price">800 <span class="grn">грн</span></p>
-            </div>
+            <p class="title">Закажите<br>от 3х хвостов<br>по оптовой цене,<br>без предоплаты!</p>
           </div>
           <div class="counter-container">
-            <div class="counter" id="counter2">
-              <div class="days wrapper">
+            <div class="counter" id="counter1">
+              <div class="wrapper" id="days">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
                 <span class="days"></span>
                 <p class="lable">День</p>
               </div>
-              <div class="hours wrapper">
+              <div class="wrapper" id="hours">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
                 <span class="hours"></span>
                 <p class="lable">Часы</p>
               </div>
-              <div class="minutes wrapper">
+              <div class="wrapper" id="minutes">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
                 <span class="minutes"></span>
                 <p class="lable">Минуты</p>
               </div>
@@ -128,5 +129,66 @@
         </div>
       </div>
     </app-stock-card>
+
+    <app-stock-card deadline="" cookieDeadline="2" counterId="counter2">
+      <div class="stock-card with-price">
+        <div class="cover">
+          <img src="" alt="" />
+          <div class="lable">
+            <div class="triangle"></div>
+            <div class="rectangle">
+              <p class="text">Наращивание волос</p>
+            </div>
+          </div>
+        </div>
+        <div class="stock-info">
+          <div class="info">
+            <p class="title">Мастер категории<br />Стандарт+</p>
+            <div class="price">
+              <p class="old-price">
+                <span class="line"></span>1000 <span class="grn">грн</span>
+              </p>
+              <p class="new-price">800<span class="grn"> грн</span></p>
+            </div>
+          </div>
+          <div class="counter-container">
+            <div class="counter" id="counter2">
+              <div class="wrapper" id="days">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
+                <span class="days"></span>
+                <p class="lable">День</p>
+              </div>
+              <div class="wrapper" id="hours">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
+                <span class="hours"></span>
+                <p class="lable">Часы</p>
+              </div>
+              <div class="wrapper" id="minutes">
+                <div class="lines-wrapper">
+                  <span class="line-top"></span>
+                  <span class="line-left"></span>
+                  <span class="line-right"></span>
+                  <span class="line-bottom"></span>
+                </div>
+                <span class="minutes"></span>
+                <p class="lable">Минуты</p>
+              </div>
+            </div>
+            <button>Записаться</button>
+          </div>
+        </div>
+      </div>
+    </app-stock-card>
+
   </div>
 </section>

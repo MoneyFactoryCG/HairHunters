@@ -16,9 +16,7 @@ import { HairPaletteCarouselComponent } from "./hair-palette-page/hair-palette-c
 import { PricePageComponent } from "./price-page/price-page.component";
 import { StockCarouselComponent } from "./price-page/stock-carousel/stock-carousel.component";
 
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
 import { HowWorkPageComponent } from './how-work-page/how-work-page.component';
 import { ReviewsPageComponent } from './reviews-page/reviews-page.component';
 import { ReviewsCarouselComponent } from './reviews-page/reviews-carousel/reviews-carousel.component';
@@ -27,6 +25,10 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { StockCardComponent } from './price-page/stock-card/stock-card.component';
 
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { CookieService } from 'ngx-cookie-service';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -59,7 +61,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
