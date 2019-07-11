@@ -147,7 +147,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
 
       // console.log(t.total);
 
-      if (t.total <= 0 && this.t != 0) {
+      if (t.total <= 0) {
         clearInterval(timeinterval);
       }
     };
@@ -160,7 +160,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
     if (this.deadline) {
       this.initializeClock(this.counterId, this.deadline);
     }
-    if (this.cookieDeadline) {
+    if (this.cookieDeadline  && this.t != 0) {
       this.initializeClock(this.counterId, this.cookieDeadline);
     }
   }
