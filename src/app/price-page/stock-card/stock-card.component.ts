@@ -13,31 +13,46 @@ export class StockCardComponent implements OnInit, AfterViewInit {
   @Input() counterId?: string;
   @Input() cookieDeadline;
 
-  total: Number;
+  t: Number;
 
   constructor(private cookieService: CookieService) {}
 
   getTimeRemaining(endtime) {
-    let seconds = 0;
-    let minutes = 0;
-    let hours = 0;
-    let days = 0;
-    let t = 0;
+    let seconds;
+    let minutes;
+    let hours;
+    let days;
+    let t;
 
     if (this.deadline) {
       t = Date.parse(endtime) - Date.parse("" + new Date());
     }
 
-    if (this.cookieDeadline && !this.cookieService.get("deadline" + this.counterId)) {
+    if (
+      this.cookieDeadline &&
+      !this.cookieService.get("deadline" + this.counterId)
+    ) {
       this.cookieService.set(
         "deadline" + this.counterId,
         "" + Date.parse("" + new Date()),
         30
       );
-      t = ((endtime * 60 * 60 * 1000) + +this.cookieService.get("deadline" + this.counterId)) - Date.parse("" + new Date());
+      t =
+        endtime * 60 * 60 * 1000 +
+        +this.cookieService.get("deadline" + this.counterId) -
+        Date.parse("" + new Date());
     }
-    if (this.cookieDeadline && this.cookieService.get("deadline" + this.counterId)) {
-      t = ((endtime * 60 * 60 * 1000) + +this.cookieService.get("deadline" + this.counterId)) - Date.parse("" + new Date());
+    if (
+      this.cookieDeadline &&
+      this.cookieService.get("deadline" + this.counterId)
+    ) {
+      t =
+        endtime * 60 * 60 * 1000 +
+        +this.cookieService.get("deadline" + this.counterId) -
+        Date.parse("" + new Date());
+        if (t <= 0) {
+          this.t = 0;
+        }
     }
 
     seconds = Math.floor((t / 1000) % 60);
@@ -125,13 +140,14 @@ export class StockCardComponent implements OnInit, AfterViewInit {
       daysSpan.innerHTML = "" + t.days;
       hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
       minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-      this.total = t.total;
 
       setProgress(t.seconds, 60, "#minutes");
       setProgress(t.minutes, 60, "#hours");
       setProgress(t.hours, 24, "#days");
 
-      if (t.total <= 0) {
+      // console.log(t.total);
+
+      if (t.total <= 0 && this.t != 0) {
         clearInterval(timeinterval);
       }
     };
