@@ -29,6 +29,8 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { CookieService } from 'ngx-cookie-service';
+import { ButtonModalWindowComponent } from './button-modal-window/button-modal-window.component';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -54,7 +56,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WorksCarouselComponent,
     ContactsPageComponent,
     FooterComponent,
-    StockCardComponent
+    StockCardComponent,
+    ButtonModalWindowComponent,
+    ModalWindowComponent
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule, BrowserAnimationsModule],
   providers: [

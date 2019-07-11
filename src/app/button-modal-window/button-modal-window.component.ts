@@ -1,0 +1,26 @@
+import { Component, OnInit, Input } from "@angular/core";
+
+import * as $ from "jquery";
+
+@Component({
+  selector: "app-button-modal-window",
+  templateUrl: "./button-modal-window.component.html",
+  styleUrls: ["./button-modal-window.component.scss"]
+})
+export class ButtonModalWindowComponent implements OnInit {
+  @Input() text: string;
+  @Input() windowId: string;
+
+  openWindow() {
+    console.log("open")
+    $('.' + this.windowId + ' .modal-window').css({
+      transform:'translateY(0)',
+      opacity: "1"
+    });
+    $('.' + this.windowId).fadeIn(300).css({display: 'flex'});
+  }
+
+  constructor() {}
+
+  ngOnInit() {}
+}
