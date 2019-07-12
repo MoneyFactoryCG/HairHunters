@@ -1,0 +1,16 @@
+app-modal-window {
+  .masters-container {
+    display: flex;
+    width: 870px;
+    height: 522px;
+    background: #fff;
+    img {
+      object-fit: cover;
+    }
+    .form-container {
+      width: 520px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -22,12 +22,14 @@
   .reviews-page-container {
     max-width: 1110px;
     position: relative;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     .reviews {
+      position: relative;
+      z-index: 0;
       .title {
         font-family: montserrat, sans-serif;
         font-size: 36px;
@@ -39,7 +41,7 @@
     .need-know {
       display: flex;
       flex-direction: column;
-
+      z-index: 0;
       .title {
         font-family: montserrat, sans-serif;
         font-size: 36px;
@@ -62,7 +64,7 @@
           .header {
             cursor: pointer;
             position: relative;
-            z-index: 2;
+            z-index: 1;
             height: 60px;
             width: 100%;
             background: #fff;
@@ -92,7 +94,7 @@
           .content {
             position: relative !important;
             overflow: hidden;
-            z-index: 1;
+            z-index: 0;
             display: flex;
             width: 1110px;
             box-sizing: border-box;
@@ -230,3 +232,8 @@
     height: auto;
   }
 }
+
+app-button-modal-window {
+  margin-top: 30px;
+}
+

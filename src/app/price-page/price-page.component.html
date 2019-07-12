@@ -28,7 +28,7 @@
         </div>
         <div class="free-consultation">
           <p class="text">Консультация - Бесплатно!</p>
-          <app-button-modal-window text="Записаться"></app-button-modal-window>
+          <app-button-modal-window text="Записаться" windowId="free-consultation-modal"></app-button-modal-window>
         </div>
       </div>
       <div class="right-col">
@@ -79,8 +79,8 @@
     <!-- <app-stock-carousel></app-stock-carousel> -->
     <p class="title">Акции</p>
     <app-stock-card
-      deadline="2019-07-12"
-      cookieDeadline=""
+      deadline="2019-07-13"
+      cookieDeadline="0"
       counterId="counter1"
     >
       <div class="stock-card without-price">
@@ -124,13 +124,13 @@
                 <p class="lable">Минуты</p>
               </div>
             </div>
-            <app-button-modal-window text="Записаться"></app-button-modal-window>
+            <app-button-modal-window text="Записаться" windowId="stock-modal-1"></app-button-modal-window>
           </div>
         </div>
       </div>
     </app-stock-card>
 
-    <app-stock-card deadline="" cookieDeadline="2" counterId="counter2">
+    <app-stock-card deadline="0" cookieDeadline="2" counterId="counter2">
       <div class="stock-card with-price">
         <div class="cover">
           <img src="" alt="" />
@@ -184,7 +184,7 @@
                 <p class="lable">Минуты</p>
               </div>
             </div>
-            <app-button-modal-window text="Записаться"></app-button-modal-window>
+            <app-button-modal-window text="Записаться" windowId="stock-modal-2"></app-button-modal-window>
           </div>
         </div>
       </div>

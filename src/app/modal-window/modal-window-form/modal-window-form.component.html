@@ -1,0 +1,38 @@
+<form class="modal-window-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h1 class="title">Записаться к мастеру</h1>
+
+  <input
+    formControlName="name"
+    name="name"
+    type="text"
+    class="name"
+    placeholder="Имя"
+    autocomplete="off"
+    maxlength="21"
+  />
+  <div class="number-box">
+    <input
+      formControlName="number"
+      autocomplete="off"
+      type="text"
+      name="number"
+      class="number"
+      mask="00-000-00-00"
+      placeholder="00-000-00-00"
+    />
+    <span class="code">+380</span>
+  </div>
+  <div class="data-proc">
+    <span [ngClass]="isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'"  (click)="isAgree = !isAgree"></span>
+    <p class="info">
+      Я даю <a href="">согласие на обработку<br />персональных данных</a>
+    </p>
+  </div>
+  <button
+    [disabled]="form.invalid || !isAgree"
+    type="submit"
+    [ngClass]="(form.invalid || !isAgree) ? 'signup-btn disabled' : 'signup-btn'"
+  >
+    Записаться
+  </button>
+</form>

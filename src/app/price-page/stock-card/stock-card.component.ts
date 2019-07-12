@@ -13,7 +13,8 @@ export class StockCardComponent implements OnInit, AfterViewInit {
   @Input() counterId?: string;
   @Input() cookieDeadline;
 
-  t: Number;
+  isActive: boolean = true;
+  isActiveCookie: boolean = true;
 
   constructor(private cookieService: CookieService) {}
 
@@ -24,12 +25,12 @@ export class StockCardComponent implements OnInit, AfterViewInit {
     let days;
     let t;
 
-    if (this.deadline) {
+    if (this.deadline !== 0) {
       t = Date.parse(endtime) - Date.parse("" + new Date());
     }
 
     if (
-      this.cookieDeadline &&
+      +this.cookieDeadline &&
       !this.cookieService.get("deadline" + this.counterId)
     ) {
       this.cookieService.set(
@@ -43,16 +44,13 @@ export class StockCardComponent implements OnInit, AfterViewInit {
         Date.parse("" + new Date());
     }
     if (
-      this.cookieDeadline &&
+      +this.cookieDeadline &&
       this.cookieService.get("deadline" + this.counterId)
     ) {
       t =
         endtime * 60 * 60 * 1000 +
         +this.cookieService.get("deadline" + this.counterId) -
         Date.parse("" + new Date());
-        if (t <= 0) {
-          this.t = 0;
-        }
     }
 
     seconds = Math.floor((t / 1000) % 60);
@@ -76,8 +74,9 @@ export class StockCardComponent implements OnInit, AfterViewInit {
     const minutesSpan = clock.querySelector(".minutes");
 
     const setProgress = (time, count, type) => {
-      const increment = 100 / 15;
-      if (time <= 15) {
+      count = count / 4;
+      const increment = 100 / count;
+      if (time <= count) {
         $(`${type} .line-top`).css({
           width: `${time * increment}%` //top
         });
@@ -91,7 +90,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
           height: "0"
         });
       }
-      if (time > 15 && time <= 30) {
+      if (time > count && time <= count * 2) {
         $(`${type} .line-top`).css({
           width: "100%"
         });
@@ -105,7 +104,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
           height: "0"
         });
       }
-      if (time > 30 && time <= 45) {
+      if (time > count * 2 && time <= count * 3) {
         $(`${type} .line-top`).css({
           width: "100%"
         });
@@ -119,7 +118,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
           height: "0"
         });
       }
-      if (time > 45 && time <= 60) {
+      if (time > count * 3 && time <= count * 4) {
         $(`${type} .line-top`).css({
           width: "100%"
         });
@@ -157,10 +156,22 @@ export class StockCardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (this.deadline) {
+    if (Date.parse(this.deadline) - Date.parse("" + new Date()) <= 0) {
+      this.isActive = false;
+    }
+    if (
+      this.cookieDeadline * 60 * 60 * 1000 +
+        +this.cookieService.get("deadline" + this.counterId) -
+        Date.parse("" + new Date()) <=
+      0 && this.cookieService.get("deadline" + this.counterId)
+    ) {
+      this.isActiveCookie = false;
+    }
+    console.log(this.isActive + '' + this.isActiveCookie)
+    if (this.deadline && this.isActive) {
       this.initializeClock(this.counterId, this.deadline);
     }
-    if (this.cookieDeadline  && this.t != 0) {
+    if (this.cookieDeadline && this.isActiveCookie) {
       this.initializeClock(this.counterId, this.cookieDeadline);
     }
   }
