@@ -4,7 +4,12 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let slide of slides; index as i">
         <img [src]="slide.img" alt="" />
-        <div class="lable"></div>
+        <div class="lable">
+          <div class="rectangle">
+            <p class="code">{{slide.code}}</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
       </div>
     </div>
 

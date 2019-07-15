@@ -1,29 +1,55 @@
 <form class="modal-window-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-  <h1 class="title">Записаться к мастеру</h1>
+  <h1 class="title">{{ title }}</h1>
+  <p class="stock">{{ stock }}</p>
 
-  <input
-    formControlName="name"
-    name="name"
-    type="text"
-    class="name"
-    placeholder="Имя"
-    autocomplete="off"
-    maxlength="21"
-  />
+  <div class="name-box">
+    <input
+      formControlName="name"
+      name="name"
+      type="text"
+      [(ngModel)]="value.name"
+      (change)="onChange()"
+      [ngClass]="form.get('name').invalid && form.get('name').touched ? 'name invalid' : 'name'"
+      placeholder="Имя"
+      autocomplete="off"
+      maxlength="21"
+    />
+    <span
+      *ngIf="form.get('name').invalid && form.get('name').touched"
+      class="helper-text"
+    >
+      <span *ngIf="form.get('name').errors['required']"
+        >*Введите имя</span
+      >
+    </span>
+  </div>
   <div class="number-box">
     <input
       formControlName="number"
       autocomplete="off"
       type="text"
+      (change)="onChange()"
+      [(ngModel)]="value.number"
       name="number"
-      class="number"
+      [ngClass]="form.get('number').invalid && form.get('number').touched ? 'number invalid' : 'number'"
       mask="00-000-00-00"
       placeholder="00-000-00-00"
     />
     <span class="code">+380</span>
+    <span
+      *ngIf="form.get('number').invalid && form.get('number').touched"
+      class="helper-text"
+    >
+      <span *ngIf="form.get('number').errors['required']"
+        >*Введите номер телефона</span
+      >
+    </span>
   </div>
   <div class="data-proc">
-    <span [ngClass]="isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'"  (click)="isAgree = !isAgree"></span>
+    <span
+      [ngClass]="isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'"
+      (click)="isAgree = !isAgree"
+    ></span>
     <p class="info">
       Я даю <a href="">согласие на обработку<br />персональных данных</a>
     </p>
@@ -31,7 +57,7 @@
   <button
     [disabled]="form.invalid || !isAgree"
     type="submit"
-    [ngClass]="(form.invalid || !isAgree) ? 'signup-btn disabled' : 'signup-btn'"
+    [ngClass]="form.invalid || !isAgree ? 'signup-btn disabled' : 'signup-btn'"
   >
     Записаться
   </button>

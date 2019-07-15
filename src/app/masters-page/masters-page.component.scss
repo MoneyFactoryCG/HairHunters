@@ -66,6 +66,9 @@
         .photo {
           img {
             height: 348px;
+            object-fit: cover;
+            width: 100%;
+            object-position: top;
           }
         }
         .lable {

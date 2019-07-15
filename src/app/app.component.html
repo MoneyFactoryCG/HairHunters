@@ -14,39 +14,127 @@
 <!-- MODAL WINDOWS -->
 
 <app-modal-window windowId="first-master-modal">
-  <div class="first-master-container masters-container">
-    <img src="../assets/imgs/masters-page/first-m.png" alt="" />
+  <div class="first-master-container container">
+    <img src="../assets/imgs/masters-page/1.png" alt="" />
+    <svg
+      class="star"
+      width="56"
+      height="77"
+      viewBox="0 0 56 77"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 0H56V77L28 59.5959L0 77V0Z" fill="#942FE5" />
+      <path
+        d="M28.5 18L32.2045 29.4012H44.1924L34.494 36.4476L38.1985 47.8488L28.5 40.8024L18.8015 47.8488L22.506 36.4476L12.8076 29.4012H24.7955L28.5 18Z"
+        fill="white"
+      />
+    </svg>
+
+    <div class="lable">
+      <div class="rectangle">
+        <p class="who">
+          Мастер по наращиванию<br />волос <span class="num">№1</span> в Украине
+        </p>
+        <h1 class="name">Евгения Валериевна</h1>
+      </div>
+      <div class="triangle"></div>
+    </div>
     <div class="form-container">
-        <app-modal-window-form></app-modal-window-form>
+      <app-modal-window-form
+        title="Записаться к мастеру"
+      ></app-modal-window-form>
     </div>
   </div>
 </app-modal-window>
+
 <app-modal-window windowId="second-master-modal">
-  <div class="second-master-container masters-container">
-    <img src="" alt="" />
+  <div class="second-master-container container">
+    <img src="../assets/imgs/masters-page/2.png" alt="" />
+    <div class="lable">
+      <div class="rectangle">
+        <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
+        <h1 class="name">Наталия Николаевна</h1>
+      </div>
+      <div class="triangle"></div>
+    </div>
+    <div class="form-container">
+      <app-modal-window-form
+        title="Записаться к мастеру"
+      ></app-modal-window-form>
+    </div>
   </div>
 </app-modal-window>
+
 <app-modal-window windowId="third-master-modal">
-  <div class="third-master-container masters-container">
-    <img src="" alt="" />
-    <div class="form"></div>
+  <div class="third-master-container container">
+    <img src="../assets/imgs/masters-page/3.png" alt="" />
+    <div class="lable">
+      <div class="rectangle">
+        <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
+        <h1 class="name">Ирина Александровна</h1>
+      </div>
+      <div class="triangle"></div>
+    </div>
+    <div class="form-container">
+      <app-modal-window-form
+        title="Записаться к мастеру"
+      ></app-modal-window-form>
+    </div>
   </div>
 </app-modal-window>
+
 <app-modal-window windowId="free-consultation-modal">
-  <div class="free-consultation-container">
-    <img src="" alt="" />
-    <div class="form"></div>
+  <div class="free-consultation-container container">
+    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
+    <div class="form-container">
+      <app-modal-window-form
+        title="Записаться на бесплатную консультацию"
+      ></app-modal-window-form>
+    </div>
   </div>
 </app-modal-window>
+
 <app-modal-window windowId="stock-modal-1">
-  <div class="stock-container">
-    <img src="" alt="" />
-    <div class="form"></div>
+  <div class="stock-container container">
+    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
+    <div class="form-container">
+      <app-modal-window-form
+        title="Записаться на акционное предложение:"
+        stock="Наращивание волос"
+      ></app-modal-window-form>
+    </div>
   </div>
 </app-modal-window>
+
 <app-modal-window windowId="stock-modal-2">
-  <div class="stock-container">
-    <img src="" alt="" />
-    <div class="form"></div>
+  <div class="stock-container container">
+    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
+    <div class="form-container">
+      <app-modal-window-form
+        title="Записаться на акционное предложение:"
+        stock="Мастер категории Стандарт+"
+      ></app-modal-window-form>
+    </div>
   </div>
 </app-modal-window>
+
+<div class="hair-palette-modal">
+  <div class="hair-palette-container">
+    <h1 class="title">Палитра волос</h1>
+    <div class="hair-container">
+      <div
+        class="hair"
+        *ngFor="let hair of hair; index as i"
+      >
+        <img [src]="hair.img" alt=""/>
+        <div class="lable">
+          <div class="rectangle">
+            <p class="code">{{ hair.code }}</p>
+          </div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

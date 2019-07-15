@@ -163,7 +163,7 @@ export class StockCardComponent implements OnInit, AfterViewInit {
       this.cookieDeadline * 60 * 60 * 1000 +
         +this.cookieService.get("deadline" + this.counterId) -
         Date.parse("" + new Date()) <=
-      0 && this.cookieService.get("deadline" + this.counterId)
+      0 && this.cookieService.get("deadline" + this.counterId) || this.cookieDeadline === '0'
     ) {
       this.isActiveCookie = false;
     }

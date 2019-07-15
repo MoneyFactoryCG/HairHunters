@@ -10,33 +10,32 @@
     font-family: montserrat, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 40px;
   }
+  .stock {
+    margin-top: 7px;
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #942fe5;
+  }
+
+  .invalid {
+    border: 1px solid red !important;
+  }
+
   input {
     outline: none;
+    padding: 10px;
+    padding-top: 11px;
   }
-  .name {
-    display: block;
-    border: 1px solid #343434;
-    background: transparent;
-    width: 350px;
-    height: 48px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-family: montserrat, sans-serif;
-    color: #000;
-    font-size: 16px;
-    padding-left: 10px;
+  .name-box {
+    margin-top: 40px;
     margin-bottom: 30px;
-  }
-  .number-box {
     position: relative;
-    .number {
+    .name {
       display: block;
       border: 1px solid #343434;
       background: transparent;
-      padding: 10px;
-      padding-left: 70px;
       width: 350px;
       height: 48px;
       box-sizing: border-box;
@@ -44,17 +43,49 @@
       font-family: montserrat, sans-serif;
       color: #000;
       font-size: 16px;
-      margin-bottom: 30px;
+      padding-left: 16px;
+    }
+  }
+  
+  .number-box {
+    position: relative;
+    margin-bottom: 30px;
+    .number {
+      display: block;
+      border: 1px solid #343434;
+      background: transparent;
+      padding-left: 66px;
+      width: 350px;
+      height: 48px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      font-family: montserrat, sans-serif;
+      color: #000;
+      font-size: 16px;
+      &::placeholder {
+        color: #7c7a7a;
+      }
     }
     .code {
       position: absolute;
-      top: 12px;
-      left: 10px;
+      top: 15px;
+      left: 16px;
       font-family: montserrat, sans-serif;
       color: #000;
-      font-size: 20px;
+      font-size: 16px;
     }
   }
+
+  .helper-text {
+    position: absolute;
+    bottom: -20px;
+    color: red;
+    font-family: montserrat, sans-serif;
+    font-size: 12px;
+    span {
+    }
+  }
+
   .data-proc {
     position: relative;
     display: flex;
@@ -72,20 +103,24 @@
       &:before {
         position: absolute;
         border-radius: 3px;
-        content: '';
+        content: "";
         width: 12px;
         height: 12px;
         top: 2px;
         left: 2px;
-        background: #942FE5;
+        background: #942fe5;
       }
     }
     .info {
       font-family: montserrat, sans-serif;
       font-size: 14px;
+      color: #7c7a7a;
       a {
         text-decoration: none;
         color: #475993;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
