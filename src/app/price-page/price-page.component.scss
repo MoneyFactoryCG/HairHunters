@@ -434,3 +434,252 @@
     }
   }
 }
+
+@media screen and (max-width: 1160px) {
+  .price-page {
+    padding-bottom: 50px;
+    padding-top: 30px;
+    .price-container {
+      min-width: 649px;
+      margin-bottom: 138px;
+      .title {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .left-col {
+          margin-right: 0px;
+          margin-bottom: 20px;
+          .table {
+            padding: 20px 14px;
+            table {
+              width: 100%;
+              td {
+                padding: 20px 15px;
+                font-size: 18px;
+              }
+            }
+          }
+          .free-consultation {
+            position: absolute;
+            bottom: -120px;
+            left: 0;
+            right: 0;
+            margin-top: 40px;
+            .text {
+              font-size: 18px;
+            }
+            app-button-modal-window {
+              margin-top: 20px;
+            }
+          }
+        }
+        .right-col {
+          .table {
+            padding: 20px 14px;
+            table {
+              width: 100%;
+              td {
+                padding: 11px 15px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .stock-container {
+      margin-top: 50px;
+      max-width: 649px;
+      .title {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+      .stock-card {
+        flex-direction: row;
+        min-height: 124px;
+        margin-bottom: 20px;
+      }
+      .with-price {
+        .cover {
+          width: 267px;
+          .lable {
+            bottom: 20px;
+            .triangle {
+              border-bottom: 31px solid #fff;
+              border-left: 17px solid transparent;
+            }
+            .rectangle {
+              height: 31px;
+              .text {
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .stock-info {
+          min-width: calc(100% - 267px);
+          padding: 20px;
+          .info {
+            margin-right: 23px;
+            .title {
+              font-size: 14px;
+              margin-bottom: 17px;
+            }
+            .price {
+              
+              .old-price {
+                font-size: 14px;
+                margin-right: 30px;
+                .grn {
+                  font-size: 12px;
+                }
+                .line {
+                  height: 2px;
+                  width: 106%;
+                  left: -3%;
+                }
+              }
+              .new-price {
+                font-size: 24px;
+                line-height: 12px;
+                .grn {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .counter-container {
+            .counter {
+              #days {
+                margin-left: 0;
+              }
+              #minutes {
+                margin-right: 0;
+              }
+              .wrapper {
+                margin: 0 2px;
+                width: 41px;
+                height: 38px;
+                margin-bottom: 10px;
+                .lines-wrapper {
+                  width: calc(100% + 2px);
+                  height: calc(100% + 2px);
+                  top: -1px;
+                  left: -1px;
+                  .line-top {
+                    height: 2px;
+                  }
+                  .line-left {
+                    width: 2px;
+                  }
+                  .line-right {
+                    width: 2px;
+                  }
+                  .line-bottom {
+                    height: 2px;
+                  }
+                }
+                span {
+                  font-size: 18px;
+                }
+                .lable {
+                  font-size: 10px;
+                }
+              }
+            }
+            button {
+              width: 200px;
+              height: 48px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+  
+      .without-price {
+        .cover {
+          width: 267px;
+          .lable {
+            bottom: 20px;
+            .triangle {
+              border-bottom: 31px solid #fff;
+              border-left: 17px solid transparent;
+            }
+            .rectangle {
+              height: 31px;
+              .text {
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .stock-info {
+          min-width: calc(100% - 267px);
+          padding: 20px;
+          .info {
+            margin-right: 50px;
+            .title {
+              font-size: 14px;
+              margin-bottom: 0px;
+              line-height: 21px;
+            }
+          }
+          .counter-container {
+            .counter {
+              #days {
+                margin-left: 0;
+              }
+              #minutes {
+                margin-right: 0;
+              }
+              .wrapper {
+                margin: 0 2px;
+                width: 41px;
+                height: 38px;
+                margin-bottom: 10px;
+                .lines-wrapper {
+                  width: calc(100% + 2px);
+                  height: calc(100% + 2px);
+                  top: -1px;
+                  left: -1px;
+                  .line-top {
+                    height: 2px;
+                  }
+                  .line-left {
+                    width: 2px;
+                  }
+                  .line-right {
+                    width: 2px;
+                  }
+                  .line-bottom {
+                    height: 2px;
+                  }
+                }
+                span {
+                  font-size: 18px;
+                }
+                .lable {
+                  font-size: 10px;
+
+                }
+              }
+            }
+            button {
+              width: 200px;
+              height: 48px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

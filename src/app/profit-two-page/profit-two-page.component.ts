@@ -16,7 +16,7 @@ export class ProfitTwoPageComponent implements OnInit {
     {
       img: "../../assets/imgs/profit-two-page/2.svg",
       text:
-        "Можно выравнивать плойкой,<br>Можно накручивать локоном,<br>Можно сушить феном"
+        'Можно выравнивать<br>плойкой, накручивать<br>локоном, сушить феном'
     },
     {
       img: "../../assets/imgs/profit-two-page/3.svg",
@@ -34,7 +34,7 @@ export class ProfitTwoPageComponent implements OnInit {
     },
     {
       img: "../../assets/imgs/profit-two-page/6.svg",
-      text: "Ни чем не обработанные - Без<br>«улучшателей» вида и блеска<br>Мягкие и шелковистые"
+      text: "Ни чем не обработанные -<br>Без «улучшателей» вида и<br>блеска. Мягкие и<br>шелковистые"
     }
   ];
 

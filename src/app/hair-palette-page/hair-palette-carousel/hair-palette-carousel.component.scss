@@ -5,15 +5,12 @@
     .swiper-slide {
       width: 334px;
       height: 503px;
-      //transition: height 0.4s;
       position: relative;
       img {
         object-fit: cover;
         width: 100%;
         min-height: 503px;
         height: 100%;
-        //transition: transform 0.3s;
-        //transform: translate3d(0,-40px,-180px);
       }
       .lable {
         position: absolute;
@@ -42,26 +39,125 @@
       }
     }
   }
+  .palette-swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
   .nav {
     width: 100%;
     position: absolute;
+    z-index: 2;
     top: 50%;
-    .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
-      opacity: 1;
-      cursor: pointer;
-      pointer-events: visible !important;
+    .palette-swiper-button-prev.swiper-button-disabled, .palette-swiper-button-next.swiper-button-disabled {
+      opacity: 0.7;
+      cursor: normal;
+      pointer-events: none;
     }
-    .swiper-button-next {
+    .palette-swiper-button-next {
+      cursor: pointer;
+      position: absolute;
+      width: 40px;
+      height: 40px;
       top: 0;
       right: -70px;
       background: url(../../../assets/imgs/hair-palette-page/carousel/right-arrow.svg) no-repeat center center;
+      background-size: 100% 100%;
       outline: none;
     }
-    .swiper-button-prev {
+    .palette-swiper-button-prev {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      position: absolute;
       top: 0;
       left: -70px;
       background: url(../../../assets/imgs/hair-palette-page/carousel/left-arrow.svg) no-repeat center center;
+      background-size: 100% 100%;
       outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) { 
+  .hair-palette-carousel {
+    .palette-swiper-pagination {
+      width: 90%;
+      margin-left: 5%;
+    }
+    .nav {
+      width: 100%;
+      top: unset;
+      bottom: -53px;
+      .palette-swiper-button-next {
+        width: 40px;
+        height: 40px;
+        top: unset;
+        bottom: 0;
+        right: -7px;
+      }
+      .palette-swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        top: unset;
+        bottom: 0;
+        left: -7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) { 
+  .hair-palette-carousel {
+    max-width: 649px;
+    .swiper-container {
+      .swiper-slide {
+        width: 203px;
+        height: 290px;
+        img {
+          min-height: 290px;
+        }
+        .lable {
+          top: 5px;
+          height: 27px;
+          .rectangle {
+            padding: 5px 20px;
+            .code {
+              font-size: 14px;
+              margin-top: 2px;
+            }
+          }
+          .triangle {
+            border-top: 27px solid #474747;
+            border-right: 10px solid transparent;
+          }
+        }
+      }
+    }
+    .palette-swiper-pagination {
+      width: 90%;
+      margin-left: 5%;
+      height: 2px;
+    }
+    .nav {
+      width: 100%;
+      top: unset;
+      bottom: -34px;
+      .palette-swiper-button-next {
+        width: 21px;
+        height: 21px;
+        top: unset;
+        bottom: 0;
+        right: -4px;
+      }
+      .palette-swiper-button-prev {
+        width: 21px;
+        height: 21px;
+        top: unset;
+        bottom: 0;
+        left: -4px;
+      }
     }
   }
 }

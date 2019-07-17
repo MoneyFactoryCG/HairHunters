@@ -59,7 +59,7 @@ export class ProfitOnePageComponent implements OnInit {
     {
       img: "../../assets/imgs/profit-one-page/10.png",
       title: "Гарантия на волосы<br>и работу",
-      text: "Мы профессионалы, поэтому даем гарантию на свою работу и волосы на волосы - 3 года!"
+      text: "Мы профессионалы, поэтому даем гарантию на свою работу<br>и волосы - 3 года!"
     }
   ];
 

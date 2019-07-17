@@ -76,3 +76,45 @@
     }
   }
 }
+
+@media screen and (max-width: 1160px) { 
+  .how-work-page {
+    padding-top: 90px;
+    min-height: 826px;
+    .how-work-page-container {
+      max-width: 649px;
+      .title {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+      .row {
+        .left-col {
+          margin-right: 20px;
+        }
+        .left-col,
+        .right-col {
+          width: 315px;
+          .step {
+            margin-bottom: 40px;
+            .num {
+              top: -17px;
+              font-size: 30px;
+            }
+            .text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .free-consultation {
+        margin-top: 12px;
+        .text {
+          font-size: 16px;
+        }
+        app-button-modal-window {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

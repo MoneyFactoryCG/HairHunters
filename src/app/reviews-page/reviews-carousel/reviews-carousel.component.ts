@@ -16,7 +16,7 @@ import {
 export class ReviewsCarouselComponent implements OnInit {
   config: SwiperConfigInterface = {
     pagination: {
-      el: ".swiper-pagination",
+      el: ".reviews-swiper-pagination",
       type: 'custom',
       renderCustom: (swiper, current, total) => {
         return this.customProgressBar(current, total);
@@ -24,12 +24,11 @@ export class ReviewsCarouselComponent implements OnInit {
     },
     a11y: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".reviews-swiper-button-next",
+      prevEl: ".reviews-swiper-button-prev"
     },
     spaceBetween: 30,
     slidesPerView: 2
-    //centeredSlides: true
   };
 
   slides = [];

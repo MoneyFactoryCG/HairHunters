@@ -11,7 +11,7 @@ export class ReviewsPageComponent implements OnInit {
   constructor() {}
 
   // handleClick(event) {
-  //   if (event["path"][0].className === "header") {
+  //   if (event["path"][0].className === "need-know-header") {
   //     if (
   //       !$("." + event["path"][1].classList[1] + " .content").hasClass("toggle")
   //     ) {
@@ -35,7 +35,7 @@ export class ReviewsPageComponent implements OnInit {
   //       );
   //     }
   //   }
-  //   if (event["path"][1].className === "header") {
+  //   if (event["path"][1].className === "need-know-header") {
   //     if (
   //       !$("." + event["path"][2].classList[1] + " .content").hasClass("toggle")
   //     ) {
@@ -59,7 +59,7 @@ export class ReviewsPageComponent implements OnInit {
   //       );
   //     }
   //   }
-  //   if (event["path"][2].className === "header") {
+  //   if (event["path"][2].className === "need-know-header") {
   //     if (
   //       !$("." + event["path"][3].classList[1] + " .content").hasClass("toggle")
   //     ) {
@@ -90,7 +90,7 @@ export class ReviewsPageComponent implements OnInit {
     console.log(event)
 
     if (event.target != undefined) {
-      if ((event.target.className === "header")) {
+      if ((event.target.className === "need-know-header")) {
         console.log("first")
         if (
           !$(
@@ -103,7 +103,7 @@ export class ReviewsPageComponent implements OnInit {
           $(".block .content").removeClass("toggle");
           setTimeout(() => {
             var offset = $(event.target.nextSibling.offsetParent).offset();
-            offset.top -= 20;
+            offset.top -= 100;
             $("html, body").animate({
               scrollTop: offset.top
             });
@@ -127,7 +127,7 @@ export class ReviewsPageComponent implements OnInit {
           ).removeClass("active");
         }
       }
-      if (event.target.offsetParent.className === "header") {
+      if (event.target.offsetParent.className === "need-know-header") {
         console.log("second")
         if (
           !$(
@@ -140,7 +140,7 @@ export class ReviewsPageComponent implements OnInit {
           $(".block .content").removeClass("toggle");
           setTimeout(() => {
             var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
-            offset.top -= 20;
+            offset.top -= 100;
             $("html, body").animate({
               scrollTop: offset.top
             });

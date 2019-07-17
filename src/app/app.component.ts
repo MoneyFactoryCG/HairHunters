@@ -1,14 +1,18 @@
 import { Component, AfterViewInit, OnInit } from "@angular/core";
 
-import lozad from 'lozad';
+import * as $ from 'jquery';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })
+
 export class AppComponent implements AfterViewInit, OnInit {
 
+  title = "HairHunters";
+
+  windowId: string = 'hair-palette-modal';
 
   hair = [
     {
@@ -128,10 +132,20 @@ export class AppComponent implements AfterViewInit, OnInit {
     },
   ];
 
+  closeWindow() {
+    $('.hair-palette-container').css({
+      transform:'translateY(100%)',
+      opacity: "0"
+    });
+    $('.' + this.windowId).fadeOut(300);
+    $('html').css({
+      overflow: 'auto'
+    })
+  }
+
   ngOnInit() {
   }
 
   ngAfterViewInit() {}
 
-  title = "HairHunters";
 }

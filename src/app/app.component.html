@@ -121,13 +121,32 @@
 
 <div class="hair-palette-modal">
   <div class="hair-palette-container">
+    <span class="close" (click)="closeWindow()">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2 2L12 12L22 2"
+          stroke="#D49FFF"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+        <path
+          d="M22 22L12 12L2 22"
+          stroke="#D49FFF"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+      </svg>
+    </span>
     <h1 class="title">Палитра волос</h1>
     <div class="hair-container">
-      <div
-        class="hair"
-        *ngFor="let hair of hair; index as i"
-      >
-        <img [src]="hair.img" alt=""/>
+      <div class="hair" *ngFor="let hair of hair; index as i">
+        <img [src]="hair.img" alt="" />
         <div class="lable">
           <div class="rectangle">
             <p class="code">{{ hair.code }}</p>
@@ -135,6 +154,13 @@
           <div class="triangle"></div>
         </div>
       </div>
+    </div>
+    <div class="free-consultation">
+      <p class="text">Подобрать натуральные волосы для наращивания</p>
+      <app-button-modal-window
+        text="Подобрать"
+        windowId="free-consultation-modal"
+      ></app-button-modal-window>
     </div>
   </div>
 </div>

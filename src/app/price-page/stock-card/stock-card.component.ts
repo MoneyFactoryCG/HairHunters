@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterViewInit } from "@angular/core";
+import { Component, OnInit, Input, AfterViewInit, Output, EventEmitter } from "@angular/core";
 import { CookieService } from "ngx-cookie-service";
 
 import * as $ from "jquery";
@@ -145,6 +145,18 @@ export class StockCardComponent implements OnInit, AfterViewInit {
       setProgress(t.hours, 24, "#days");
 
       // console.log(t.total);
+
+      if (Date.parse(this.deadline) - Date.parse("" + new Date()) <= 0) {
+        this.isActive = false;
+      }
+      if (
+        this.cookieDeadline * 60 * 60 * 1000 +
+          +this.cookieService.get("deadline" + this.counterId) -
+          Date.parse("" + new Date()) <=
+        0 && this.cookieService.get("deadline" + this.counterId) || this.cookieDeadline === '0'
+      ) {
+        this.isActiveCookie = false;
+      }
 
       if (t.total <= 0) {
         clearInterval(timeinterval);

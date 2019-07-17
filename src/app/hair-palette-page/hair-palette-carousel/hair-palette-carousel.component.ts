@@ -10,18 +10,17 @@ import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
 export class HairPaletteCarouselComponent implements OnInit {
 
   config: SwiperConfigInterface = {
-    pagination: { el: '.swiper-pagination', clickable: true },
-    //effect: 'coverflow',
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+    pagination: {
+      el: ".palette-swiper-pagination",
+      type: 'custom',
+      renderCustom: (swiper, current, total) => {
+        return this.customProgressBar(current, total);
+      }
     },
-    // coverflowEffect: {
-    //   depth: 100,
-    //   rotate: 0,
-    //   stretch: -100,
-    //   slideShadows: false
-    // },
+    navigation: {
+      nextEl: '.palette-swiper-button-next',
+      prevEl: '.palette-swiper-button-prev'
+    },
     spaceBetween: 30,
     slidesPerView: 3,
     freeMode: true,
@@ -127,6 +126,27 @@ export class HairPaletteCarouselComponent implements OnInit {
       code: '135HH'
     },
   ];
+
+
+  customProgressBar(current: number, total: number): string {
+    const ratio: number = current / total;
+
+    const progressBarStyle: string =
+      "style='transform: translate3d(0px, 0px, 0px) scaleX(" +
+      ratio +
+      ") scaleY(1); transition-duration: 300ms; background: #942FE5;'";
+    const progressBar: string =
+      "<span class='swiper-pagination-progressbar-fill' " +
+      progressBarStyle +
+      "></span>";
+
+    let progressBarContainer: string =
+      "<div class='swiper-pagination-progressbar' style='height: 3px; top: unset; bottom: -25px; width: 100%; background-color: #fff;'>";
+    progressBarContainer += progressBar;
+    progressBarContainer += "</span></div>";
+
+    return progressBarContainer;
+  }
 
   constructor() {}
 

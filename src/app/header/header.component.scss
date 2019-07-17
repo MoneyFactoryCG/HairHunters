@@ -1,3 +1,7 @@
+.header-mask {
+  width: 100%;
+  height: 121px;
+}
 .header {
   width: 100%;
   height: 121px;
@@ -7,6 +11,9 @@
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #fff;
+  position: absolute;
+  z-index: 11;
+  top: 0;
   .top-row {
     max-width: 1110px;
     width: 100%;
@@ -14,37 +21,192 @@
     justify-content: center;
     align-items: center;
     margin: 11px 0;
+    margin-bottom: 0;
     .title {
       font-family: montserrat, sans-serif;
       font-size: 27px;
       font-weight: 500;
       color: #333;
+      letter-spacing: 0.03em;
     }
   }
-  .bottom-row{
+  .bottom-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1110px;
     width: 100%;
-    height: 96px;
+    min-height: 77px;
+    .logo > img {
+      width: 260px;
+      height: auto;
+    }
+    .nav > li {
+      display: inline;
+      padding: 0 13px;
+      a {
+        font-family: montserrat, sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        text-decoration: none;
+        color: #333333;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-hamburger {
+      display: none;
+    }
   }
-  .logo > img {
-    width: 260px;
-    height: auto;
-  }
-  .nav > li {
-    display: inline;
-    padding: 0 13px;
-    a {
-      font-family: montserrat, sans-serif;
-      font-weight: normal;
-      font-size: 20px;
-      text-decoration: none;
-      color: #333333;
-      &:hover {
-        text-decoration: underline;
+  &.fixed {
+    position: fixed;
+    height: 77px;
+    .top-row {
+      display: none;
+    }
+    .bottom-row {
+      .nav-hamburger {
+        top: 77px;
       }
     }
   }
+}
+
+
+
+@media screen and (max-width: 1160px) {
+  .header-mask {
+    height: 96px;
+  }
+  .header {
+    height: 96px;
+    z-index: 10;
+    .top-row {
+      max-width: 649px;
+      min-height: 30px;
+      margin-bottom: 0;
+      .title {
+        font-size: 16px;
+        letter-spacing: 0.03em;
+      }
+    }
+    .bottom-row {
+      max-width: 649px;
+      min-height: 60px;
+      .logo > img {
+        width: 205px;
+        height: auto;
+      }
+      .nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 23px;
+        cursor: pointer;
+        span {
+          height: 3px;
+          width: 38px;
+          background: #942fe5;
+          border-radius: 3px;
+          transition: opacity 0.3s ease, transform 0.5s ease;
+        }
+        .center-line {
+          margin: 7px 0;
+        }
+        &.active {
+          .top-line {
+            transform: translateY(10px) rotate(45deg);
+          }
+          .center-line {
+            opacity: 0;
+          }
+          .bottom-line {
+            transform: translateY(-10px) rotate(-45deg);
+          }
+        }
+      }
+
+      .nav-hamburger {
+        list-style-type: none;
+        position: fixed;
+        overflow-y: auto;
+        height: calc(100vh - 78px);
+        background: #fff;
+        width: 465px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-top: 20px;
+        padding-right: 60px;
+        box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+        top: 96px;
+        right: 0;
+        z-index: 9;
+        transform: translateX(105%);
+        transition: transform 0.5s ease;
+        li {
+          padding: 8px 0;
+          a {
+            font-family: montserrat, sans-serif;
+            font-weight: normal;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333333;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .line {
+          height: 4px;
+          border-radius: 1.5px;
+          width: 354px;
+          background: #942fe5;
+          margin-top: 35px;
+          margin-bottom: 45px;
+        }
+        .address, .p-number {
+          font-family: montserrat, sans-serif;
+          font-size: 24px;
+          font-weight: 500;
+          color: #333;
+        }
+        .address {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &.fixed {
+      height: 60px;
+      .bottom-row {
+        .nav-hamburger {
+          top: 60px;
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
 }

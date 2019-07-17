@@ -117,3 +117,64 @@
     }
   }
 }
+
+@media screen and (max-width: 1160px) {
+  .profit-one-page {
+    min-height: 1800px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    .profit-one-page-container {
+      max-width: 649px;
+      .title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-left: 0;
+      }
+      .profit-card-container {
+        min-height: 100px;
+        margin-left: -5px;
+        .profit-card {
+          width: 314px;
+          height: auto;
+          margin: 5px;
+          .cover {
+            height: 110px;
+            object-fit: cover;
+            object-position: top;
+          }
+          .lable {
+            top: 90px;
+            .triangle {
+              border-bottom: 42px solid #fff;
+              border-right: 17px solid transparent;
+            }
+            .rectangle {
+              height: 42px;
+              p {
+                line-height: 18px;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 16px;
+              }
+            }
+          }
+          .text {
+            font-size: 14px;
+            margin-top: 20px;
+            padding: 10px 10px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  
+    .free-consultation {
+      .text {
+        font-size: 18px;
+      }
+      app-button-modal-window {
+        margin-top: 20px;
+      }
+    }
+  }
+}

@@ -22,7 +22,60 @@ body {
 }
 
 .works-swiper-pagination .swiper-pagination-bullet-active {
-  background: #942FE5;
+  background: #942fe5;
   width: 54px;
   height: 3px;
+}
+
+
+//--------------- MEDIA -----------------
+
+
+@media screen and (max-width: 1366px) { 
+  .works-swiper-pagination {
+    margin-top: -12px;
+    margin-right: 75px;
+  }
+  .palette-swiper-pagination {
+    .swiper-pagination-progressbar {
+      height: 4px !important;
+      bottom: -35px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  
+  .reviews-swiper-pagination {
+    .swiper-pagination-progressbar {
+      height: 2px !important;
+    }
+  }
+
+  .works-swiper-pagination {
+    margin-top: -5px;
+    margin-right: 48px;
+  }
+
+  .works-swiper-pagination .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 31px;
+    height: 2px;
+    border-radius: 1.5px;
+    margin-left: 12px;
+    opacity: 1;
+  }
+
+  .works-swiper-pagination .swiper-pagination-bullet-active {
+    background: #942fe5;
+    width: 31px;
+    height: 2px;
+  }
+
+  .palette-swiper-pagination {
+    .swiper-pagination-progressbar {
+      height: 2px !important;
+      bottom: -24px !important;
+    }
+  }
 }

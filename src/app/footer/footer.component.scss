@@ -9,10 +9,40 @@ footer {
     background: radial-gradient(650.49px at 50.88% 50.42%, #414141 0%, #000000 100%);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     .logo {
       height: 64px;
       width: 336px;
+    }
+    .copyright {
+      font-family: montserrat, sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  footer {
+    background: #000;
+    width: 100%;
+    height: 90px;
+    .footer-container {
+      margin: auto;
+      width: 100%;
+      height: 90px;
+      background: radial-gradient(650.49px at 50.88% 50.42%, #414141 0%, #000000 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        height: 37px;
+        width: 212px;
+      }
     }
   }
 }

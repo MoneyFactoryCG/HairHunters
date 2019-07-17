@@ -10,15 +10,17 @@
     width: 100%;
     top: -30%;
     z-index: 0;
+    height: 100%;
     img {
       width: 100%;
-      height: 130%;
+      height: 150%;
       object-fit: cover;
+      object-position: top;
     }
     .mask {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 150%;
       background: rgba(255, 255, 255, 1);
       opacity: 0.85;
     }
@@ -73,6 +75,46 @@
           padding: 0 20px;
           line-height: 24px;
           text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .profit-two-page {
+    min-height: 500px;
+    .profit-two-page-container {
+      min-height: 457px;
+      max-width: 669px;
+      flex-direction: column;
+      .title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        margin-left: 3px;
+      }
+      .profit-card-container {
+        margin-left: -10px;
+        flex-wrap: wrap;
+        .profit-card {
+          width: 203px;
+          height: 187px;
+          margin: 10px;
+          justify-content: flex-start;
+          padding-top: 20px;
+          box-sizing: border-box;
+          .icon {
+            width: 56px;
+            height: 64px;
+            margin: 0 auto;
+          }
+          .text {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 5px;
+            line-height: 18px;
+            letter-spacing: -0.03em;
+          }
         }
       }
     }

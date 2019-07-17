@@ -1,12 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 
 import {
-  SwiperComponent,
-  SwiperDirective,
-  SwiperConfigInterface,
-  SwiperScrollbarInterface,
-  SwiperPaginationInterface
+  SwiperConfigInterface, SwiperComponent, SwiperDirective,
 } from "ngx-swiper-wrapper";
+
+import * as $ from 'jquery';
 
 @Component({
   selector: "app-works-carousel",
@@ -14,6 +12,7 @@ import {
   styleUrls: ["./works-carousel.component.scss"]
 })
 export class WorksCarouselComponent implements OnInit {
+
   config: SwiperConfigInterface = {
     pagination: {
       el: ".works-swiper-pagination",
@@ -21,13 +20,33 @@ export class WorksCarouselComponent implements OnInit {
     },
     a11y: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: ".works-swiper-button-next",
+      prevEl: ".works-swiper-button-prev"
     },
     slidesPerView: 3
   };
 
+  @ViewChild(SwiperComponent, { static: false }) componentRef?: SwiperComponent;
+  @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
+
   slides = [];
+  
+  checkSlides() {
+    console.log(this.directiveRef.getIndex())
+    console.log(this.componentRef)
+    if (this.directiveRef.getIndex() == 0) {
+      $('.works-swiper-button-prev').addClass('disabled');
+    } else {
+      $('.works-swiper-button-prev').removeClass('disabled');
+    }
+    if (this.directiveRef.getIndex() == 9) {
+      $('.works-swiper-button-next').addClass('disabled');
+    } else {
+      $('.works-swiper-button-next').removeClass('disabled');
+    }
+  }
+
+  
 
   constructor() {}
 
