@@ -104,3 +104,30 @@
     }
   }
 }
+
+@media screen and (max-width: 690px) {
+  .works-carousel {
+    max-width: 345px;
+    .swiper-container {
+      .swiper-slide {
+        width: 345px;
+        height: 352px;
+      }
+    }
+    .nav {
+      width: 193px;
+      top: -40px;
+      right: 0;
+      .works-swiper-button-next {
+        right: 0;
+        width: 19px;
+        height: 19px;
+      }
+      .works-swiper-button-prev {
+        left: 0;
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+}

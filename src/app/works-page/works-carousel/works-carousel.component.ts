@@ -23,7 +23,14 @@ export class WorksCarouselComponent implements OnInit {
       nextEl: ".works-swiper-button-next",
       prevEl: ".works-swiper-button-prev"
     },
-    slidesPerView: 3
+    slidesPerView: 3,
+    loop: true,
+    breakpoints: {
+      690: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+    }
   };
 
   @ViewChild(SwiperComponent, { static: false }) componentRef?: SwiperComponent;
@@ -31,23 +38,6 @@ export class WorksCarouselComponent implements OnInit {
 
   slides = [];
   
-  checkSlides() {
-    console.log(this.directiveRef.getIndex())
-    console.log(this.componentRef)
-    if (this.directiveRef.getIndex() == 0) {
-      $('.works-swiper-button-prev').addClass('disabled');
-    } else {
-      $('.works-swiper-button-prev').removeClass('disabled');
-    }
-    if (this.directiveRef.getIndex() == 9) {
-      $('.works-swiper-button-next').addClass('disabled');
-    } else {
-      $('.works-swiper-button-next').removeClass('disabled');
-    }
-  }
-
-  
-
   constructor() {}
 
   ngOnInit() {

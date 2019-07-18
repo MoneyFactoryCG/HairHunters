@@ -34,6 +34,7 @@ import { ButtonModalWindowComponent } from "./button-modal-window/button-modal-w
 import { ModalWindowComponent } from "./modal-window/modal-window.component";
 import { ModalWindowFormComponent } from "./modal-window/modal-window-form/modal-window-form.component";
 import { NgxMaskModule } from "ngx-mask";
+import { MastersCarouselComponent } from './masters-page/masters-carousel/masters-carousel.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -62,7 +63,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     StockCardComponent,
     ButtonModalWindowComponent,
     ModalWindowComponent,
-    ModalWindowFormComponent
+    ModalWindowFormComponent,
+    MastersCarouselComponent
   ],
   imports: [
     BrowserModule,

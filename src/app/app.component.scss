@@ -66,7 +66,7 @@ app-modal-window {
 }
 
 .hair-palette-modal {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -80,16 +80,16 @@ app-modal-window {
   overflow-y: auto;
   .hair-palette-container {
     border-radius: 3px;
-    margin: 100px 0px;
-    margin-bottom: 50px;
-    padding: 50px 30px;
+    margin: 50px 0px;
+    padding: 40px 30px;
     box-sizing: border-box;
     max-width: 1200px;
-    //min-height: 2000px;
+    min-height: 100%;
     transform: translateY(100%);
-    transition: opacity .6s ease, transform 1s ease;
+    transition: opacity 0.6s ease, transform 1s ease;
     opacity: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,7 +114,6 @@ app-modal-window {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(1454.58px at 32.01% 74.11%, #414141 0%, #000000 100%);
       .hair {
         width: 250px;
         height: 386px;
@@ -169,13 +168,11 @@ app-modal-window {
         color: #fff;
       }
       app-button-modal-window {
-        margin-top: 15px;
+        margin-top: 25px;
       }
     }
   }
-  
 }
-
 
 @media screen and (max-width: 1160px) {
   app-modal-window {
@@ -210,7 +207,7 @@ app-modal-window {
         width: calc(620px - 272px);
       }
     }
-  
+
     .second-master-container {
       img {
         object-position: top left;
@@ -266,6 +263,6 @@ app-modal-window {
         }
       }
     }
-    
   }
 }
+
