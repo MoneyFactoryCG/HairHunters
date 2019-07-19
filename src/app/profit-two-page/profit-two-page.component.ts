@@ -34,7 +34,7 @@ export class ProfitTwoPageComponent implements OnInit {
     },
     {
       img: "../../assets/imgs/profit-two-page/6.svg",
-      text: "Ни чем не обработанные -<br>Без «улучшателей» вида и<br>блеска. Мягкие и<br>шелковистые"
+      text: "Ни чем не обработанные.<br>Без «улучшателей» вида<br>и блеска. Мягкие<br>и шелковистые"
     }
   ];
 

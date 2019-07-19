@@ -232,10 +232,15 @@
     max-height: 440px;
     min-width: 375px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     .masters-page-container {
       min-width: 375px;
       position: relative;
+      ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+      }
       app-masters-carousel {
       }
       width: 100vw;
@@ -243,9 +248,12 @@
       overflow: hidden;
       .title {
         font-family: montserrat, sans-serif;
-        font-size: 24px;
+        font-size: 20px;
+        margin-left: 18px;
       }
       .master-card-container {
+        scrollbar-width: none;
+        top: -20px;
         position: absolute;
         -webkit-overflow-scrolling: touch;
         flex-flow: nowrap;
@@ -257,7 +265,7 @@
         margin-left: 0;
         .cards-wrapper {
           display: flex;
-          padding: 0 20px;
+          padding: 0 8px;
           .master-card {
             max-height: 308px;
             max-width: 210px;

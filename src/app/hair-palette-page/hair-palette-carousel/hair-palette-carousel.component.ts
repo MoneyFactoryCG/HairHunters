@@ -29,7 +29,14 @@ export class HairPaletteCarouselComponent implements OnInit {
     freeModeSticky: true,
     preloadImages: false,
     lazy: false,
-    loop: false
+    loop: true,
+    breakpoints: {
+      690: {
+        slidesPerView: 'auto',
+        freeMode: false,
+        centeredSlides: true
+      }
+    }
   };
 
   slides = [
