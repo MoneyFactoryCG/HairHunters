@@ -11,12 +11,11 @@ export class HeaderComponent implements OnInit {
   isOpen: boolean = false;
 
   @HostListener("window:scroll", ["$event"])
-
   fixedHeader() {
     if ($(window).scrollTop() > 30) {
-      $('.header').addClass('fixed');
+      $(".header").addClass("fixed");
     } else {
-      $('.header').removeClass('fixed');
+      $(".header").removeClass("fixed");
     }
   }
 
@@ -26,7 +25,7 @@ export class HeaderComponent implements OnInit {
       $(".nav-hamburger").css({
         transform: "translateX(0)"
       });
-      $("html").css({
+      $('body').css({
         overflow: "hidden"
       });
       this.isOpen = true;
@@ -35,11 +34,25 @@ export class HeaderComponent implements OnInit {
       $(".nav-hamburger").css({
         transform: "translateX(105%)"
       });
-      $("html").css({
+      $("body").css({
         overflow: "auto"
       });
       this.isOpen = false;
     }
+  }
+  
+
+  scroll(el) {
+    const element = document.getElementById(el);
+    element.scrollIntoView({ behavior: "smooth", inline: "start"});
+    $(".hamburger").removeClass("active");
+    $(".nav-hamburger").css({
+      transform: "translateX(105%)"
+    });
+    $("html").css({
+      overflow: "auto"
+    });
+    this.isOpen = false;
   }
 
   constructor() {}

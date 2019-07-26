@@ -11,6 +11,7 @@ export class PricePageComponent implements OnInit, AfterViewInit {
   @ViewChildren('stock') childQuery;
 
   isStock: boolean = true;
+  stockCount = 0;
 
   checkStocks() {
     for (let i = 0; i < this.childQuery.length; i++) {
@@ -21,6 +22,14 @@ export class PricePageComponent implements OnInit, AfterViewInit {
     return false;
   }
 
+  countStocks() {
+    for (let i = 0; i < this.childQuery.length; i++) {
+      if (this.childQuery._results[i].isActive || this.childQuery._results[i].isActiveCookie) {
+        this.stockCount += 1;
+      }
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +37,7 @@ export class PricePageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.isStock = this.checkStocks();
+    this.countStocks();
   }
   
 

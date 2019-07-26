@@ -7,9 +7,13 @@
   outline: none;
 }
 
+video::-webkit-media-controls {
+  display: none;
+}
+
 body {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
 }
 
 .works-swiper-pagination .swiper-pagination-bullet {

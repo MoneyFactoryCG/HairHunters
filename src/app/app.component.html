@@ -1,166 +1,216 @@
-<app-header></app-header>
-<app-works-page></app-works-page>
-<app-masters-page></app-masters-page>
-<app-profit-one-page></app-profit-one-page>
-<app-our-hairs-page></app-our-hairs-page>
-<app-profit-two-page></app-profit-two-page>
-<app-hair-palette-page></app-hair-palette-page>
-<app-price-page></app-price-page>
-<!-- <app-how-work-page></app-how-work-page>
-<app-reviews-page></app-reviews-page>
-<app-contacts-page></app-contacts-page>
-<app-footer></app-footer> -->
-
-<!-- MODAL WINDOWS -->
-
-<app-modal-window windowId="first-master-modal">
-  <div class="first-master-container container">
-    <img src="../assets/imgs/masters-page/1.png" alt="" />
-    <svg
-      class="star"
-      width="56"
-      height="77"
-      viewBox="0 0 56 77"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M0 0H56V77L28 59.5959L0 77V0Z" fill="#942FE5" />
-      <path
-        d="M28.5 18L32.2045 29.4012H44.1924L34.494 36.4476L38.1985 47.8488L28.5 40.8024L18.8015 47.8488L22.506 36.4476L12.8076 29.4012H24.7955L28.5 18Z"
-        fill="white"
-      />
-    </svg>
-
-    <div class="lable">
-      <div class="rectangle">
-        <p class="who">
-          Мастер по наращиванию<br />волос <span class="num">№1</span> в Украине
-        </p>
-        <h1 class="name">Евгения Валериевна</h1>
-      </div>
-      <div class="triangle"></div>
-    </div>
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться к мастеру"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<app-modal-window windowId="second-master-modal">
-  <div class="second-master-container container">
-    <img src="../assets/imgs/masters-page/2.png" alt="" />
-    <div class="lable">
-      <div class="rectangle">
-        <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
-        <h1 class="name">Наталия Николаевна</h1>
-      </div>
-      <div class="triangle"></div>
-    </div>
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться к мастеру"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<app-modal-window windowId="third-master-modal">
-  <div class="third-master-container container">
-    <img src="../assets/imgs/masters-page/3.png" alt="" />
-    <div class="lable">
-      <div class="rectangle">
-        <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
-        <h1 class="name">Ирина Александровна</h1>
-      </div>
-      <div class="triangle"></div>
-    </div>
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться к мастеру"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<app-modal-window windowId="free-consultation-modal">
-  <div class="free-consultation-container container">
-    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться на бесплатную консультацию"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<app-modal-window windowId="stock-modal-1">
-  <div class="stock-container container">
-    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться на акционное предложение:"
-        stock="Наращивание волос"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<app-modal-window windowId="stock-modal-2">
-  <div class="stock-container container">
-    <img src="../assets/imgs/profit-one-page/3.png" alt="" />
-    <div class="form-container">
-      <app-modal-window-form
-        title="Записаться на акционное предложение:"
-        stock="Мастер категории Стандарт+"
-      ></app-modal-window-form>
-    </div>
-  </div>
-</app-modal-window>
-
-<div class="hair-palette-modal">
-  <div class="hair-palette-container">
-    <span class="close" (click)="closeWindow()">
+<div class="app-container">
+  <app-header></app-header>
+  <app-works-page id="worksPage"></app-works-page>
+  <app-masters-page id="mastersPage"></app-masters-page>
+  <app-profit-one-page id="profitOnePage"></app-profit-one-page>
+  <app-our-hairs-page id="ourHairsPage"></app-our-hairs-page>
+  <app-profit-two-page id="profitTwoPage"></app-profit-two-page>
+  <app-hair-palette-page id="hairPalettePage"></app-hair-palette-page>
+  <app-price-page id="pricePage"></app-price-page>
+  <app-how-work-page id="howWorkPage"></app-how-work-page>
+  <app-reviews-page id="reviewsPage"></app-reviews-page>
+  <app-contacts-page id="contactsPage"></app-contacts-page>
+  <app-footer></app-footer>
+  
+  <!-- MODAL WINDOWS -->
+  
+  <app-modal-window windowId="first-master-modal">
+    <div class="first-master-container container">
+      <img src="../assets/imgs/masters-page/1.png" alt="" />
       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+        class="star"
+        width="56"
+        height="77"
+        viewBox="0 0 56 77"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <path d="M0 0H56V77L28 59.5959L0 77V0Z" fill="#942FE5" />
         <path
-          d="M2 2L12 12L22 2"
-          stroke="#D49FFF"
-          stroke-width="3"
-          stroke-linecap="round"
-        />
-        <path
-          d="M22 22L12 12L2 22"
-          stroke="#D49FFF"
-          stroke-width="3"
-          stroke-linecap="round"
+          d="M28.5 18L32.2045 29.4012H44.1924L34.494 36.4476L38.1985 47.8488L28.5 40.8024L18.8015 47.8488L22.506 36.4476L12.8076 29.4012H24.7955L28.5 18Z"
+          fill="white"
         />
       </svg>
-    </span>
-    <h1 class="title">Палитра волос</h1>
-    <div class="hair-container">
-      <div class="hair" *ngFor="let hair of hair; index as i">
-        <img [src]="hair.img" alt="" />
-        <div class="lable">
-          <div class="rectangle">
-            <p class="code">{{ hair.code }}</p>
-          </div>
-          <div class="triangle"></div>
+  
+      <div class="lable">
+        <div class="rectangle">
+          <p class="who">
+            Мастер по наращиванию<br />волос <span class="num">№1</span> в Украине
+          </p>
+          <h1 class="name">Евгения Валериевна</h1>
         </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться к мастеру"
+          message="Запись к мастеру [Евгения Валериевна]"
+          windowId="first-master-modal"
+        ></app-modal-window-form>
       </div>
     </div>
-    <div class="free-consultation">
-      <p class="text">Подобрать натуральные волосы для наращивания</p>
-      <app-button-modal-window
-        text="Подобрать"
-        windowId="free-consultation-modal"
-      ></app-button-modal-window>
+  </app-modal-window>
+  
+  <app-modal-window windowId="second-master-modal">
+    <div class="second-master-container container">
+      <img src="../assets/imgs/masters-page/2.png" alt="" />
+      <div class="lable">
+        <div class="rectangle">
+          <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
+          <h1 class="name">Наталия Николаевна</h1>
+        </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться к мастеру"
+          message="Запись к мастеру [Наталия Николаевна]"
+          windowId="second-master-modal"
+        ></app-modal-window-form>
+      </div>
+    </div>
+  </app-modal-window>
+  
+  <app-modal-window windowId="third-master-modal">
+    <div class="third-master-container container">
+      <img src="../assets/imgs/masters-page/3.png" alt="" />
+      <div class="lable">
+        <div class="rectangle">
+          <p class="who">Мастер категории <span class="num">Стандарт+</span></p>
+          <h1 class="name">Ирина Александровна</h1>
+        </div>
+        <div class="triangle"></div>
+      </div>
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться к мастеру"
+          message="Запись к мастеру [Ирина Александровна]"
+          windowId="third-master-modal"
+        ></app-modal-window-form>
+      </div>
+    </div>
+  </app-modal-window>
+  
+  <app-modal-window windowId="free-consultation-modal">
+    <div class="free-consultation-container container">
+      <img src="../assets/imgs/profit-one-page/11.png" alt="" />
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться на бесплатную консультацию"
+          message="Запись на бесплатную консультацию"
+          windowId="free-consultation-modal"
+        ></app-modal-window-form>
+      </div>
+    </div>
+  </app-modal-window>
+  
+  <app-modal-window windowId="stock-1-modal">
+    <div class="stock-1-container container">
+      <img src="../assets/imgs/profit-one-page/3.png" alt="" />
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться на акционное предложение:"
+          stock="Наращивание волос"
+          message="Запись на акционное предложение: [Наращивание волос]"
+          windowId="stock-1-modal"
+        ></app-modal-window-form>
+      </div>
+    </div>
+  </app-modal-window>
+  
+  <app-modal-window windowId="stock-2-modal">
+    <div class="stock-2-container container">
+      <img src="../assets/imgs/profit-one-page/3.png" alt="" />
+      <div class="form-container">
+        <app-modal-window-form
+          title="Записаться на акционное предложение:"
+          stock="Мастер категории Стандарт+"
+          message="Запись на акционное предложение: [Мастер категории Стандарт+]"
+          windowId="stock-2-modal"
+        ></app-modal-window-form>
+      </div>
+    </div>
+  </app-modal-window>
+  
+  <div class="hair-palette-modal">
+    <div class="out-close" (click)="closeWindow('hair-palette')"></div> 
+    <div class="hair-palette-container">
+      <span class="close" (click)="closeWindow('hair-palette')">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L12 12L22 2"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <path
+            d="M22 22L12 12L2 22"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <h1 class="title">Палитра волос</h1>
+      <div class="hair-container">
+        <div class="hair" *ngFor="let hair of hair; index as i">
+          <img [src]="hair.img" alt="" />
+          <div class="lable">
+            <div class="rectangle">
+              <p class="code">{{ hair.code }}</p>
+            </div>
+            <div class="triangle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="free-consultation">
+        <p class="text">Подобрать натуральные волосы для наращивания</p>
+        <app-button-modal-window
+          text="Подобрать"
+          windowId="free-consultation-modal"
+        ></app-button-modal-window>
+      </div>
     </div>
   </div>
+  
+  <div class="submit-modal">
+    <div class="submit-container">
+      <span class="close" (click)="closeWindow('submit')">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L12 12L22 2"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <path
+            d="M22 22L12 12L2 22"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <div class="success">
+          <h1 class="title">Ваша заявка успешно отправлена</h1>
+          <p class="message">Наш менеджер свяжется с Вами<br>в ближайшее время</p>
+      </div>
+      <div class="failed">
+          <h1 class="title">Ошибка сервера</h1>
+          <p class="message">Ваша заявка не отправлена.<br>Попробуйте в другое время.</p>
+      </div>
+    </div>
+  </div>  
 </div>

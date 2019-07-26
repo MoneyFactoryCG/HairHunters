@@ -398,3 +398,172 @@ app-button-modal-window {
     }
   }
 }
+
+@media screen and (max-width: 690px) {
+  app-button-modal-window {
+    margin-top: 15px;
+  }
+  .reviews-page {
+    min-height: 920px;
+    min-width: 375px;
+    padding: 150px 0;
+    .reviews-page-container {
+      max-width: 345px;
+      .reviews {
+        .title {
+          font-size: 18px;
+          margin-bottom: 40px;
+        }
+      }
+      .need-know {
+        margin-top: 50px;
+        .title {
+          font-size: 18px;
+          margin-bottom: 40px;
+          margin-top: 30px;
+        }
+        .need-know-container {
+          max-width: 345px;
+          width: 345px;
+          .block {
+            margin-bottom: 15px;
+            .need-know-header {
+              height: 43px;
+              padding: 5px 10px;
+              h1 {
+                font-size: 14px;
+              }
+              .arrow {
+                width: 26px;
+                height: 13px;
+              }
+            }
+            .content {
+              width: 345px;
+              padding: 20px;
+              margin-top: -40px;
+              .info {
+                margin-right: 15px;
+                .text {
+                  font-family: montserrat, sans-serif;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 21px;
+                }
+              }
+              img {
+                display: none;
+                float: right;
+                width: 234px;
+                object-fit: cover;
+                object-position: top;
+              }
+            }
+            .content.toggle {
+              max-height: 1000px;
+              margin-top: -2px;
+              opacity: 1;
+            }
+          }
+          .block-1 {
+            .content {
+              img {
+                height: 255px;
+              }
+            }
+          }
+          .block-2 {
+            .content {
+              img {
+                height: 255px;
+              }
+            }
+          }
+          .block-3 {
+            .content {
+              img {
+                height: 200px;
+              }
+            }
+          }
+          .block-4 {
+            .content {
+              img {
+                height: 300px;
+              }
+            }
+          }
+          .block-5 {
+            h1 {
+              span {
+                display: none;
+              }
+            }
+            .content {
+              .info {
+                .one {
+                  display: flex;
+                  margin-bottom: 30px;
+                  img {
+                    display: none;
+                    height: 300px;
+                  }
+                  .text {
+                    margin-right: 0px;
+                  }
+                }
+                .two {
+                  display: flex;
+                  img {
+                    display: none;
+                    height: 267px;
+                  }
+                  .col {
+                    .text {
+                      margin-bottom: 30px;
+                    }
+                    margin-left: 0px;
+                  }
+                }
+              }
+            }
+          }
+          .block-6 {
+            .content {
+              .info {
+                flex-direction: column;
+                .one {
+                  width: 100%;
+                  margin-right: 0px;
+                }
+                .two {
+                  margin-top: 20px;
+                  .text {
+                    font-family: montserrat, sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
+          .block-7 {
+            .content {
+              img {
+                height: 200px;
+              }
+            }
+          }
+          .block-8 {
+            .content {
+              img {
+                height: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

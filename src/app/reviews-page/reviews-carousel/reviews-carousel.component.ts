@@ -28,7 +28,12 @@ export class ReviewsCarouselComponent implements OnInit {
       prevEl: ".reviews-swiper-button-prev"
     },
     spaceBetween: 30,
-    slidesPerView: 2
+    slidesPerView: 2,
+    breakpoints: {
+      690: {
+        slidesPerView: 1
+      }
+    }
   };
 
   slides = [];

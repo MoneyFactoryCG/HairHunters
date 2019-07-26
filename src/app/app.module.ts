@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { DeferLoadModule } from '@trademe/ng-defer-load';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -17,7 +17,6 @@ import { HairPalettePageComponent } from "./hair-palette-page/hair-palette-page.
 import { HairPaletteCarouselComponent } from "./hair-palette-page/hair-palette-carousel/hair-palette-carousel.component";
 import { PricePageComponent } from "./price-page/price-page.component";
 import { StockCarouselComponent } from "./price-page/stock-carousel/stock-carousel.component";
-
 import { HowWorkPageComponent } from "./how-work-page/how-work-page.component";
 import { ReviewsPageComponent } from "./reviews-page/reviews-page.component";
 import { ReviewsCarouselComponent } from "./reviews-page/reviews-carousel/reviews-carousel.component";
@@ -34,7 +33,7 @@ import { ButtonModalWindowComponent } from "./button-modal-window/button-modal-w
 import { ModalWindowComponent } from "./modal-window/modal-window.component";
 import { ModalWindowFormComponent } from "./modal-window/modal-window-form/modal-window-form.component";
 import { NgxMaskModule } from "ngx-mask";
-import { MastersCarouselComponent } from './masters-page/masters-carousel/masters-carousel.component';
+import { MastersCarouselComponent } from "./masters-page/masters-carousel/masters-carousel.component";
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -72,8 +71,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
-    DeferLoadModule,
     NgxMaskModule.forRoot()
   ],
   providers: [

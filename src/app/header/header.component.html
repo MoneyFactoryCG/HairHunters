@@ -10,13 +10,15 @@
       <img src="../../assets/imgs/logo.png" alt="logo" />
     </span>
     <nav class="nav">
-      <li class="works"><a href="#">Работы</a></li>
-      <li class="masters"><a href="#">Мастера</a></li>
-      <li class="hairs"><a href="#">Волосы</a></li>
-      <li class="prices"><a href="#">Цены</a></li>
-      <li class="how"><a href="#">Как мы работаем</a></li>
-      <li class="reviews"><a href="#">Отзывы</a></li>
-      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="works"><a (click)="scroll('worksPage')">Работы</a></li>
+      <li class="masters"><a (click)="scroll('mastersPage')">Мастера</a></li>
+      <li class="hairs"><a (click)="scroll('hairPalettePage')">Волосы</a></li>
+      <li class="prices"><a (click)="scroll('pricePage')">Цены</a></li>
+      <li class="how">
+        <a (click)="scroll('howWorkPage')">Как мы работаем</a>
+      </li>
+      <li class="reviews"><a (click)="scroll('reviewsPage')">Отзывы</a></li>
+      <li class="contacts"><a (click)="scroll('contactsPage')">Контакты</a></li>
     </nav>
     <div class="hamburger" (click)="openMenu()">
       <span class="top-line"></span>
@@ -24,13 +26,15 @@
       <span class="bottom-line"></span>
     </div>
     <nav class="nav-hamburger">
-      <li class="works"><a href="#">Работы</a></li>
-      <li class="masters"><a href="#">Мастера</a></li>
-      <li class="hairs"><a href="#">Волосы</a></li>
-      <li class="prices"><a href="#">Цены</a></li>
-      <li class="how"><a href="#">Как мы работаем</a></li>
-      <li class="reviews"><a href="#">Отзывы</a></li>
-      <li class="contacts"><a href="#">Контакты</a></li>
+      <li class="works"><a (click)="scroll('worksPage')">Работы</a></li>
+      <li class="masters"><a (click)="scroll('mastersPage')">Мастера</a></li>
+      <li class="hairs"><a (click)="scroll('hairPalettePage')">Волосы</a></li>
+      <li class="prices"><a (click)="scroll('pricePage')">Цены</a></li>
+      <li class="how">
+        <a (click)="scroll('howWorkPage')">Как мы работаем</a>
+      </li>
+      <li class="reviews"><a (click)="scroll('reviewsPage')">Отзывы</a></li>
+      <li class="contacts"><a (click)="scroll('contactsPage')">Контакты</a></li>
       <span class="line"></span>
       <p class="address">г. Харьков ул. Каразина, 1</p>
       <p class="p-number">0 (99) 685 57 00</p>

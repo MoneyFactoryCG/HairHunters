@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
   SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
+
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-hair-palette-carousel',
   templateUrl: './hair-palette-carousel.component.html',
   styleUrls: ['./hair-palette-carousel.component.scss']
 })
-export class HairPaletteCarouselComponent implements OnInit {
+export class HairPaletteCarouselComponent implements OnInit, AfterViewInit {
 
   config: SwiperConfigInterface = {
     pagination: {
@@ -28,8 +30,8 @@ export class HairPaletteCarouselComponent implements OnInit {
     freeModeMomentumVelocityRatio: 0.4,
     freeModeSticky: true,
     preloadImages: false,
-    lazy: false,
-    loop: true,
+    lazy: true,
+    loop: false,
     breakpoints: {
       690: {
         slidesPerView: 'auto',
@@ -42,98 +44,122 @@ export class HairPaletteCarouselComponent implements OnInit {
   slides = [
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/1.jpg`,
-      code: '18-HH'
+      code: '1B-HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/18-HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/2.jpg`,
-      code: '1HH'
+      code: '1HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/1HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/3.jpg`,
-      code: '2HH'
+      code: '2HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/2HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/4.jpg`,
-      code: '3HH'
+      code: '3HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/3HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/5.jpg`,
-      code: '4HH'
+      code: '4HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/4HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/6.jpg`,
-      code: '5HH'
+      code: '5HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/5HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/7.jpg`,
-      code: '6HH'
+      code: '6HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/6HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/8.jpg`,
-      code: '8HH'
+      code: '8HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/8HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/9.jpg`,
-      code: '10HH'
+      code: '10HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/10HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/10.jpg`,
-      code: '12HH'
+      code: '12HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/12HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/11.jpg`,
-      code: '14HH'
+      code: '14HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/14HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/12.jpg`,
-      code: '16HH'
+      code: '16HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/16HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/13.jpg`,
-      code: '18HH'
+      code: '18HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/18HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/14.jpg`,
-      code: '22HH'
+      code: '22HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/22HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/15.jpg`,
-      code: '24HH'
+      code: '24HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/24HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/16.jpg`,
-      code: '27HH'
+      code: '27HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/27HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/17.jpg`,
-      code: 'PlatHH'
+      code: '1001HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/PlatHH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/18.jpg`,
-      code: '60HH'
+      code: '60H-HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/60HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/19.jpg`,
-      code: '60H-HH'
+      code: '130HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/60H-HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/20.jpg`,
-      code: '613HH'
+      code: '135HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/613HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/21.jpg`,
-      code: '100HH'
+      code: '613HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/100HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/22.jpg`,
-      code: '130HH'
+      code: '60HH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/130HH.mp4'
     },
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/23.jpg`,
-      code: '135HH'
+      code: 'PlatHH',
+      video: '../../../assets/imgs/hair-palette-page/carousel/135HH.mp4'
     },
   ];
 
+  video;
 
   customProgressBar(current: number, total: number): string {
     const ratio: number = current / total;
@@ -155,9 +181,34 @@ export class HairPaletteCarouselComponent implements OnInit {
     return progressBarContainer;
   }
 
+  startVideo(index) {
+    const figure = $(".hair-palette-carousel .swiper-slide");
+    console.log($(figure[index]).find(".play-ico-desktop"));
+    $(figure[index]).find(".play-ico-desktop").css({
+      opacity: "0",
+      cursor: "auto"
+    })
+    this.video = figure.find("video");
+    this.video[index].play();
+  }
+
+  hideVideo(index) {
+    const figure = $(".hair-palette-carousel .swiper-slide");
+    $(figure[index]).find(".play-ico-desktop").css({
+      opacity: "1",
+      cursor: "pointer"
+    })
+    this.video = figure.find("video");
+    this.video[index].pause();
+  }
+
   constructor() {}
 
+  ngAfterViewInit() {
+  }
+
   ngOnInit() {
+
   }
 
 }

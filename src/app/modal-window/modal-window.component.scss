@@ -1,5 +1,6 @@
 .modal-container {
   position: fixed;
+  min-width: 375px;
   width: 100vw;
   height: 100vh;
   display: none;
@@ -9,7 +10,6 @@
   top: 0;
   left: 0;
   z-index: 20;
-  overflow-y: scroll;
   .out-close {
     z-index: 10;
     width: 100vw;
@@ -19,7 +19,7 @@
     top: 0;
   }
   .modal-window {
-    z-index: 11;
+    z-index: 21;
     position: absolute;
     transform: translateY(100%);
     opacity: 0;

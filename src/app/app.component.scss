@@ -1,3 +1,7 @@
+.app-container {
+  min-width: 375px;
+}
+
 app-modal-window {
   .container {
     border-radius: 4px;
@@ -69,27 +73,38 @@ app-modal-window {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   z-index: 10;
-  overflow-y: auto;
+  overflow:hidden;
+  overflow-y: scroll;
+  .out-close {
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
   .hair-palette-container {
     border-radius: 3px;
-    margin: 50px 0px;
+    margin: 50px auto;
     padding: 40px 30px;
     box-sizing: border-box;
     max-width: 1200px;
     min-height: 100%;
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: opacity 0.6s ease, transform 1s ease;
     opacity: 0;
     position: absolute;
-    top: 0;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,6 +185,75 @@ app-modal-window {
       app-button-modal-window {
         margin-top: 25px;
       }
+    }
+  }
+}
+
+.submit-modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  overflow-y: auto;
+  .submit-container {
+    display: flex;
+    transform: translateY(100%);
+    transition: opacity 0.6s ease, transform 1s ease;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 540px;
+    height: 224px;
+    font-family: montserrat, sans-serif;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    .success {
+      display: none;
+      flex-direction: column;
+      h1 {
+        font-weight: 600;
+        font-size: 22px;
+        color: #343434;
+        margin-bottom: 36px;
+        text-align: center;
+      }
+      .message {
+        font-size: 19px;
+        color: #343434;
+        text-align: center;
+      }
+    }
+    .failed {
+      display: none;
+      flex-direction: column;
+      h1 {
+        font-weight: 600;
+        font-size: 22px;
+        color: red;
+        margin-bottom: 36px;
+        text-align: center;
+      }
+      .message {
+        font-size: 19px;
+        color: #343434;
+        text-align: center;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
   }
 }
@@ -264,5 +348,163 @@ app-modal-window {
       }
     }
   }
+  .submit-modal {
+    .submit-container {
+      display: flex;
+      width: 455px;
+      height: 155px;
+      .success {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+      }
+      .failed {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 690px) {
+  app-modal-window {
+    min-width: 375px;
+    .container {
+      width: 315px;
+      height: 378px;
+      img {
+        display: none;
+        width: 272px;
+      }
+      .lable {
+        display: none;
+        bottom: 20px;
+        height: 74px;
+        .rectangle {
+          height: 74px;
+          padding: 0 10px;
+          .who {
+            font-size: 14px;
+          }
+          .name {
+            font-size: 18px;
+          }
+        }
+        .triangle {
+          border-bottom: 74px solid #fff;
+          border-right: 17px solid transparent;
+        }
+      }
+      .star {
+        right: calc(620px - 262px);
+      }
+      .form-container {
+        width: calc(620px - 272px);
+      }
+    }
+
+    .second-master-container {
+      img {
+        object-position: top left;
+      }
+    }
+  }
+
+  .hair-palette-modal {
+    min-width: 375px;
+    .hair-palette-container {
+      border-radius: 3px;
+      margin: 50px 0px;
+      padding: 60px 30px;
+      max-width: 345px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        min-width: 100%;
+      }
+      .close {
+        top: 10px;
+        right: 10px;
+      }
+      .hair-container {
+        .hair {
+          width: 130px;
+          height: 190px;
+          margin: 4px;
+          .lable {
+            top: 5px;
+            height: 20px;
+            .rectangle {
+              padding: 5px 10px;
+              .code {
+                font-size: 12px;
+                margin-top: -2px;
+              }
+            }
+            .triangle {
+              border-top: 20px solid #474747;
+              border-right: 10px solid transparent;
+            }
+          }
+        }
+      }
+      .free-consultation {
+        margin-top: 40px;
+        .text {
+          text-align: center;
+          font-size: 16px;
+        }
+        app-button-modal-window {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .submit-modal {
+    min-width: 375px;
+    .submit-container {
+      display: flex;
+      width: 315px;
+      height: 204px;
+      .success {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+      }
+      .failed {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}

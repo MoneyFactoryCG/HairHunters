@@ -1,21 +1,64 @@
-
 <div class="hair-palette-carousel">
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let slide of slides; index as i">
-        <img [src]="slide.img" alt="" />
+      <div class="swiper-slide" *ngFor="let slide of slides; index as i" (mouseleave)="hideVideo(i)" (click)="startVideo(i)">
+        <img [src]="slide.img" alt="" class="swiper-lazy"/>
         <div class="lable">
           <div class="rectangle">
-            <p class="code">{{slide.code}}</p>
+            <p class="code">{{ slide.code }}</p>
           </div>
           <div class="triangle"></div>
         </div>
+        <div class="play-ico-mobile">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="17" stroke="#474747" stroke-width="2" />
+            <path d="M30 18L12 28.3923L12 7.60769L30 18Z" fill="#474747" />
+          </svg>
+        </div>
+        <div class="play-ico-desktop" (click)="startVideo(i)">
+          <svg
+            width="149"
+            height="149"
+            viewBox="0 0 149 149"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M74.5 144C112.884 144 144 112.884 144 74.5C144 36.1162 112.884 5 74.5 5C36.1162 5 5 36.1162 5 74.5C5 112.884 36.1162 144 74.5 144ZM74.5 149C115.645 149 149 115.645 149 74.5C149 33.3548 115.645 0 74.5 0C33.3548 0 0 33.3548 0 74.5C0 115.645 33.3548 149 74.5 149Z"
+              fill="#FDFDFD"
+              fill-opacity="1"
+            />
+            <path
+              d="M124 74.5L49.75 117.368L49.75 31.6317L124 74.5Z"
+              fill="#FDFDFD"
+              fill-opacity="1"
+            />
+          </svg>
+        </div>
+        <video
+          class="swiper-lazy"
+          width="100%"
+          height="100%"
+          loop
+          muted
+        >
+          <source [src]="slide.video" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
   <div class="palette-swiper-pagination"></div>
   <div class="nav">
-      <div class="palette-swiper-button-prev"></div>
-      <div class="palette-swiper-button-next"></div>
-    </div>
+    <div class="palette-swiper-button-prev"></div>
+    <div class="palette-swiper-button-next"></div>
+  </div>
 </div>

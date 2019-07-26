@@ -118,3 +118,48 @@
     }
   }
 }
+
+@media screen and (max-width: 690px) { 
+  .how-work-page {
+    padding-top: 90px;
+    min-height: unset;
+    min-width: 375px;
+    .how-work-page-container {
+      max-width: 345px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      .row {
+        flex-direction: column;
+        .left-col {
+          margin-right: 0px;
+        }
+        .left-col,
+        .right-col {
+          width: 345px;
+          .step {
+            margin-bottom: 16px;
+            .num {
+              top: -10px;
+              font-size: 24px;
+            }
+            .text {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .free-consultation {
+        margin-top: 12px;
+        .text {
+          font-size: 16px;
+          letter-spacing: -0.03em;
+        }
+        app-button-modal-window {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

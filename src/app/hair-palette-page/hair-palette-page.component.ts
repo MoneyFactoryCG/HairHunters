@@ -13,15 +13,15 @@ export class HairPalettePageComponent implements OnInit {
 
   openWindow() {
     setTimeout(() => {
+      $('body').css({
+        overflow: 'hidden'
+      })
       $('.hair-palette-container').css({
         transform:'translateY(0)',
         opacity: "1"
       });
     }, 50)
     $('.' + this.windowId).fadeIn(300).css({display: 'flex'});
-    $('html').css({
-      overflow: 'hidden'
-    })
   }
 
   constructor() { }

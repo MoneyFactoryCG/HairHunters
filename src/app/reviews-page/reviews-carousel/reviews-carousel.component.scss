@@ -108,3 +108,38 @@
     }
   }
 }
+
+@media screen and (max-width: 690px) {
+  .reviews-carousel {
+    max-width: 345px;
+    .swiper-container {
+      height: 183px;
+      .swiper-slide {
+        width: 345px;
+        height: 183px;
+        border-radius: 3px;
+      }
+    }
+    .reviews-swiper-pagination {
+      bottom: -15px;
+      width: 80%;
+      margin-left: 10%;
+    }
+    .nav {
+      top: unset;
+      bottom: -33px;
+      .reviews-swiper-button-prev {
+        width: 21px;
+        height: 21px;
+        left: -4px;
+        top: -21px;
+      }
+      .reviews-swiper-button-next {
+        width: 21px;
+        height: 21px;
+        right: -4px;
+        top: -21px;
+      }
+    }
+  }
+}
