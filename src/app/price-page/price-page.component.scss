@@ -937,7 +937,7 @@
 
 @media screen and (max-width: 690px) {
   .price-page {
-    min-width: 375px;
+    // min-width: 375px;
     padding-bottom: 50px;
     padding-top: 30px;
     .price-container {
@@ -996,6 +996,7 @@
     .stock-container {
       margin-top: 50px;
       max-width: 100vw;
+      min-width: 375px;
       ::-webkit-scrollbar {
         width: 0;
         background: transparent;

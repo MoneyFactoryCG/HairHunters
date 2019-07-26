@@ -1,5 +1,7 @@
 .app-container {
-  min-width: 375px;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
 }
 
 app-modal-window {
@@ -382,7 +384,7 @@ app-modal-window {
 
 @media screen and (max-width: 690px) {
   app-modal-window {
-    min-width: 375px;
+    // min-width: 375px;
     .container {
       width: 315px;
       height: 378px;
@@ -425,7 +427,7 @@ app-modal-window {
   }
 
   .hair-palette-modal {
-    min-width: 375px;
+    // min-width: 375px;
     .hair-palette-container {
       border-radius: 3px;
       margin: 50px 0px;
@@ -477,7 +479,7 @@ app-modal-window {
   }
 
   .submit-modal {
-    min-width: 375px;
+    // min-width: 375px;
     .submit-container {
       display: flex;
       width: 315px;
@@ -507,4 +509,8 @@ app-modal-window {
       }
     }
   }
+}
+
+@media screen and (max-width: 374px) {
+
 }

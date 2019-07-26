@@ -200,10 +200,10 @@
 @media screen and (max-width: 690px) {
   .header-mask {
     height: 105px;
-    min-width: 375px;
+    // min-width: 375px;
   }
   .header {
-    min-width: 375px;
+    // min-width: 375px;
     height: 105px;
     z-index: 9;
     .top-row {
@@ -260,7 +260,7 @@
         list-style-type: none;
         position: fixed;
         overflow-y: auto;
-        height: calc(100vh - 64px);
+        height: calc(100% - 64px);
         background: #fff;
         min-width: 375px;
         width: 100vw;

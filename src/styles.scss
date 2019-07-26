@@ -11,7 +11,13 @@ video::-webkit-media-controls {
   display: none;
 }
 
+html {
+  position: relative;
+}
 body {
+  position: relative;
+  min-width: 375px;
+  overflow-x: hidden;
   // overflow-x: hidden;
   // overflow-y: scroll;
 }
