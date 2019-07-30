@@ -26,6 +26,19 @@ export class ButtonModalWindowComponent implements OnInit {
     })
   }
 
+  puls(event) {
+    console.log(event)
+    $(event.target.children[1]).css({
+      transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`
+    })
+  }
+
+  resetPuls(event) {
+    $(event.target.children[1]).css({
+      transform: `translate(0, 0)`
+    })
+  }
+
   constructor() {}
 
   ngOnInit() {}

@@ -44,11 +44,11 @@
           </svg>
         </div>
         <video
-          class="swiper-lazy"
           width="100%"
           height="100%"
           loop
-          muted
+          webkit-playsinline="true" 
+          playsinline="true"
         >
           <source [src]="slide.video" type="video/mp4"/>
           Your browser does not support the video tag.

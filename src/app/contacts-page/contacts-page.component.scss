@@ -202,3 +202,66 @@
   }
   
 }
+
+@media screen and (max-width: 375px) {
+  .contacts-page {
+    min-height: 280px;
+    margin-top: -50px;
+    // min-width: 375px;
+    overflow: hidden;
+    .contacts-page-container {
+      max-width: 304px;
+      .contacts {
+        z-index: 2;
+        margin-top: 30px;
+        float: left;
+        .title {
+          font-size: 18px;
+          margin-bottom: 26px;
+        }
+        .info {
+          font-size: 14px;
+          .adress {
+            margin-bottom: 10px;
+          }
+          .work-time {
+            margin-bottom: 10px;
+          }
+          .p-number {
+            margin-bottom: 10px;
+          }
+          .inst {
+            .inst-ico {
+              margin-right: 10px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      .map {
+        height: 280px;
+        min-width: 516px;
+        margin-left: -230px;
+        margin-top: 0px;
+        &:before {
+          width: 96px;
+          top: -111px;
+          min-height: calc(100% + 130px);
+          z-index: 1;
+        }
+        &:after{
+          width: 300px;
+          top: -111px;
+          min-height: calc(100% + 130px);
+        }
+        .img {
+          top: -111px;
+          min-height: calc(100% + 130px);
+          background-position: -130px 50px;
+        }
+      }
+    }
+  }
+  
+}

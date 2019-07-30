@@ -1,2 +1,27 @@
-<button class="button-modal-window" *ngIf="!isLink" (click)="openWindow()">{{text}}</button>
-<button class="button-link" *ngIf="isLink"><a href="{{link}}" target="_blank">{{text}}</a></button>
+<button
+  class="button-modal-window"
+  *ngIf="!isLink"
+  (click)="openWindow()"
+  (mousemove)="puls($event)"
+  (mouseout)="resetPuls($event)"
+>
+  <p class="">{{ text }}</p>
+  <div class="puls-wrapper">
+    <div class="puls"></div>
+    <div class="puls-2"></div>
+  </div>
+</button>
+<button
+  class="button-link"
+  *ngIf="isLink"
+  (mousemove)="puls($event)"
+  (mouseout)="resetPuls($event)"
+>
+  <a href="{{ link }}" target="_blank"
+    ><p class="">{{ text }}</p></a
+  >
+  <div class="puls-wrapper">
+    <div class="puls"></div>
+    <div class="puls-2"></div>
+  </div>
+</button>

@@ -7,20 +7,24 @@
     Your browser does not support SVG
   </object>
 
-  <div class="how-work-page-container">
+  <div class="how-work-page-container" id="how-work-page-container">
     <p class="title">Как мы работаем:</p>
     <div class="row">
       <div class="left-col">
         <div class="step" *ngFor="let step of leftText; index as i">
           <span class="num">{{ i + 1 }}</span>
           <p class="text" >{{step.text}}</p>
+          <span class="dot"></span>
         </div>
+        <span class="line"></span>
       </div>
       <div class="right-col">
         <div class="step" *ngFor="let step of rightText; index as i">
           <span class="num">{{ i + 7 }}</span>
           <p class="text" >{{step.text}}</p>
+          <span class="dot"></span>
         </div>
+        <span class="line"></span>
       </div>
     </div>
     <div class="free-consultation">

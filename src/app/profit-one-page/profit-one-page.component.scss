@@ -9,6 +9,7 @@
   align-items: center;
   padding-top: 250px;
   padding-bottom: 150px;
+  box-sizing: border-box;
   .bg {
     width: 110%;
     height: 100%;
@@ -182,11 +183,10 @@
 
 @media screen and (max-width: 690px) {
   .profit-one-page {
-    // min-width: 375px;
-    max-height: 2315px;
+    // max-height: 2315px;
     min-height: 1800px;
-    padding-top: 240px;
-    padding-bottom: 180px;
+    padding-top: 200px;
+    padding-bottom: 160px;
     margin-top: -100px;
     .bg {
       width: 110%;
@@ -255,6 +255,94 @@
     .free-consultation {
       margin-top: 30px;
       .text {
+        font-size: 16px;
+        letter-spacing: -0.03em;
+      }
+      app-button-modal-window {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .profit-one-page {
+    // max-height: 2315px;
+    min-height: 1800px;
+    padding-top: 160px;
+    padding-bottom: 110px;
+    margin-top: -100px;
+    .bg {
+      width: 110%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -5%;
+      z-index: 1;
+      object-fit: cover;
+      object-position: center -50%;
+      display: block;
+    }
+    .profit-one-page-container {
+      max-width: 304px;
+      .title {
+        margin-bottom: 20px;
+        font-size: 18px;
+        margin-left: 0;
+      }
+      .profit-card-container {
+        min-height: 100px;
+        margin-left: 0px;
+        .profit-card {
+          width: 304px;
+          height: auto;
+          margin: 0;
+          margin-bottom: 10px;
+          .cover {
+            height: 75px;
+            width: 134px;
+            object-fit: cover;
+            object-position: top right;
+            box-shadow: 43px 4px 4px rgba(0, 0, 0, 0.3);
+            float: right;
+          }
+          .lable {
+            top: 0;
+            .triangle {
+              border-bottom: 75px solid #fff;
+              border-right: 17px solid transparent;
+              box-shadow: none;
+            }
+            .rectangle {
+              height: 75px;
+              width: 200px;
+              p {
+                line-height: 18px;
+                margin-left: 10px;
+                margin-right: 5px;
+                font-size: 16px;
+              }
+            }
+          }
+          .text {
+            font-size: 13px;
+            margin-top: 10px;
+            padding: 0px 8px;
+            padding-top: 75px;
+            padding-left: 8px;
+            letter-spacing: -0.03em;
+            line-height: 19px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  
+    .free-consultation {
+      margin-top: 30px;
+      max-width: 304px;
+      .text {
+        text-align: center;
         font-size: 16px;
         letter-spacing: -0.03em;
       }

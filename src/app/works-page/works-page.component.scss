@@ -67,3 +67,28 @@
     }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .works-page {
+    // min-width: 375px;
+    align-items: flex-start;
+    height: 450px;
+    .bg {
+      position: absolute;
+      z-index: 1;
+      width: 110%;
+      left: -5%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+    }
+    .works-page-container {
+      margin-top: 30px;
+      max-width: 304px;
+      .title {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}

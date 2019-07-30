@@ -32,7 +32,7 @@ export class HeaderComponent implements OnInit {
     } else {
       $(".hamburger").removeClass("active");
       $(".nav-hamburger").css({
-        transform: "translateX(105%)"
+        transform: "translateX(100%)"
       });
       $("body").css({
         overflow: "auto"

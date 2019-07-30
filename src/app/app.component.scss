@@ -134,6 +134,8 @@ app-modal-window {
       .hair {
         width: 250px;
         height: 386px;
+        border-radius: 3px;
+        overflow: hidden;
         position: relative;
         border-radius: 3px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -251,11 +253,40 @@ app-modal-window {
         color: #343434;
         text-align: center;
       }
+      .contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 27px;
+        a {
+          text-decoration: none;
+          display: block;
+          margin-left: 4px;
+          cursor: pointer;
+        }
+        .number {
+          text-decoration: none;
+          color: #000000;
+          font-family: montserrat, sans-serif;
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 20px;
+          padding-bottom: 8px;
+          position: relative;
+          svg {
+            position: absolute;
+            left: -30px;
+            top: 0;
+          }
+        }
+      }
     }
     .close {
       position: absolute;
       top: 10px;
       right: 10px;
+      cursor: pointer;
     }
   }
 }
@@ -354,7 +385,7 @@ app-modal-window {
     .submit-container {
       display: flex;
       width: 455px;
-      height: 155px;
+      height: 200px;
       .success {
         h1 {
           font-size: 18px;
@@ -482,6 +513,163 @@ app-modal-window {
     // min-width: 375px;
     .submit-container {
       display: flex;
+      width: 304px;
+      height: 204px;
+      .success {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+      }
+      .failed {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 36px;
+        }
+        .message {
+          font-size: 14px;
+        }
+        .contacts {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10px;
+          margin-left: 27px;
+          a {
+            text-decoration: none;
+            display: block;
+            margin-left: 4px;
+          }
+          .number {
+            text-decoration: none;
+            color: #000000;
+            font-family: montserrat, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 20px;
+            padding-bottom: 8px;
+            position: relative;
+            svg {
+              position: absolute;
+              left: -30px;
+              top: 0;
+            }
+          }
+        }
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  app-modal-window {
+    // min-width: 375px;
+    .container {
+      width: 304px;
+      height: 378px;
+      img {
+        display: none;
+        width: 272px;
+      }
+      .lable {
+        display: none;
+        bottom: 20px;
+        height: 74px;
+        .rectangle {
+          height: 74px;
+          padding: 0 10px;
+          .who {
+            font-size: 14px;
+          }
+          .name {
+            font-size: 18px;
+          }
+        }
+        .triangle {
+          border-bottom: 74px solid #fff;
+          border-right: 17px solid transparent;
+        }
+      }
+      .star {
+        right: calc(620px - 262px);
+      }
+      .form-container {
+        width: calc(620px - 272px);
+      }
+    }
+
+    .second-master-container {
+      img {
+        object-position: top left;
+      }
+    }
+  }
+
+  .hair-palette-modal {
+    // min-width: 375px;
+    .hair-palette-container {
+      border-radius: 3px;
+      margin: 50px 0px;
+      padding: 60px 8px;
+      max-width: 304px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        min-width: 100%;
+      }
+      .close {
+        top: 10px;
+        right: 10px;
+      }
+      .hair-container {
+        width: 290px;
+        .hair {
+          width: 130px;
+          height: 190px;
+          margin: 4px;
+          .lable {
+            top: 5px;
+            height: 20px;
+            .rectangle {
+              padding: 5px 10px;
+              .code {
+                font-size: 12px;
+                margin-top: -2px;
+              }
+            }
+            .triangle {
+              border-top: 20px solid #474747;
+              border-right: 10px solid transparent;
+            }
+          }
+        }
+      }
+      .free-consultation {
+        margin-top: 40px;
+        .text {
+          text-align: center;
+          font-size: 16px;
+        }
+        app-button-modal-window {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .submit-modal {
+    // min-width: 375px;
+    .submit-container {
+      display: flex;
       width: 315px;
       height: 204px;
       .success {
@@ -501,6 +689,7 @@ app-modal-window {
         .message {
           font-size: 14px;
         }
+        
       }
       .close {
         position: absolute;
@@ -509,8 +698,4 @@ app-modal-window {
       }
     }
   }
-}
-
-@media screen and (max-width: 374px) {
-
 }

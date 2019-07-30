@@ -9,7 +9,6 @@ import * as $ from "jquery";
 })
 export class AppComponent implements AfterViewInit, OnInit {
   title = "HairHunters";
-
   hair = [
     {
       img: `../../../assets/imgs/hair-palette-page/carousel/1.jpg`,
@@ -127,6 +126,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       show: false
     }
   ];
+  isMobileDevice: boolean;
 
   closeWindow(windowId: string) {
     $("." + windowId + "-container").css({
@@ -147,7 +147,10 @@ export class AppComponent implements AfterViewInit, OnInit {
     }, 300);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
+    || screen.width <= 480;
+  }
 
   ngAfterViewInit() {}
 }

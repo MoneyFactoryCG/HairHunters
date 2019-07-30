@@ -85,6 +85,92 @@ export class ReviewsPageComponent implements OnInit {
   //   }
   // }
 
+  // handleClick(event) {
+
+  //   console.log(event)
+
+  //   if (event.target != undefined) {
+  //     if ((event.target.className === "need-know-header")) {
+  //       console.log("first")
+  //       if (
+  //         !$(
+  //           "." +
+  //             event.target.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).hasClass("toggle")
+  //       ) {
+  //         $(".block .arrow").removeClass("active");
+  //         $(".block .content").removeClass("toggle");
+  //         setTimeout(() => {
+  //           var offset = $(event.target.nextSibling.offsetParent).offset();
+  //           offset.top -= 100;
+  //           $("html, body").animate({
+  //             scrollTop: offset.top
+  //           });
+  //         }, 800);
+  //         $(
+  //           "." +
+  //             event.target.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).addClass("toggle");
+  //         $(
+  //           "." + event.target.nextSibling.offsetParent.classList[1] + " .arrow"
+  //         ).addClass("active");
+  //       } else {
+  //         $(
+  //           "." +
+  //             event.target.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).removeClass("toggle");
+  //         $(
+  //           "." + event.target.nextSibling.offsetParent.classList[1] + " .arrow"
+  //         ).removeClass("active");
+  //       }
+  //     }
+  //     if (event.target.offsetParent.className === "need-know-header") {
+  //       console.log("second")
+  //       if (
+  //         !$(
+  //           "." +
+  //             event.target.offsetParent.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).hasClass("toggle")
+  //       ) {
+  //         $(".block .arrow").removeClass("active");
+  //         $(".block .content").removeClass("toggle");
+  //         setTimeout(() => {
+  //           var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
+  //           offset.top -= 100;
+  //           $("html, body").animate({
+  //             scrollTop: offset.top
+  //           });
+  //         }, 800);
+  //         $(
+  //           "." +
+  //             event.target.offsetParent.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).addClass("toggle");
+  //         $(
+  //           "." +
+  //             event.target.offsetParent.nextSibling.offsetParent.classList[1] +
+  //             " .arrow"
+  //         ).addClass("active");
+  //       } else {
+  //         $(
+  //           "." +
+  //             event.target.offsetParent.nextSibling.offsetParent.classList[1] +
+  //             " .content"
+  //         ).removeClass("toggle");
+  //         $(
+  //           "." +
+  //             event.target.offsetParent.nextSibling.offsetParent.classList[1] +
+  //             " .arrow"
+  //         ).removeClass("active");
+  //       }
+  //     }
+  //   }
+  // }
+
   handleClick(event) {
 
     console.log(event)
@@ -101,13 +187,13 @@ export class ReviewsPageComponent implements OnInit {
         ) {
           $(".block .arrow").removeClass("active");
           $(".block .content").removeClass("toggle");
-          setTimeout(() => {
-            var offset = $(event.target.nextSibling.offsetParent).offset();
-            offset.top -= 100;
-            $("html, body").animate({
-              scrollTop: offset.top
-            });
-          }, 800);
+          // setTimeout(() => {
+          //   var offset = $(event.target.nextSibling.offsetParent).offset();
+          //   offset.top -= 100;
+          //   $("html, body").animate({
+          //     scrollTop: offset.top
+          //   });
+          // }, 800);
           $(
             "." +
               event.target.nextSibling.offsetParent.classList[1] +
@@ -138,13 +224,13 @@ export class ReviewsPageComponent implements OnInit {
         ) {
           $(".block .arrow").removeClass("active");
           $(".block .content").removeClass("toggle");
-          setTimeout(() => {
-            var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
-            offset.top -= 100;
-            $("html, body").animate({
-              scrollTop: offset.top
-            });
-          }, 800);
+          // setTimeout(() => {
+          //   var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
+          //   offset.top -= 100;
+          //   $("html, body").animate({
+          //     scrollTop: offset.top
+          //   });
+          // }, 800);
           $(
             "." +
               event.target.offsetParent.nextSibling.offsetParent.classList[1] +

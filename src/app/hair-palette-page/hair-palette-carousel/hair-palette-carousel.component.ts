@@ -37,6 +37,12 @@ export class HairPaletteCarouselComponent implements OnInit, AfterViewInit {
         slidesPerView: 'auto',
         freeMode: false,
         centeredSlides: true
+      },
+      375: {
+        slidesPerView: 'auto',
+        freeMode: false,
+        centeredSlides: true,
+        spaceBetween: 20
       }
     }
   };

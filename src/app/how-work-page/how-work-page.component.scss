@@ -27,16 +27,16 @@
       margin-bottom: 70px;
     }
     .row {
+      margin-left: 32px;
       display: flex;
-      .left-col {
-        margin-right: 70px;
-      }
       .left-col,
       .right-col {
         width: 510px;
+        position: relative;
         .step {
           position: relative;
           margin-bottom: 58px;
+          cursor: default;
           .num {
             z-index: 0;
             position: absolute;
@@ -54,6 +54,44 @@
             font-size: 16px;
             font-weight: 300;
           }
+          .dot {
+            position: absolute;
+            display: block;
+            left: -32px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #E8CBFF;
+            border-radius: 100px;
+            z-index: 2;
+            background: #fff;
+            transition: background 0.3s ease;
+          }
+          &:hover {
+            .dot {
+              background: #E8CBFF;
+            }
+            .text {
+              text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            }
+          }
+        }
+        .line {
+          width: 2px;
+          height: 85%;
+          position: absolute;
+          background: #E8CBFF;
+          left: -22px;
+          top: 5px;
+          display: block;
+        }
+      }
+      .left-col {
+        margin-right: 70px;
+      }
+      .right-col {
+        .line {
+          height: 70%;
         }
       }
     }
@@ -88,21 +126,41 @@
         margin-bottom: 40px;
       }
       .row {
-        .left-col {
-          margin-right: 20px;
-        }
+        flex-direction: column;
+        
         .left-col,
         .right-col {
-          width: 315px;
+          width: 649px;
           .step {
             margin-bottom: 40px;
+            max-width: 630px;
+            // &:hover {
+            //   .dot {
+            //     background: #E8CBFF;
+            //   }
+            //   .text {
+            //     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            //   }
+            // }
             .num {
               top: -17px;
               font-size: 30px;
             }
             .text {
               font-size: 14px;
+              letter-spacing: -0.03em;
             }
+          }
+          .line {
+            height: 100%;
+          }
+        }
+        .left-col {
+          margin-right: 20px;
+        }
+        .right-col {
+          .line {
+            height: 84%;
           }
         }
       }
@@ -138,7 +196,10 @@
         .left-col,
         .right-col {
           width: 345px;
+          height: 100%;
+          position: relative;
           .step {
+            max-width: 320px;
             margin-bottom: 16px;
             .num {
               top: -10px;
@@ -147,7 +208,28 @@
             .text {
               font-size: 14px;
             }
+            .dot {
+
+            }
           }
+          .line {
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            background: #E8CBFF;
+            left: -22px;
+            display: block;
+          }
+        }
+        .right-col {
+          .line {
+            width: 2px;
+            height: 90%;
+            position: absolute;
+            background: #E8CBFF;
+            left: -22px;
+            display: block;
+          } 
         }
       }
       .free-consultation {
@@ -155,6 +237,79 @@
         .text {
           font-size: 16px;
           letter-spacing: -0.03em;
+        }
+        app-button-modal-window {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) { 
+  .how-work-page {
+    padding-top: 90px;
+    min-height: unset;
+    // min-width: 375px;
+    .how-work-page-container {
+      max-width: 304px;
+      .title {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+      .row {
+        flex-direction: column;
+        .left-col {
+          margin-right: 0px;
+        }
+        .left-col,
+        .right-col {
+          width: 270px;
+          height: 100%;
+          position: relative;
+          .step {
+            max-width: 304px;
+            margin-bottom: 16px;
+            .num {
+              top: -10px;
+              font-size: 24px;
+            }
+            .text {
+              font-size: 13px;
+              letter-spacing: -0.03em;
+            }
+            .dot {
+              width: 14px;
+              height: 14px;
+              left: -30px;
+            }
+          }
+          .line {
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            background: #E8CBFF;
+            left: -22px;
+            display: block;
+          }
+        }
+        .right-col {
+          .line {
+            width: 2px;
+            height: 90%;
+            position: absolute;
+            background: #E8CBFF;
+            left: -22px;
+            display: block;
+          } 
+        }
+      }
+      .free-consultation {
+        margin-top: 12px;
+        .text {
+          font-size: 16px;
+          letter-spacing: -0.03em;
+          text-align: center;
         }
         app-button-modal-window {
           margin-top: 20px;

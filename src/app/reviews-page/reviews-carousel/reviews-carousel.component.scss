@@ -6,7 +6,7 @@
     border-radius: 3px;
     .swiper-slide {
       width: 540px;
-      height: 290px;
+      height: 321px;
       img {
         border-radius: 3px;
         display: block;
@@ -20,7 +20,7 @@
   .reviews-swiper-pagination {
     position: absolute;
     z-index: 2;
-    bottom: 10px;
+    bottom: 0px;
   }
   .nav {
     position: absolute;
@@ -55,7 +55,7 @@
 @media screen and (max-width: 1366px) {
   .reviews-carousel {
     .reviews-swiper-pagination {
-      bottom: 10px;
+      bottom: -24px;
       width: 90%;
       margin-left: 5%;
     }
@@ -64,11 +64,11 @@
       bottom: 0;
       .reviews-swiper-button-prev {
         left: -7px;
-        top: -21px;
+        top: 12px;
       }
       .reviews-swiper-button-next {
         right: -7px;
-        top: -21px;
+        top: 12px;
       }
     }
   }
@@ -116,6 +116,41 @@
       height: 183px;
       .swiper-slide {
         width: 345px;
+        height: 183px;
+        border-radius: 3px;
+      }
+    }
+    .reviews-swiper-pagination {
+      bottom: -15px;
+      width: 80%;
+      margin-left: 10%;
+    }
+    .nav {
+      top: unset;
+      bottom: -33px;
+      .reviews-swiper-button-prev {
+        width: 21px;
+        height: 21px;
+        left: -4px;
+        top: -21px;
+      }
+      .reviews-swiper-button-next {
+        width: 21px;
+        height: 21px;
+        right: -4px;
+        top: -21px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .reviews-carousel {
+    max-width: 304px;
+    .swiper-container {
+      height: 183px;
+      .swiper-slide {
+        width: 304px;
         height: 183px;
         border-radius: 3px;
       }
