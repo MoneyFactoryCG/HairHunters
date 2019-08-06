@@ -36,7 +36,48 @@ export class ReviewsCarouselComponent implements OnInit {
     }
   };
 
-  slides = [];
+  slides = [
+    {
+      img: 'assets/imgs/reviews-page/1.png',
+      alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/reviews-page/2.png',
+      alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/reviews-page/3.png',
+      alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/reviews-page/4.png',
+      alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/reviews-page/5.png',
+      alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/reviews-page/6.png',
+      alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/reviews-page/7.png',
+      alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/reviews-page/8.png',
+      alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/reviews-page/9.png',
+      alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/reviews-page/10.png',
+      alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    }
+  ];
 
   customProgressBar(current: number, total: number): string {
     const ratio: number = current / total;
@@ -61,8 +102,8 @@ export class ReviewsCarouselComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    for (let i = 1; i <= 10; i++) {
-      this.slides.push({ img: `../../../assets/imgs/reviews-page/${i}.png` });
-    }
+    // for (let i = 1; i <= 10; i++) {
+    //   this.slides.push({ img: `assets/imgs/reviews-page/${i}.png` });
+    // }
   }
 }

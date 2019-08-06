@@ -47,121 +47,145 @@ export class HairPaletteCarouselComponent implements OnInit, AfterViewInit {
     }
   };
 
+  // ../../../
   slides = [
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/1.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/1.jpg`,
       code: '#1B',
-      video: '../../../assets/imgs/hair-palette-page/carousel/1B.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/1B.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/2.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/2.jpg`,
       code: '#1',
-      video: '../../../assets/imgs/hair-palette-page/carousel/1.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/1.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/3.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/3.jpg`,
       code: '#2',
-      video: '../../../assets/imgs/hair-palette-page/carousel/2.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/2.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/4.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/4.jpg`,
       code: '#3',
-      video: '../../../assets/imgs/hair-palette-page/carousel/3.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/3.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/5.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/5.jpg`,
       code: '#4',
-      video: '../../../assets/imgs/hair-palette-page/carousel/4.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/4.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/6.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/6.jpg`,
       code: '#5',
-      video: '../../../assets/imgs/hair-palette-page/carousel/5.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/5.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/7.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/7.jpg`,
       code: '#6',
-      video: '../../../assets/imgs/hair-palette-page/carousel/6.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/6.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/8.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/8.jpg`,
       code: '#8',
-      video: '../../../assets/imgs/hair-palette-page/carousel/8.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/8.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/9.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/9.jpg`,
       code: '#10',
-      video: '../../../assets/imgs/hair-palette-page/carousel/10.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/10.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/10.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/10.jpg`,
       code: '#12',
-      video: '../../../assets/imgs/hair-palette-page/carousel/12.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/12.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/11.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/11.jpg`,
       code: '#14',
-      video: '../../../assets/imgs/hair-palette-page/carousel/14.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/14.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/12.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/12.jpg`,
       code: '#16',
-      video: '../../../assets/imgs/hair-palette-page/carousel/16.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/16.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/13.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/13.jpg`,
       code: '#18',
-      video: '../../../assets/imgs/hair-palette-page/carousel/18.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/18.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/14.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/14.jpg`,
       code: '#22',
-      video: '../../../assets/imgs/hair-palette-page/carousel/22.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/22.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/15.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/15.jpg`,
       code: '#24',
-      video: '../../../assets/imgs/hair-palette-page/carousel/24.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/24.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/16.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/16.jpg`,
       code: '#27',
-      video: '../../../assets/imgs/hair-palette-page/carousel/27.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/27.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/17.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/17.jpg`,
       code: '#1001',
-      video: '../../../assets/imgs/hair-palette-page/carousel/1001.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/1001.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/18.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/18.jpg`,
       code: '#60H',
-      video: '../../../assets/imgs/hair-palette-page/carousel/60H.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/60H.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/19.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/19.jpg`,
       code: '#130',
-      video: '../../../assets/imgs/hair-palette-page/carousel/130.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/130.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/20.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/20.jpg`,
       code: '#135',
-      video: '../../../assets/imgs/hair-palette-page/carousel/135.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/135.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/21.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/21.jpg`,
       code: '#613',
-      video: '../../../assets/imgs/hair-palette-page/carousel/613.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/613.mp4',
+      alt: "Натуральные южнорусские волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/22.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/22.jpg`,
       code: '#60',
-      video: '../../../assets/imgs/hair-palette-page/carousel/60.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/60.mp4',
+      alt: "Интернет магазин натуральных славянских волос для наращивания в срезе"
     },
     {
-      img: `../../../assets/imgs/hair-palette-page/carousel/23.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/23.jpg`,
       code: '#Plat',
-      video: '../../../assets/imgs/hair-palette-page/carousel/Plat.mp4'
+      video: 'assets/imgs/hair-palette-page/carousel/Plat.mp4',
+      alt: "Натуральные славянские волос для наращивания в срезе"
     },
   ];
 

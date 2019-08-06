@@ -2,7 +2,7 @@
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let slide of slides; index as i" (mouseleave)="hideVideo(i)" (click)="startVideo(i)">
-        <img [src]="slide.img" alt="" class="swiper-lazy"/>
+        <img [src]="slide.img" alt="{{slide.alt}}" class="swiper-lazy"/>
         <div class="lable">
           <div class="rectangle">
             <p class="code">{{ slide.code }}</p>

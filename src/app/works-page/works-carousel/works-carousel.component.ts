@@ -37,13 +37,54 @@ export class WorksCarouselComponent implements OnInit {
   @ViewChild(SwiperComponent, { static: false }) componentRef?: SwiperComponent;
   @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
 
-  slides = [];
+  slides = [
+    {
+      img: 'assets/imgs/works-page/1.JPG',
+      alt: 'Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/works-page/2.JPG',
+      alt: 'Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/works-page/3.JPG',
+      alt: 'Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/works-page/4.JPG',
+      alt: 'Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/works-page/5.JPG',
+      alt: 'Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/works-page/6.JPG',
+      alt: 'Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/works-page/7.JPG',
+      alt: 'Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    },
+    {
+      img: 'assets/imgs/works-page/8.JPG',
+      alt: 'Испанское холодное наращивание натуральных славянских волос на биогель'
+    },
+    {
+      img: 'assets/imgs/works-page/9.JPG',
+      alt: 'Студия по наращиванию натуральных славянских волос харьков'
+    },
+    {
+      img: 'assets/imgs/works-page/10.JPG',
+      alt: 'Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
+    }
+  ];
   
   constructor() {}
 
   ngOnInit() {
-    for (let i = 1; i <= 10; i++) {
-      this.slides.push({ img: `../../../assets/imgs/works-page/${i}.JPG` });
-    }
+    // for (let i = 1; i <= 10; i++) {
+    //   this.slides.push({ img: `assets/imgs/works-page/${i}.JPG` });
+    // }
   }
 }
