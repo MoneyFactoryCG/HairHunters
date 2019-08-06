@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -34,6 +34,7 @@ import { ModalWindowComponent } from "./modal-window/modal-window.component";
 import { ModalWindowFormComponent } from "./modal-window/modal-window-form/modal-window-form.component";
 import { NgxMaskModule } from "ngx-mask";
 import { MastersCarouselComponent } from "./masters-page/masters-carousel/masters-carousel.component";
+import { InViewportModule } from "@thisissoon/angular-inviewport";
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -63,7 +64,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ButtonModalWindowComponent,
     ModalWindowComponent,
     ModalWindowFormComponent,
-    MastersCarouselComponent
+    MastersCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +74,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    InViewportModule,
     NgxMaskModule.forRoot()
   ],
   providers: [

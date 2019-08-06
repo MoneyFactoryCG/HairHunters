@@ -1,5 +1,5 @@
-
-.button-modal-window, .button-link {
+.button-modal-window,
+.button-link {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #942fe5;
@@ -22,14 +22,6 @@
     display: block;
     pointer-events: none;
   }
-  &:hover {
-    // transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
-    // box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-    // background: #a75ee4;
-    // &:after {
-    //   animation: none;
-    // }
-  }  
   a {
     text-decoration: none;
     color: #fff;
@@ -38,7 +30,6 @@
     min-width: 200px;
     text-align: center;
     padding-top: 12px;
-    
   }
   .puls-wrapper {
     position: absolute;
@@ -49,16 +40,14 @@
     pointer-events: none;
     transform-origin: center center;
     transition: transform 0.3s linear;
-    .puls, .puls-2 {
+    .puls,
+    .puls-2 {
       pointer-events: none;
       position: absolute;
       border-radius: 100px;
-      background: radial-gradient(34.20px at 50% 50%, #942FE5 0%, #FFFFFF 100%);
-      // background: radial-gradient(19.91px at 50% 78.39%, #942FE5 0%, #FFFFFF 100%);
+      background: radial-gradient(34.2px at 50% 50%, #942fe5 0%, #ffffff 100%);
       display: block;
       margin: auto;
-      // border: 10px solid #fff;
-      // box-shadow: 0px 0px 17px rgba(255, 255, 255, 1);
       width: 34px;
       height: 34px;
       top: 0;
@@ -66,18 +55,15 @@
       right: 0;
       bottom: 0;
       z-index: 0;
-      filter: blur(0.1px);
+      filter: blur(0px);
       opacity: 0;
-      content: '';
-      transform: scale(0);
-      animation: bounce 2s ease infinite;
+      content: "";
+      animation: bounce-m 2.7s ease infinite;
     }
     .puls-2 {
-      animation: bounce 2s 200ms ease infinite;
+      animation: bounce-m 2.7s 300ms ease infinite;
     }
-
   }
-  
 }
 
 .button-link {
@@ -86,7 +72,8 @@
 }
 
 @media screen and (max-width: 1160px) {
-  .button-modal-window, .button-link {
+  .button-modal-window,
+  .button-link {
     padding: 0 20px;
     min-width: 137px;
     height: 34px;
@@ -110,16 +97,14 @@
       pointer-events: none;
       transform-origin: center center;
       transition: transform 0.3s linear;
-      .puls, .puls-2 {
+      .puls,
+      .puls-2 {
         pointer-events: none;
         position: absolute;
         border-radius: 100px;
-        background: radial-gradient(34.20px at 50% 50%, #942FE5 0%, #FFFFFF 100%);
-        // background: radial-gradient(19.91px at 50% 78.39%, #942FE5 0%, #FFFFFF 100%);
+        background: radial-gradient(34.2px at 50% 50%, #942fe5 0%, #ffffff 100%);
         display: block;
         margin: auto;
-        // border: 10px solid #fff;
-        // box-shadow: 0px 0px 17px rgba(255, 255, 255, 1);
         width: 24px;
         height: 24px;
         top: 0;
@@ -127,16 +112,15 @@
         right: 0;
         bottom: 0;
         z-index: 0;
-        filter: blur(0.1px);
+        filter: blur(0px);
         opacity: 0;
-        content: '';
+        content: "";
         transform: scale(0);
-        animation: bounce 2.5s ease infinite;
+        animation: bounce-m 2.5s ease infinite;
       }
       .puls-2 {
-        animation: bounce 2.5s 200ms ease infinite;
+        animation: bounce-m 2.5s 200ms ease infinite;
       }
-  
     }
   }
 }
@@ -153,5 +137,20 @@
   100% {
     opacity: 0;
     transform: scale(12);
+  }
+}
+
+@keyframes bounce-m {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(8);
   }
 }

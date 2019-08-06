@@ -56,7 +56,7 @@ export class ModalWindowFormComponent implements OnInit {
 
   openWindow(isSuccess: boolean) {
     setTimeout(() => {
-      $("html").css({
+      $("body").css({
         overflow: "hidden"
       });
       $(".submit-container").css({

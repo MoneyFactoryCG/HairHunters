@@ -162,9 +162,9 @@ export class StockCardComponent implements OnInit, AfterViewInit {
         clearInterval(timeinterval);
       }
     };
-
+    let timeinterval;
     updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
+    timeinterval = setInterval(updateClock, 1000);
   }
 
   ngAfterViewInit() {

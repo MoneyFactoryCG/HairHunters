@@ -61,7 +61,7 @@ export class ReviewsCarouselComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    for (let i = 1; i <= 17; i++) {
+    for (let i = 1; i <= 10; i++) {
       this.slides.push({ img: `../../../assets/imgs/reviews-page/${i}.png` });
     }
   }

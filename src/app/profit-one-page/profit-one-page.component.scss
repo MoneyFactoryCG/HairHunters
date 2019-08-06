@@ -15,9 +15,12 @@
     height: 100%;
     position: absolute;
     top: 0;
+    box-sizing: border-box;
     left: -5%;
     z-index: 1;
+    background: url(../../assets/imgs/profit-one-page/bg2.svg) no-repeat;
     //object-fit: fill;
+    background-size: 100% 100%;
     display: block;
   }
   .profit-one-page-container {
@@ -185,8 +188,8 @@
   .profit-one-page {
     // max-height: 2315px;
     min-height: 1800px;
-    padding-top: 200px;
-    padding-bottom: 160px;
+    padding-top: 150px;
+    padding-bottom: 120px;
     margin-top: -100px;
     .bg {
       width: 110%;
@@ -195,8 +198,9 @@
       top: 0;
       left: -5%;
       z-index: 1;
-      object-fit: cover;
-      object-position: center -50%;
+      background: url(../../assets/imgs/profit-one-page/bg-m.svg) no-repeat;
+      background-size: 300% 100%;
+      background-position: 60% 0%;
       display: block;
     }
     .profit-one-page-container {

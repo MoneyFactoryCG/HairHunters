@@ -12,6 +12,8 @@ export class PricePageComponent implements OnInit, AfterViewInit {
 
   isStock: boolean = true;
   stockCount = 0;
+  isDesktop = true;
+
 
   checkStocks() {
     for (let i = 0; i < this.childQuery.length; i++) {
@@ -38,6 +40,11 @@ export class PricePageComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.isStock = this.checkStocks();
     this.countStocks();
+    if (window.innerWidth > 690) {
+      this.isDesktop = true;
+    } else {
+      this.isDesktop = false;
+    }
   }
   
 

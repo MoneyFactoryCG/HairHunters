@@ -28,8 +28,16 @@
           Польша, Румыния, Франция,  Турция, Грузия, Израиль.
         </p>
       </div>
-      <div class="video">
-        
+      <div class="video" snInViewport (inViewportChange)="onInViewportChange($event)">
+        <video
+          src="../../assets/imgs/our-hairs-page/1.mp4"
+          id="videoour"
+          loop
+          autoplay
+          muted="muted"
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>

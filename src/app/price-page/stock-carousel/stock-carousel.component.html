@@ -1,10 +1,204 @@
-<div class="stock-carousel">
+<div class="stock-carousel"  *ngIf="isStocks">
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        
+      <div class="swiper-slide" *ngIf="isStock[0]">
+        <!-- Без цены -->
+        <app-stock-card
+          #stock
+          deadline="2019-08-18"
+          cookieDeadline="0"
+          counterId="counter1"
+        >
+          <div class="stock-card without-price">
+            <div class="cover">
+              <img src="" alt="" />
+            </div>
+            <div class="stock-info">
+              <div class="info">
+                <p class="title">
+                  Закажите<br />от 3х хвостов<br />по оптовой цене,<br />без
+                  предоплаты!
+                </p>
+              </div>
+              <div class="counter-container">
+                <div class="counter" id="counter1">
+                  <div class="wrapper" id="days">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="days"></span>
+                    <p class="lable">День</p>
+                  </div>
+                  <div class="wrapper" id="hours">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="hours"></span>
+                    <p class="lable">Часы</p>
+                  </div>
+                  <div class="wrapper" id="minutes">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="minutes"></span>
+                    <p class="lable">Мин.</p>
+                  </div>
+                </div>
+                <app-button-modal-window
+                  text="Заказать"
+                  windowId="stock-1-modal"
+                ></app-button-modal-window>
+              </div>
+            </div>
+          </div>
+        </app-stock-card>
+      </div>
+      <div class="swiper-slide" *ngIf="isStock[1]">
+        <!-- С ценой -->
+        <app-stock-card
+          #stock
+          deadline="0"
+          cookieDeadline="2"
+          counterId="counter2"
+        >
+          <div class="stock-card with-price">
+            <div class="cover">
+              <img src="" alt="" />
+              <div class="lable">
+                <div class="triangle"></div>
+                <div class="rectangle">
+                  <p class="text">Наращивание волос</p>
+                </div>
+              </div>
+            </div>
+            <div class="stock-info">
+              <div class="info">
+                <p class="title">Мастер категории<br />Стандарт+</p>
+                <div class="price">
+                  <p class="old-price">
+                    <span class="line"></span>1000 <span class="grn">грн</span>
+                  </p>
+                  <p class="new-price">800<span class="grn"> грн</span></p>
+                </div>
+              </div>
+              <div class="counter-container">
+                <div class="counter" id="counter2">
+                  <div class="wrapper" id="days">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="days"></span>
+                    <p class="lable">День</p>
+                  </div>
+                  <div class="wrapper" id="hours">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="hours"></span>
+                    <p class="lable">Часы</p>
+                  </div>
+                  <div class="wrapper" id="minutes">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="minutes"></span>
+                    <p class="lable">Мин.</p>
+                  </div>
+                </div>
+                <app-button-modal-window
+                  text="Записаться"
+                  windowId="stock-2-modal"
+                ></app-button-modal-window>
+              </div>
+            </div>
+          </div>
+        </app-stock-card>
+      </div>
+      <div class="swiper-slide" *ngIf="isStock[2]">
+        <!-- сертификат -->
+        <app-stock-card
+          #stock
+          deadline="0"
+          cookieDeadline="2"
+          counterId="counter3"
+        >
+          <div class="stock-card certificate">
+            <div class="cover">
+              <img src="" alt="" />
+              <div class="lable">
+                <div class="triangle"></div>
+                <div class="rectangle">
+                  <p class="text">Получи сертификат</p>
+                </div>
+              </div>
+            </div>
+            <div class="stock-info">
+              <div class="info">
+                <span class="sale">50%</span>
+                <p class="title">скидка на<br />наращивание волос</p>
+              </div>
+              <div class="counter-container">
+                <div class="counter" id="counter3">
+                  <div class="wrapper" id="days">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="days"></span>
+                    <p class="lable">День</p>
+                  </div>
+                  <div class="wrapper" id="hours">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="hours"></span>
+                    <p class="lable">Часы</p>
+                  </div>
+                  <div class="wrapper" id="minutes">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="minutes"></span>
+                    <p class="lable">Мин.</p>
+                  </div>
+                </div>
+                <app-button-modal-window
+                  text="Получить"
+                  isLink="true"
+                  link="https://wep.wf/k2g1if"
+                ></app-button-modal-window>
+              </div>
+            </div>
+          </div>
+        </app-stock-card>
       </div>
     </div>
-      <div class="swiper-pagination"></div>
   </div>
+  <div class="stock-swiper-pagination"></div>
 </div>
