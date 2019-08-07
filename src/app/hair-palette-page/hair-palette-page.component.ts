@@ -14,7 +14,7 @@ export class HairPalettePageComponent implements OnInit {
   openWindow() {
     setTimeout(() => {
       $('body').css({
-        overflow: 'hidden'
+        overflow: 'hidden',
       })
       $('.hair-palette-container').css({
         transform:'translateY(0)',

@@ -25,8 +25,8 @@ export class HeaderComponent implements OnInit {
       $(".nav-hamburger").css({
         transform: "translateX(0)"
       });
-      $('body').css({
-        overflow: "hidden"
+      $('body,html').css({
+        overflow: "hidden",
       });
       this.isOpen = true;
     } else {
@@ -34,8 +34,8 @@ export class HeaderComponent implements OnInit {
       $(".nav-hamburger").css({
         transform: "translateX(100%)"
       });
-      $("body").css({
-        overflow: "auto"
+      $("body,html").css({
+        overflow: "auto",
       });
       this.isOpen = false;
     }

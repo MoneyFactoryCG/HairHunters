@@ -128,6 +128,12 @@ export class AppComponent implements AfterViewInit, OnInit {
   ];
   isMobileDevice: boolean;
 
+  constructor() {
+    $(window).bind("load", function() {  
+      $('video').load();
+    }); 
+  }
+
   closeWindow(windowId: string) {
     $("." + windowId + "-container").css({
       transform: "translateY(100%)",
@@ -136,7 +142,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     setTimeout(() => {
       $("." + windowId + "-modal").fadeOut(300);
       $("body").css({
-        overflow: "auto"
+        overflow: "auto",
       });
       $('.submit-container .success').css({
         display: 'none'

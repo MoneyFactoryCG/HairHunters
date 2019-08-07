@@ -26,6 +26,7 @@ export class WorksCarouselComponent implements OnInit {
     slidesPerView: 3,
     loop: true,
     spaceBetween: 20,
+    lazy: true,
     breakpoints: {
       690: {
         slidesPerView: 1,
