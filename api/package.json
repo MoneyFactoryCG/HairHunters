@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node index.js\" \"/etc/init.d/nginx restart\""
+    "start": "concurrently \"node index.js\" \"/etc/init.d/nginx stop\""
   },
   "author": "",
   "license": "ISC",
