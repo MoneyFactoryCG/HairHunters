@@ -1,9 +1,9 @@
 <div class="stock-carousel"  *ngIf="isStocks">
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngIf="isStock[0]">
+      <!-- <div class="swiper-slide" *ngIf="isStock[0]"> -->
         <!-- Без цены -->
-        <app-stock-card
+        <!-- <app-stock-card
           #stock
           deadline="2019-08-18"
           cookieDeadline="0"
@@ -60,11 +60,11 @@
               </div>
             </div>
           </div>
-        </app-stock-card>
-      </div>
-      <div class="swiper-slide" *ngIf="isStock[1]">
+        </app-stock-card> -->
+      <!-- </div> -->
+      <!-- <div class="swiper-slide" *ngIf="isStock[1]"> -->
         <!-- С ценой -->
-        <app-stock-card
+        <!-- <app-stock-card
           #stock
           deadline="0"
           cookieDeadline="2"
@@ -130,19 +130,19 @@
               </div>
             </div>
           </div>
-        </app-stock-card>
-      </div>
-      <div class="swiper-slide" *ngIf="isStock[2]">
+        </app-stock-card> -->
+      <!-- </div> -->
+      <div class="swiper-slide" *ngIf="isStock[0]">
         <!-- сертификат -->
         <app-stock-card
           #stock
-          deadline="0"
-          cookieDeadline="2"
+          deadline="2019-08-31"
+          cookieDeadline="0"
           counterId="counter3"
         >
           <div class="stock-card certificate">
             <div class="cover">
-              <img src="" alt="" />
+              <img src="assets/imgs/stocks/s1.jpg" alt="" />
               <div class="lable">
                 <div class="triangle"></div>
                 <div class="rectangle">
