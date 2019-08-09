@@ -21,7 +21,7 @@
     position: relative;
     z-index: 2;
     .title {
-      font-family: montserrat, sans-serif;
+      // font-family: montserrat, sans-serif;
       font-size: 36px;
       font-weight: 600;
       margin-bottom: 70px;
@@ -42,7 +42,7 @@
             position: absolute;
             top: -30px;
             left: 0;
-            font-family: montserrat, sans-serif;
+            // font-family: montserrat, sans-serif;
             font-size: 48px;
             font-weight: 600;
             color: #e8cbff;
@@ -50,7 +50,7 @@
           .text {
             position: relative;
             z-index: 1;
-            font-family: montserrat, sans-serif;
+            // font-family: montserrat, sans-serif;
             font-size: 16px;
             font-weight: 300;
           }
@@ -103,7 +103,7 @@
       justify-content: center;
       align-items: center;
       .text {
-        font-family: montserrat, sans-serif;
+        // font-family: montserrat, sans-serif;
         font-size: 24px;
         font-weight: 600;
         color: #000;

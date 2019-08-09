@@ -1,6 +1,6 @@
 const telegram = require("telegram-bot-api");
 const errorHandler = require('../utils/errorHandler');
-
+//653560938:AAFlZpHrWkRDrzZu89YeBrhRHK80c8olqp
 const api = new telegram({
   token: "877996443:AAGKM5wRaj22J9FLK8-obd_IIBaDSfFgDq0"
 });
@@ -30,7 +30,7 @@ module.exports.sendMessage = async (req, res) => {
 
   api
     .sendMessage({
-      chat_id: "406019468",
+      chat_id: "-289363401",
       text: text,
       parse_mode: "HTML"
     })
@@ -40,6 +40,7 @@ module.exports.sendMessage = async (req, res) => {
       })
     })
     .catch(err => {
+      console.log(err)
       errorHandler(res, err);
     });
 };

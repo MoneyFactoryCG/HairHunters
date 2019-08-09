@@ -9,6 +9,7 @@ export class ModalWindowFormService {
   constructor(private http: HttpClient) {}
 
   sendMessage(title: string, name: string, phoneNumber: string) {
+    console.log(title)
     return this.http.post(
       environment.api + "/api/telegramNotifications/sendMessage",
       {

@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from "@angular/core";
+import { Component, OnInit, HostListener, Input } from "@angular/core";
 
 import * as $ from "jquery";
 
@@ -9,6 +9,8 @@ import * as $ from "jquery";
 })
 export class HeaderComponent implements OnInit {
   isOpen: boolean = false;
+
+  @Input() isAgreement = false;
 
   @HostListener("window:scroll", ["$event"])
   fixedHeader() {
@@ -55,7 +57,10 @@ export class HeaderComponent implements OnInit {
     this.isOpen = false;
   }
 
-  constructor() {}
+  constructor() {
+    
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

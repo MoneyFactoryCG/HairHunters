@@ -24,7 +24,7 @@
     margin: 11px 0;
     margin-bottom: 0;
     .title {
-      font-family: montserrat, sans-serif;
+      // font-family: montserrat, sans-serif;
       font-size: 27px;
       font-weight: 500;
       color: #333;
@@ -39,6 +39,7 @@
     width: 100%;
     min-height: 77px;
     .logo > img {
+      cursor: pointer;
       width: 260px;
       height: auto;
     }
@@ -46,7 +47,7 @@
       display: inline;
       padding: 0 13px;
       a {
-        font-family: montserrat, sans-serif;
+        // font-family: montserrat, sans-serif;
         font-weight: normal;
         font-size: 20px;
         text-decoration: none;
@@ -62,6 +63,9 @@
     }
     .nav-hamburger {
       display: none;
+    }
+    &.agreement {
+      justify-content: center;
     }
   }
   &.fixed {
@@ -163,7 +167,7 @@
             padding: 8px 0;
             a {
               cursor: pointer;
-              font-family: montserrat, sans-serif;
+              // font-family: montserrat, sans-serif;
               font-weight: normal;
               font-size: 24px;
               text-decoration: none;
@@ -182,7 +186,7 @@
             margin-bottom: 45px;
           }
           .address, .p-number {
-            font-family: montserrat, sans-serif;
+            // font-family: montserrat, sans-serif;
             font-size: 24px;
             font-weight: 500;
             color: #333;
@@ -295,7 +299,7 @@
             padding: 8px 0;
             a {
               cursor: pointer;
-              font-family: montserrat, sans-serif;
+              // font-family: montserrat, sans-serif;
               font-weight: normal;
               font-size: 20px;
               text-decoration: none;
@@ -314,7 +318,7 @@
             margin-bottom: 35px;
           }
           .address, .p-number {
-            font-family: montserrat, sans-serif;
+            // font-family: montserrat, sans-serif;
             font-size: 20px;
             font-weight: 500;
             color: #333;
@@ -424,7 +428,7 @@
             padding: 8px 0;
             a {
               cursor: pointer;
-              font-family: montserrat, sans-serif;
+              // font-family: montserrat, sans-serif;
               font-weight: normal;
               font-size: 20px;
               text-decoration: none;
@@ -443,7 +447,7 @@
             margin-bottom: 35px;
           }
           .address, .p-number {
-            font-family: montserrat, sans-serif;
+            // font-family: montserrat, sans-serif;
             font-size: 20px;
             font-weight: 500;
             color: #333;

@@ -3,10 +3,9 @@ import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
 
+import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { WorksPageComponent } from "./works-page/works-page.component";
 import { MastersPageComponent } from "./masters-page/masters-page.component";
@@ -24,17 +23,20 @@ import { WorksCarouselComponent } from "./works-page/works-carousel/works-carous
 import { ContactsPageComponent } from "./contacts-page/contacts-page.component";
 import { FooterComponent } from "./footer/footer.component";
 import { StockCardComponent } from "./price-page/stock-card/stock-card.component";
+import { ButtonModalWindowComponent } from "./button-modal-window/button-modal-window.component";
+import { ModalWindowComponent } from "./modal-window/modal-window.component";
+import { ModalWindowFormComponent } from "./modal-window/modal-window-form/modal-window-form.component";
+import { MainPageComponent } from './main-page/main-page.component';
+import { MastersCarouselComponent } from "./masters-page/masters-carousel/masters-carousel.component";
 
 import { SwiperModule } from "ngx-swiper-wrapper";
 import { SWIPER_CONFIG } from "ngx-swiper-wrapper";
 import { SwiperConfigInterface } from "ngx-swiper-wrapper";
 import { CookieService } from "ngx-cookie-service";
-import { ButtonModalWindowComponent } from "./button-modal-window/button-modal-window.component";
-import { ModalWindowComponent } from "./modal-window/modal-window.component";
-import { ModalWindowFormComponent } from "./modal-window/modal-window-form/modal-window-form.component";
 import { NgxMaskModule } from "ngx-mask";
-import { MastersCarouselComponent } from "./masters-page/masters-carousel/masters-carousel.component";
 import { InViewportModule } from "@thisissoon/angular-inviewport";
+import { AgreementPageComponent } from './agreement-page/agreement-page.component';
+import { CookiesPageComponent } from './cookies-page/cookies-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -65,6 +67,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalWindowComponent,
     ModalWindowFormComponent,
     MastersCarouselComponent,
+    MainPageComponent,
+    AgreementPageComponent,
+    CookiesPageComponent,
   ],
   imports: [
     BrowserModule,

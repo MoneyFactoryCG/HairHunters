@@ -129,9 +129,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   isMobileDevice: boolean;
 
   constructor() {
-    $(window).bind("load", function() {  
-      $('video').load();
-    }); 
+    
   }
 
   closeWindow(windowId: string) {
@@ -153,10 +151,23 @@ export class AppComponent implements AfterViewInit, OnInit {
     }, 300);
   }
 
-  ngOnInit() {
-    this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
-    || screen.width <= 480;
+  closeCookies() {
+    $('.cookies-modal').css({
+      transform: 'translateY(150%)'
+    })
   }
 
-  ngAfterViewInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      $('.cookies-modal').css({
+        transform: 'translateY(0)'
+      })
+    }, 2000); 
+    this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
+    || screen.width <= 480;
+    
+  }
+
+  ngAfterViewInit() {
+  }
 }

@@ -38,43 +38,43 @@ export class ReviewsCarouselComponent implements OnInit {
 
   slides = [
     {
-      img: 'assets/imgs/reviews-page/1.png',
+      img: 'assets/imgs/reviews-page/1.jpeg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/2.png',
+      img: 'assets/imgs/reviews-page/2.jpeg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/3.png',
+      img: 'assets/imgs/reviews-page/3.jpeg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/4.png',
+      img: 'assets/imgs/reviews-page/4.jpeg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/5.png',
+      img: 'assets/imgs/reviews-page/5.jpeg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/6.png',
+      img: 'assets/imgs/reviews-page/6.jpeg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/7.png',
+      img: 'assets/imgs/reviews-page/7.jpeg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/8.png',
+      img: 'assets/imgs/reviews-page/8.jpeg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/9.png',
+      img: 'assets/imgs/reviews-page/9.jpeg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/10.png',
+      img: 'assets/imgs/reviews-page/10.jpeg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     }
   ];
@@ -102,8 +102,6 @@ export class ReviewsCarouselComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // for (let i = 1; i <= 10; i++) {
-    //   this.slides.push({ img: `assets/imgs/reviews-page/${i}.png` });
-    // }
+
   }
 }

@@ -5,7 +5,14 @@
       Студия по наращиванию и продаже натуральных волос №1 в г. Харькове
     </h1>
   </div>
-  <div class="bottom-row">
+
+  <div class="bottom-row agreement" *ngIf="isAgreement">
+    <span routerLink="" class="logo">
+      <img src="assets/imgs/logo.png" alt="салон красоты" />
+    </span>
+  </div>
+
+  <div class="bottom-row" *ngIf="!isAgreement">
     <span class="logo">
       <img src="assets/imgs/logo.png" alt="салон красоты" />
     </span>
