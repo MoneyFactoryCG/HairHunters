@@ -8,7 +8,7 @@
     <div class="title">Почему мы:</div>
     <div class="profit-card-container">
       <div class="profit-card" *ngFor="let profit of profits">
-        <img [src]="profit.img" class="icon"/>
+        <img [src]="profit.img" class="icon" alt="icon"/>
         <p class="text" [innerHTML]="profit.text"></p>
       </div>
     </div>
