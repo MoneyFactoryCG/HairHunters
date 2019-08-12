@@ -162,11 +162,14 @@ export class AppComponent implements AfterViewInit, OnInit {
       $('.cookies-modal').css({
         transform: 'translateY(0)'
       })
-    }, 2000); 
+    }, 3500); 
     this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
     || screen.width <= 480;
   }
 
   ngAfterViewInit() {
+    setTimeout(() => {
+      $(".app-loading").fadeOut()
+    }, 1500);
   }
 }
