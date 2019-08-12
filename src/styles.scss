@@ -37,6 +37,7 @@ body {
 .works-swiper-pagination .swiper-pagination-bullet {
   background-color: #fff;
   width: 54px;
+  border: none;
   height: 3px;
   border-radius: 1.5px;
   margin-left: 12px;
@@ -45,6 +46,7 @@ body {
 
 .works-swiper-pagination .swiper-pagination-bullet-active {
   background: #942fe5;
+  border: none;
   width: 54px;
   height: 3px;
 }
@@ -180,7 +182,7 @@ body {
     background: #942fe5;
     width: 8px;
     height: 8px;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
   }
 
   .palette-swiper-pagination {
@@ -250,9 +252,10 @@ body {
 
   .works-swiper-pagination .swiper-pagination-bullet-active {
     background: #942fe5;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #fff;
+    width: 11px;
+    height: 11px;
+    margin-bottom: -1px;
+    // border: 1px solid #fff;
   }
 
   .palette-swiper-pagination {

@@ -96,8 +96,9 @@
       min-height: 30px;
       margin-bottom: 0;
       .title {
-        font-size: 16px;
-        letter-spacing: 0.03em;
+        font-size: 17px;
+        letter-spacing: -0.03em;
+        font-weight: 600;
       }
     }
     .bottom-row {
@@ -212,18 +213,19 @@
 
 @media screen and (max-width: 690px) {
   .header-mask {
-    height: 105px;
+    height: 120px;
     // min-width: 375px;
   }
   .header {
     // min-width: 375px;
-    height: 105px;
+    height: 120px;
+    flex-direction: column-reverse;
     z-index: 9;
     .top-row {
       max-width: 345px;
       min-height: 36px;
-      margin: 10px 0;
-      margin-bottom: 0;
+      margin: 5px 0;
+      margin-left: 10px;
       .title {
         font-size: 17.4px;
         letter-spacing: 0em;
@@ -343,20 +345,21 @@
 
 @media screen and (max-width: 375px) {
   .header-mask {
-    height: 93px;
+    height: 110px;
   }
   .header {
-    height: 93px;
+    height: 110px;
     z-index: 10;
     .top-row {
       max-width: 304px;
       min-height: 36px;
       margin: 5px 0;
       margin-bottom: 0;
+      margin-left: 10px;
       .title {
-        font-size: 15px;
-        letter-spacing: 0.03em;
-        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.03em;
+        font-weight: 600;
       }
     }
     .bottom-row {

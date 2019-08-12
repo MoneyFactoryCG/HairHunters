@@ -165,7 +165,6 @@ export class AppComponent implements AfterViewInit, OnInit {
     }, 2000); 
     this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
     || screen.width <= 480;
-    
   }
 
   ngAfterViewInit() {

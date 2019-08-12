@@ -21,7 +21,7 @@ export class MastersCarouselComponent implements OnInit {
     a11y: true,
     navigation: false,
     slidesPerView: 'auto',
-    freeMode: true,
+    freeMode: false,
     freeModeMomentum: true,
     freeModeMomentumVelocityRatio: 1.1,
     freeModeMomentumRatio: 1,

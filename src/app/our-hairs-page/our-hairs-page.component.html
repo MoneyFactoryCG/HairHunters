@@ -34,7 +34,9 @@
           id="videoour"
           loop
           autoplay
-          muted="muted"
+          webkit-playsinline="true" 
+          playsinline="true"
+          oncanplay="this.play()" 
         >
           Your browser does not support the video tag.
         </video>
