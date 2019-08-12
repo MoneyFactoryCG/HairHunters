@@ -59,6 +59,8 @@
           height: 238px;
           background: #c4c4c4;
           display: block;
+          object-fit: cover;
+          object-position: 30% 40%;
         }
         .lable {
           position: absolute;
@@ -145,7 +147,7 @@
           .cover {
             height: 110px;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
           }
           .lable {
             top: 90px;

@@ -179,7 +179,6 @@ export class StockCardComponent implements OnInit, AfterViewInit {
     ) {
       this.isActiveCookie = false;
     }
-    console.log(this.isActive + '' + this.isActiveCookie)
     if (this.deadline && this.isActive) {
       this.initializeClock(this.counterId, this.deadline);
     }
