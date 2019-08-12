@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
     $(".nav-hamburger").css({
       transform: "translateX(105%)"
     });
-    $("html").css({
+    $("html, body").css({
       overflow: "auto"
     });
     this.isOpen = false;
