@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://narshivanie-volos.club'
+  api: 'https://narashivanie-volos.club'
 };
