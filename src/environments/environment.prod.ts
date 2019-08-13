@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://narashivanie-volos.club'
+  api: 'http://localhost:5000'
 };
