@@ -17,11 +17,11 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-httpServer.listen(5000, () => {
+httpServer.listen(80, () => {
 	console.log('HTTP Server running on port 80');
 });
 
-httpsServer.listen(5000, () => {
+httpsServer.listen(443, () => {
 	console.log('HTTPS Server running on port 443');
 });
 
