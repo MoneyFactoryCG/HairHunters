@@ -273,13 +273,13 @@ export class ReviewsPageComponent implements OnInit {
         ) {
           $(".block .arrow").removeClass("active");
           $(".block .content").removeClass("toggle");
-          // setTimeout(() => {
-          //   var offset = $(event.target.nextSibling.offsetParent).offset();
-          //   offset.top -= 100;
-          //   $("html, body").animate({
-          //     scrollTop: offset.top
-          //   });
-          // }, 800);
+          setTimeout(() => {
+            var offset = $(event.target.nextSibling.offsetParent).offset();
+            offset.top -= 100;
+            $("html, body").animate({
+              scrollTop: offset.top
+            });
+          }, 800);
           $(
             "." +
               event.target.nextSibling.offsetParent.classList[1] +
@@ -310,13 +310,13 @@ export class ReviewsPageComponent implements OnInit {
         ) {
           $(".block .arrow").removeClass("active");
           $(".block .content").removeClass("toggle");
-          // setTimeout(() => {
-          //   var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
-          //   offset.top -= 100;
-          //   $("html, body").animate({
-          //     scrollTop: offset.top
-          //   });
-          // }, 800);
+          setTimeout(() => {
+            var offset = $(event.target.offsetParent.nextSibling.offsetParent).offset();
+            offset.top -= 100;
+            $("html, body").animate({
+              scrollTop: offset.top
+            });
+          }, 800);
           $(
             "." +
               event.target.offsetParent.nextSibling.offsetParent.classList[1] +
