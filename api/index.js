@@ -21,8 +21,8 @@ const port = process.env.PORT || 5000;
 // 	console.log('HTTP Server running on port 80');
 // });
 
-// httpsServer.listen(5000, () => {
-// 	console.log('HTTPS Server running on port 443');
-// });
+httpsServer.listen(5000, () => {
+	console.log('HTTPS Server running on port 5000');
+});
 
-app.listen(port, () => console.log(`Server has been started on ${port}`));
+// app.listen(port, () => console.log(`Server has been started on ${port}`));
