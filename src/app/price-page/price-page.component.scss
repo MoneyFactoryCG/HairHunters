@@ -496,6 +496,7 @@
             .info {
               margin-right: 50px;
               .sale {
+                display: none;
                 margin-top: 20px;
                 display: block;
                 font-weight: 600;
@@ -504,7 +505,8 @@
               }
               .title {
                 font-size: 24px;
-                margin-top: 16px;
+                line-height: 40px;
+                margin-top: 0px;
                 margin-bottom: 0px;
               }
             }
@@ -855,7 +857,7 @@
 
           .certificate {
             .cover {
-              width: 267px;
+              width: 320px;
               .lable {
                 bottom: 0px;
                 .triangle {
@@ -873,18 +875,20 @@
               }
             }
             .stock-info {
-              min-width: calc(100% - 267px);
+              min-width: calc(100% - 320px);
               padding: 20px;
               .info {
-                margin-right: 23px;
+                margin-right: 0px;
                 .sale {
+                  display: none;
                   margin-top: 20px;
                   font-size: 64px;
                   line-height: 32px;
                 }
                 .title {
                   font-size: 14px;
-                  margin-bottom: 17px;
+                  line-height: 30px;
+                  margin-bottom: 0px;
                 }
               }
               .counter-container {
