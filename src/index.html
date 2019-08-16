@@ -57,18 +57,19 @@
         top: 0;
         bottom: 0;
         margin: auto;
+        transform: scale(1);
         opacity: 1;
-        animation: rotate 1.5s linear infinite;
+        animation: rotate 1.5s ease infinite;
       }
       @keyframes rotate {
         0% {
-          opacity: 1;
+          transform: scale(1);
         }
         50% {
-          opacity: 0.5;
+          transform: scale(0.9);
         }
         0% {
-          opacity: 1;
+          transform: scale(1)
         }
       }
       @media screen and (max-width: 375px) {
