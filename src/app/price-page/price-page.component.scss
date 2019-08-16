@@ -41,7 +41,7 @@
       .left-col {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin-right: 30px;
         .table {
           padding: 20px 14px;
@@ -63,7 +63,7 @@
         }
         .free-consultation {
           z-index: 1;
-          margin-top: 60px;
+          margin-top: 140px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -103,6 +103,7 @@
   }
   .stock-container {
     position: relative;
+    margin-top: -100px;
     max-width: 1110px;
     width: 100%;
     z-index: 2;
