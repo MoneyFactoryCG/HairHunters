@@ -38,43 +38,43 @@ export class ReviewsCarouselComponent implements OnInit {
 
   slides = [
     {
-      img: 'assets/imgs/reviews-page/1.jpeg',
+      img: 'assets/imgs/reviews-page/1.jpg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/2.jpeg',
+      img: 'assets/imgs/reviews-page/2.jpg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/3.jpeg',
+      img: 'assets/imgs/reviews-page/3.jpg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/4.jpeg',
+      img: 'assets/imgs/reviews-page/4.jpg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/5.jpeg',
+      img: 'assets/imgs/reviews-page/5.jpg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/6.jpeg',
+      img: 'assets/imgs/reviews-page/6.jpg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/7.jpeg',
+      img: 'assets/imgs/reviews-page/7.jpg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     },
     {
-      img: 'assets/imgs/reviews-page/8.jpeg',
+      img: 'assets/imgs/reviews-page/8.jpg',
       alt: 'Отзывы Испанское холодное наращивание натуральных славянских волос на биогель'
     },
     {
-      img: 'assets/imgs/reviews-page/9.jpeg',
+      img: 'assets/imgs/reviews-page/9.jpg',
       alt: 'Отзывы Студия по наращиванию натуральных славянских волос харьков'
     },
     {
-      img: 'assets/imgs/reviews-page/10.jpeg',
+      img: 'assets/imgs/reviews-page/10.jpg',
       alt: 'Отзывы Итальянское наращивание микрокапсулами натуральных славянских волос на кератин'
     }
   ];
