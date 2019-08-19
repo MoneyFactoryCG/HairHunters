@@ -116,6 +116,7 @@ export class ModalWindowFormComponent implements OnInit {
             this.openWindow(false);
           }, 0);
           this.closeWindow();
+          console.log(fbq);
           fbq("track", "Contact");
         }
       );
