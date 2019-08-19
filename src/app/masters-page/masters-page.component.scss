@@ -238,7 +238,7 @@
     // min-width: 375px;
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 50px;
     .masters-page-container {
       min-width: 375px;
       position: relative;
@@ -248,14 +248,21 @@
       // }
       width: 100vw;
       height: 447px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       // overflow: hidden;
       app-masters-carousel {
         display: block;
       }
       .title {
-        // font-family: montserrat, sans-serif;
+        max-width: 375px;
+        width: 100%;
+        text-align: left;
         font-size: 20px;
-        margin-left: 18px;
+        margin-left: 20px;
+
       }
       .master-card-container {
         display: none;
@@ -345,7 +352,7 @@
     // min-width: 375px;
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 100px;
     .masters-page-container {
       min-width: 304px;
       position: relative;
@@ -360,9 +367,10 @@
       height: 447px;
       // overflow: hidden;
       .title {
+        max-width: 304px;
         // font-family: montserrat, sans-serif;
         font-size: 20px;
-        margin-left: 18px;
+        margin-left: 0px;
       }
       .master-card-container {
         display: none;
