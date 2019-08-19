@@ -9,7 +9,11 @@
       type="text"
       [(ngModel)]="value.name"
       (change)="onChange()"
-      [ngClass]="form.get('name').invalid && form.get('name').touched ? 'name invalid' : 'name'"
+      [ngClass]="
+        form.get('name').invalid && form.get('name').touched
+          ? 'name invalid'
+          : 'name'
+      "
       placeholder="Имя"
       autocomplete="off"
       maxlength="21"
@@ -18,9 +22,7 @@
       *ngIf="form.get('name').invalid && form.get('name').touched"
       class="helper-text"
     >
-      <span *ngIf="form.get('name').errors['required']"
-        >*Введите имя</span
-      >
+      <span *ngIf="form.get('name').errors['required']">*Введите имя</span>
     </span>
   </div>
   <div class="number-box">
@@ -31,7 +33,11 @@
       (change)="onChange()"
       [(ngModel)]="value.number"
       name="number"
-      [ngClass]="form.get('number').invalid && form.get('number').touched ? 'number invalid' : 'number'"
+      [ngClass]="
+        form.get('number').invalid && form.get('number').touched
+          ? 'number invalid'
+          : 'number'
+      "
       mask="00-000-00-00"
       placeholder="__-___-__-__"
     />
@@ -51,14 +57,27 @@
       (click)="isAgree = !isAgree"
     ></span>
     <p class="info">
-      Я даю <a href="/agreement" target="_blank">согласие на обработку<br />персональных данных</a>
+      Я даю
+      <a href="/agreement" target="_blank"
+        >согласие на обработку<br />персональных данных</a
+      >
     </p>
   </div>
   <button
+    id="contactButton"
     [disabled]="form.invalid || !isAgree"
     type="submit"
     [ngClass]="form.invalid || !isAgree ? 'signup-btn disabled' : 'signup-btn'"
   >
     Записаться
   </button>
+  <script type="text/javascript">
+    document.getElementById("contactButton").addEventListener(
+      "click",
+      function() {
+        fbq("track", "Contact");
+      },
+      false
+    );
+  </script>
 </form>
