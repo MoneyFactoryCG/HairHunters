@@ -248,20 +248,14 @@
       // }
       width: 100vw;
       height: 447px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       // overflow: hidden;
       app-masters-carousel {
         display: block;
       }
       .title {
-        max-width: 375px;
-        width: 100%;
         text-align: left;
         font-size: 20px;
-        margin-left: 20px;
+        margin-left: 18px;
 
       }
       .master-card-container {
@@ -367,10 +361,9 @@
       height: 447px;
       // overflow: hidden;
       .title {
-        max-width: 304px;
         // font-family: montserrat, sans-serif;
         font-size: 20px;
-        margin-left: 0px;
+        margin-left: 18px;
       }
       .master-card-container {
         display: none;
