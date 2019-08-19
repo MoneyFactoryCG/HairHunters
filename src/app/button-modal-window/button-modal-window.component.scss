@@ -32,12 +32,15 @@
     padding-top: 12px;
   }
   .puls-wrapper {
-    display: none;
+    // display: none;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     pointer-events: none;
     transform-origin: center center;
     transition: transform 0.3s linear;
@@ -59,10 +62,10 @@
       filter: blur(0px);
       opacity: 0;
       content: "";
-      // animation: bounce-m 2.7s ease infinite;
+      animation: bounce 2.7s ease infinite;
     }
     .puls-2 {
-      // animation: bounce-m 2.7s 300ms ease infinite;
+      animation: bounce 2.7s 300ms ease infinite;
     }
   }
 }
