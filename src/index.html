@@ -31,6 +31,19 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <script type="text/javascript">
+    setTimeout(()=>{
+      console.log(document.getElementById("contactButton"));
+      document.getElementById("contactButton").addEventListener(
+        "click",
+        function() {
+          fbq("track", "Contact");
+        },
+        false
+      );
+    },2000)
+    </script>
+
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=cyrillic"
