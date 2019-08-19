@@ -6,6 +6,8 @@ import { CookieService } from "ngx-cookie-service";
 import * as $ from "jquery";
 import { environment } from 'src/environments/environment';
 
+declare const fbq: any;
+
 @Component({
   selector: "app-modal-window-form",
   templateUrl: "./modal-window-form.component.html",
@@ -107,12 +109,14 @@ export class ModalWindowFormComponent implements OnInit {
             this.openWindow(true);
           }, 0);
           this.closeWindow();
+          fbq("track", "Contact");
         },
         error => {
           setTimeout(() => {
             this.openWindow(false);
           }, 0);
           this.closeWindow();
+          fbq("track", "Contact");
         }
       );
   }
