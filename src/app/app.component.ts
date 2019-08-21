@@ -8,7 +8,7 @@ import * as $ from "jquery";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  title = "HairHunters";
+  title = "Студия по наращиванию и продаже волос №1";
   hair = [
     {
       img: `assets/imgs/hair-palette-page/carousel/1.jpg`,
@@ -165,11 +165,13 @@ export class AppComponent implements AfterViewInit, OnInit {
     }, 3500); 
     this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
     || screen.width <= 480;
+    
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       $(".app-loading").fadeOut()
     }, 1500);
+    
   }
 }

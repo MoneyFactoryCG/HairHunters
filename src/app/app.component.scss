@@ -1,3 +1,18 @@
+#wepster_action_element {
+  left: 0;
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  iframe {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+
+
 .app-container {
   box-sizing: border-box;
   position: relative;
