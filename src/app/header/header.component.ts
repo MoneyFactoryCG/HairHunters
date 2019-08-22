@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
         transform: "translateX(0)"
       });
       $('body,html').css({
-        overflow: "hidden",
+        overflow: "hidden"
       });
       this.isOpen = true;
     } else {

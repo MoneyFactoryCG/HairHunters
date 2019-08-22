@@ -339,6 +339,10 @@
             font-size: 20px;
             font-weight: 500;
             color: #333;
+            a {
+              text-decoration: none;
+              color: #333;
+            }
           }
           .address {
             margin-bottom: 10px;
@@ -432,7 +436,7 @@
         padding-top: 20px;
         padding-right: 0;
         box-shadow: none;
-        top: 90px;
+        top: 49px;
         right: 0;
         z-index: 9;
         transform: translateX(100%);
