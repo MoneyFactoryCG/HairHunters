@@ -447,11 +447,13 @@
         .certificate {
           .cover {
             width: 458px;
+            min-width: 458px;
             position: relative;
             img {
               background: #942fe5;
               display: block;
               width: 100%;
+              min-width: 100%;
               height: 100%;
               object-fit: cover;
             }
@@ -858,7 +860,8 @@
 
           .certificate {
             .cover {
-              width: 320px;
+              width: 280px;
+              min-width: 280px;
               .lable {
                 bottom: 0px;
                 .triangle {
@@ -1225,6 +1228,7 @@
           .certificate {
             .cover {
               width: 339px;
+              min-width: 339px;
               height: 120px;
               .lable {
                 bottom: 0px;
