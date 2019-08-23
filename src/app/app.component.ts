@@ -1,146 +1,154 @@
-import { Component, AfterViewInit, OnInit } from "@angular/core";
+import {
+  Renderer2,
+  Component,
+  AfterViewInit,
+  OnInit,
+  Inject
+} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
-import * as $ from "jquery";
+import * as $ from 'jquery';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  title = "Студия по наращиванию и продаже волос №1";
+  title = 'Студия по наращиванию и продаже волос №1';
   hair = [
     {
       img: `assets/imgs/hair-palette-page/carousel/1.jpg`,
-      code: "#1B",
+      code: '#1B',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/2.jpg`,
-      code: "#1",
+      code: '#1',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/3.jpg`,
-      code: "#2",
+      code: '#2',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/4.jpg`,
-      code: "#3",
+      code: '#3',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/5.jpg`,
-      code: "#4",
+      code: '#4',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/6.jpg`,
-      code: "#5",
+      code: '#5',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/7.jpg`,
-      code: "#6",
+      code: '#6',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/8.jpg`,
-      code: "#8",
+      code: '#8',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/9.jpg`,
-      code: "#10",
+      code: '#10',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/10.jpg`,
-      code: "#12",
+      code: '#12',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/11.jpg`,
-      code: "#14",
+      code: '#14',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/12.jpg`,
-      code: "#16",
+      code: '#16',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/13.jpg`,
-      code: "#18",
+      code: '#18',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/14.jpg`,
-      code: "#22",
+      code: '#22',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/15.jpg`,
-      code: "#24",
+      code: '#24',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/16.jpg`,
-      code: "#27",
+      code: '#27',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/17.jpg`,
-      code: "#Plat",
+      code: '#Plat',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/18.jpg`,
-      code: "#60",
+      code: '#60',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/19.jpg`,
-      code: "#60H",
+      code: '#60H',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/20.jpg`,
-      code: "#613",
+      code: '#613',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/21.jpg`,
-      code: "#100",
+      code: '#100',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/22.jpg`,
-      code: "#130",
+      code: '#130',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/23.jpg`,
-      code: "#135",
+      code: '#135',
       show: false
     }
   ];
   isMobileDevice: boolean;
 
-  constructor() {
-    
-  }
+  constructor(
+    private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document: Document
+  ) {}
 
   closeWindow(windowId: string) {
-    $("." + windowId + "-container").css({
-      transform: "translateY(100%)",
-      opacity: "0"
+    $('.' + windowId + '-container').css({
+      transform: 'translateY(100%)',
+      opacity: '0'
     });
     setTimeout(() => {
-      $("." + windowId + "-modal").fadeOut(300);
-      $("body").css({
-        overflow: "auto",
+      $('.' + windowId + '-modal').fadeOut(300);
+      $('body').css({
+        overflow: 'auto'
       });
       $('.submit-container .success').css({
         display: 'none'
@@ -154,24 +162,27 @@ export class AppComponent implements AfterViewInit, OnInit {
   closeCookies() {
     $('.cookies-modal').css({
       transform: 'translateY(150%)'
-    })
+    });
   }
 
   ngOnInit() {
     setTimeout(() => {
       $('.cookies-modal').css({
         transform: 'translateY(0)'
-      })
-    }, 3500); 
-    this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
-    || screen.width <= 480;
-    
+      });
+    }, 3500);
+    this.isMobileDevice =
+      navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ||
+      screen.width <= 480;
+    // const s = this._renderer2.createElement('script');
+    //   s.text = `window.LEELOO_LEADGENTOOLS = (window.LEELOO_LEADGENTOOLS || []).concat('flgl7h');`;
+
+    //   this._renderer2.appendChild(this._document.querySelector('.success'), s);
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      $(".app-loading").fadeOut()
+      $('.app-loading').fadeOut();
     }, 1500);
-    
   }
 }

@@ -234,7 +234,7 @@ app-modal-window {
     justify-content: center;
     align-items: center;
     position: relative;
-    max-width: 450px;
+    max-width: 420px;
     min-height: 621px;
     // font-family: montserrat, sans-serif;
     background: transparent;
@@ -245,11 +245,14 @@ app-modal-window {
       flex-direction: column;
       position: relative;
       max-width: 450px;
-      width: 450px;
+      width: 420px;
       height: 621px;
-      iframe {
-        max-width: 450px;
-        height: 100%;
+      #wepster_action_element {
+        max-width: 420px;
+        height: 621px;
+      }
+      .close {
+        z-index: 1000;
       }
       h1 {
         font-weight: 600;
