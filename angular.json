@@ -33,7 +33,7 @@
             ],
             "scripts": [
               "node_modules/gsap/src/uncompressed/TweenMax.js",
-              "node_modules/file-saver/dist/FileSaver.min.js"
+              "node_modules/file-saver/src/FileSaver.js"
             ]
           },
           "configurations": {
