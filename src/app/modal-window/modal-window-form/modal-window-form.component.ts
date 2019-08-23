@@ -100,19 +100,20 @@ export class ModalWindowFormComponent implements OnInit {
   onSubmit(e) {
     console.log(environment.api);
     if (this.link) {
-      fileSaver.saveAs(
-        this.link,
-        'сертификат.jpg'
-      );
-      // const a = document.createElement('a');
-      // a.href = this.link;
-      // a.target = '_blank';
-      // a.download = 'сертификат.jpg';
-      // document.body.appendChild(a);
-      // setTimeout(() => {
-      //   a.click();
-      //   document.body.removeChild(a);
-      // }, 500);
+      // let file = new Blob()
+      // fileSaver.saveAs(
+      //   this.link,
+      //   'сертификат.jpg'
+      // );
+      const a = document.createElement('a');
+      a.href = this.link;
+      a.target = '_blank';
+      a.download = 'сертификат.jpg';
+      document.body.appendChild(a);
+      setTimeout(() => {
+        a.click();
+        document.body.removeChild(a);
+      }, 500);
     }
     this.modalWindowFormService
       .sendMessage(
