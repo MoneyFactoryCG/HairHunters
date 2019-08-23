@@ -5,8 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
-import { saveAs } from 'file-saver';
-declare const FileSaver: any;
+import * as fileSaver from 'file-saver';
 declare const fbq: any;
 
 @Component({
@@ -101,7 +100,7 @@ export class ModalWindowFormComponent implements OnInit {
   onSubmit(e) {
     console.log(environment.api);
     if (this.link) {
-      saveAs(
+      fileSaver.saveAs(
         this.link,
         'сертификат.jpg'
       );
