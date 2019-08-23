@@ -32,7 +32,8 @@
               "./node_modules/swiper/dist/css/swiper.css"
             ],
             "scripts": [
-              "node_modules/gsap/src/uncompressed/TweenMax.js"
+              "node_modules/gsap/src/uncompressed/TweenMax.js",
+              "node_modules/file-saver/dist/FileSaver.min.js"
             ]
           },
           "configurations": {
