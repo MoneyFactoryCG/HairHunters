@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPageComponent implements OnInit {
 
+  isMobileDevice: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.isMobileDevice = navigator.userAgent.match(/iPad|iPhone|iPod/i) != null 
+    || screen.width <= 480;
   }
 
 }

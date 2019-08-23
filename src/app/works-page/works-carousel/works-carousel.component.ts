@@ -25,6 +25,11 @@ export class WorksCarouselComponent implements OnInit {
     },
     slidesPerView: 3,
     loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    },
     spaceBetween: 20,
     lazy: true,
     breakpoints: {

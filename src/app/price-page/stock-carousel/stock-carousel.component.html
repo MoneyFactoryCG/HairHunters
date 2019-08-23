@@ -1,9 +1,9 @@
-<div class="stock-carousel"  *ngIf="isStocks">
+<div class="stock-carousel" *ngIf="isStocks">
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
       <!-- <div class="swiper-slide" *ngIf="isStock[0]"> -->
-        <!-- Без цены -->
-        <!-- <app-stock-card
+      <!-- Без цены -->
+      <!-- <app-stock-card
           #stock
           deadline="2019-08-18"
           cookieDeadline="0"
@@ -63,8 +63,8 @@
         </app-stock-card> -->
       <!-- </div> -->
       <!-- <div class="swiper-slide" *ngIf="isStock[1]"> -->
-        <!-- С ценой -->
-        <!-- <app-stock-card
+      <!-- С ценой -->
+      <!-- <app-stock-card
           #stock
           deadline="0"
           cookieDeadline="2"
@@ -153,7 +153,10 @@
             <div class="stock-info">
               <div class="info">
                 <!-- <span class="sale">50%</span> -->
-                <p class="title"><b>C 01.09 по 30.09</b><br>Дарим сертификат<br>на наращивание<br>волос</p>
+                <p class="title">
+                  <b>C 01.09 по 30.09</b><br />Дарим сертификат<br />на
+                  наращивание<br />волос
+                </p>
               </div>
               <div class="counter-container">
                 <div class="counter" id="counter3">
@@ -190,8 +193,7 @@
                 </div>
                 <app-button-modal-window
                   text="Получить"
-                  isLink="true"
-                  link="https://wep.wf/k2g1if"
+                  windowId="stock-3-modal"
                 ></app-button-modal-window>
               </div>
             </div>

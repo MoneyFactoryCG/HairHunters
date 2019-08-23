@@ -64,6 +64,7 @@
     </p>
   </div>
   <button
+    *ngIf="!link"
     id="contactButton"
     [disabled]="form.invalid || !isAgree"
     type="submit"
@@ -71,5 +72,12 @@
   >
     Записаться
   </button>
-  
+  <button
+    id="contactButton"
+    [disabled]="form.invalid || !isAgree"
+    type="submit"
+    [ngClass]="form.invalid || !isAgree ? 'signup-btn disabled' : 'signup-btn'"
+  >
+    Записаться
+  </button>
 </form>

@@ -136,6 +136,20 @@
   </div>
 </app-modal-window> -->
 
+<app-modal-window windowId="stock-3-modal">
+  <div class="stock-3-container container">
+    <img src="assets/imgs/stocks/cert.jpg" alt="" />
+    <div class="form-container">
+      <app-modal-window-form
+        title="Получить сертификат на 50% Скидку"
+        link="/assets/imgs/stocks/certif.jpg"
+        message="Получение сертификата 50% на наращивание волос"
+        windowId="stock-3-modal"
+      ></app-modal-window-form>
+    </div>
+  </div>
+</app-modal-window>
+
 <div class="hair-palette-modal">
   <div class="out-close" (click)="closeWindow('hair-palette')"></div>
   <div class="hair-palette-container">
@@ -185,7 +199,7 @@
 
 <div class="submit-modal">
   <div class="submit-container">
-    <span class="close" (click)="closeWindow('submit')">
+    <!-- <span class="close" (click)="closeWindow('submit')">
       <svg
         width="24"
         height="24"
@@ -206,12 +220,58 @@
           stroke-linecap="round"
         />
       </svg>
-    </span>
+    </span> -->
     <div class="success">
-      <h1 class="title">Ваша заявка успешно отправлена</h1>
-      <p class="message">Наш менеджер свяжется с Вами<br />в ближайшее время</p>
+      <span class="close" (click)="closeWindow('submit')">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L12 12L22 2"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <path
+            d="M22 22L12 12L2 22"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <iframe src="https://wep.wf/flgl7h" frameborder="0"></iframe>
+      <!-- <h1 class="title">Ваша заявка успешно отправлена</h1>
+      <p class="message">Наш менеджер свяжется с Вами<br />в ближайшее время</p> -->
     </div>
     <div class="failed">
+      <span class="close" (click)="closeWindow('submit')">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2L12 12L22 2"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <path
+            d="M22 22L12 12L2 22"
+            stroke="#D49FFF"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <!-- <iframe src="https://wep.wf/flgl7h" frameborder="0"></iframe> -->
       <h1 class="title">Ошибка сервера</h1>
       <p class="message">
         Ваша заявка не отправлена.<br />Попробуйте в другое время или<br />свяжитесть
