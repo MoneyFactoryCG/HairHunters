@@ -5,6 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
+import { saveAs } from 'file-saver';
 
 declare const fbq: any;
 
@@ -97,18 +98,22 @@ export class ModalWindowFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(e) {
     console.log(environment.api);
     if (this.link) {
-      const a = document.createElement('a');
-      a.href = this.link;
-      a.target = '_blank';
-      a.download = 'сертификат.jpg';
-      document.body.appendChild(a);
-      setTimeout(() => {
-        a.click();
-        document.body.removeChild(a);
-      }, 500);
+      saveAs(
+        this.link,
+        'сертификат.jpg'
+      );
+      // const a = document.createElement('a');
+      // a.href = this.link;
+      // a.target = '_blank';
+      // a.download = 'сертификат.jpg';
+      // document.body.appendChild(a);
+      // setTimeout(() => {
+      //   a.click();
+      //   document.body.removeChild(a);
+      // }, 500);
     }
     this.modalWindowFormService
       .sendMessage(
