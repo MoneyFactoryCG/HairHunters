@@ -102,10 +102,13 @@ export class ModalWindowFormComponent implements OnInit {
     if (this.link) {
       const a = document.createElement('a');
       a.href = this.link;
+      a.target = '_blank';
       a.download = 'сертификат.jpg';
       document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      setTimeout(() => {
+        a.click();
+        document.body.removeChild(a);
+      }, 500);
     }
     this.modalWindowFormService
       .sendMessage(
