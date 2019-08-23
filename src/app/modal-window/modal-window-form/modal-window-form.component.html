@@ -73,6 +73,7 @@
     Записаться
   </button>
   <button
+    *ngIf="link"
     id="contactButton"
     [disabled]="form.invalid || !isAgree"
     type="submit"

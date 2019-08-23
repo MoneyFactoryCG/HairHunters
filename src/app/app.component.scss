@@ -740,12 +740,16 @@ app-modal-window {
   }
 
   .submit-modal {
-    // min-width: 375px;
+    min-width: 320px;
+    overflow: hidden;
     .submit-container {
       display: flex;
       width: 315px;
       height: 204px;
       .success {
+        transform: scale(0.85);
+        iframe {
+        }
         h1 {
           font-size: 18px;
           margin-bottom: 36px;
