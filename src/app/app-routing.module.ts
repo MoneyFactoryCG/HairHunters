@@ -1,3 +1,4 @@
+import { ThanksPageComponent } from './thanks-page/thanks-page.component';
 import { CookiesPageComponent } from './cookies-page/cookies-page.component';
 import { AgreementPageComponent } from './agreement-page/agreement-page.component';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'agreement', component: AgreementPageComponent},
   {path: 'cookies', component: CookiesPageComponent},
+  {path: 'thanks', component: ThanksPageComponent},
   {path: '**', component: MainPageComponent}
 ];
 

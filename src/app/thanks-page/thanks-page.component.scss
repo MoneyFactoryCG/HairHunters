@@ -1,0 +1,28 @@
+.thanks-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .thanks-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../../assets/imgs/thanks-page/bg.jpg);
+    background-size: cover;
+    h1 {
+      font-family: montserrat, sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    h2 {
+      font-family: montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+  }
+}

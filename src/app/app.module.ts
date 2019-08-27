@@ -37,6 +37,7 @@ import { NgxMaskModule } from "ngx-mask";
 import { InViewportModule } from "@thisissoon/angular-inviewport";
 import { AgreementPageComponent } from './agreement-page/agreement-page.component';
 import { CookiesPageComponent } from './cookies-page/cookies-page.component';
+import { ThanksPageComponent } from './thanks-page/thanks-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -70,6 +71,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MainPageComponent,
     AgreementPageComponent,
     CookiesPageComponent,
+    ThanksPageComponent,
   ],
   imports: [
     BrowserModule,

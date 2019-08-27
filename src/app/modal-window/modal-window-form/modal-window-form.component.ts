@@ -2,10 +2,10 @@ import { ModalWindowFormService } from './modal-window-form.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+import {Router} from "@angular/router";
 
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
-import * as fileSaver from 'file-saver';
 declare const fbq: any;
 
 @Component({
@@ -33,7 +33,8 @@ export class ModalWindowFormComponent implements OnInit {
 
   constructor(
     private cookieService: CookieService,
-    private modalWindowFormService: ModalWindowFormService
+    private modalWindowFormService: ModalWindowFormService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -123,11 +124,12 @@ export class ModalWindowFormComponent implements OnInit {
       )
       .subscribe(
         res => {
-          setTimeout(() => {
-            this.openWindow(true);
-          }, 0);
+          // setTimeout(() => {
+          //   this.openWindow(true);
+          // }, 0);
           this.closeWindow();
           fbq('track', 'Contact');
+          this.router.navigate(['thanks']);
         },
         error => {
           setTimeout(() => {
