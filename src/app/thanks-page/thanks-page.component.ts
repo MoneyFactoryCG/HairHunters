@@ -16,7 +16,6 @@ export class ThanksPageComponent implements OnInit {
   ngOnInit() {
     const s1 = this._renderer2.createElement('script');
     s1.text = `
-    setTimeout(() => {
       window.LEELOO = function() {
         window.LEELOO_INIT = { id: "5a48e93b66f7cd04eaf73bd4" };
         var js = document.createElement("script");
@@ -24,16 +23,13 @@ export class ThanksPageComponent implements OnInit {
         js.async = true;
         document.getElementsByTagName("head")[0].appendChild(js);
       };
-      LEELOO();
-    }, 10);`;
+      LEELOO();`;
     this._renderer2.appendChild(this._document.querySelector('body'), s1);
     const s2 = this._renderer2.createElement('script');
     s2.text = `
-    setTimeout(() => {
       window.LEELOO_LEADGENTOOLS = (window.LEELOO_LEADGENTOOLS || []).concat(
         "flgl7h"
-      );
-    }, 10);`;
+      );`;
     this._renderer2.appendChild(this._document.querySelector('body'), s2);
   }
 }

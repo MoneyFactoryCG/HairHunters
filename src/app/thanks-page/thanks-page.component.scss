@@ -8,14 +8,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(../../assets/imgs/thanks-page/bg.jpg);
-    background-size: cover;
+    background: url(../../assets/imgs/thanks-page/bg.jpg) no-repeat;
+    background-size: 107% 107%;
     h1 {
       font-family: montserrat, sans-serif;
       font-size: 36px;
       font-weight: 600;
       margin-bottom: 24px;
       color: #fff;
+      text-align: center;
     }
     h2 {
       font-family: montserrat, sans-serif;
@@ -23,6 +24,26 @@
       font-weight: 600;
       margin-bottom: 40px;
       color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .thanks-page {
+    .thanks-wrapper {
+      h1 {
+        font-size: 16px;
+        margin-top: 50px;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      div {
+        margin-top: -50px;
+        margin-bottom: 0px;
+        transform: scale(0.8)
+      }
     }
   }
 }
