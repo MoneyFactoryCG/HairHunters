@@ -1,4 +1,4 @@
-import { AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { AfterViewInit, ViewChildren, QueryList, Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricePageComponent implements OnInit, AfterViewInit {
 
+  @Input() isPrice = true;
   @ViewChildren('stock') childQuery;
 
   isStock: boolean = true;
