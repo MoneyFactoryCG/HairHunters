@@ -142,9 +142,13 @@ export class AppComponent implements AfterViewInit, OnInit {
     @Inject(DOCUMENT) private _document: Document
   ) {
     this.router.events.subscribe(event => {
+      
       if (event instanceof NavigationEnd) {
+        console.log((<any>window).ga);
+        console.log((<any>window).fbq);
         (<any>window).ga('set', 'page', event.urlAfterRedirects);
         (<any>window).ga('send', 'pageview');
+        (<any>window).fbq('track', "PageView");
       }
     });
   }
