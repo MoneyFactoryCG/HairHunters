@@ -140,17 +140,19 @@ export class ModalWindowFormComponent implements OnInit {
           fbq('track', 'Contact');
         }
       );
-    this.modalWindowFormService.createOrder(
-      this.message,
-      this.form.get('name').value,
-      this.form.get('number').value
-    ).subscribe(
-      res => {
-        console.log(res);
-      },
-      error => {
-        console.log(error);
-      }
-    );
+    this.modalWindowFormService
+      .createOrder(
+        this.message,
+        this.form.get('name').value,
+        this.form.get('number').value
+      )
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
 }

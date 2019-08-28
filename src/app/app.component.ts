@@ -8,6 +8,7 @@ import {
 import { DOCUMENT } from '@angular/common';
 
 import * as $ from 'jquery';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -136,9 +137,17 @@ export class AppComponent implements AfterViewInit, OnInit {
   isMobileDevice: boolean;
 
   constructor(
+    private router: Router,
     private _renderer2: Renderer2,
     @Inject(DOCUMENT) private _document: Document
-  ) {}
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        (<any>window).ga('set', 'page', event.urlAfterRedirects);
+        (<any>window).ga('send', 'pageview');
+      }
+    });
+  }
 
   closeWindow(windowId: string) {
     $('.' + windowId + '-container').css({

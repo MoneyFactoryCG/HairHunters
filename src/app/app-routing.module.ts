@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'agreement', component: AgreementPageComponent},
   {path: 'cookies', component: CookiesPageComponent},
   {path: 'thanks', component: ThanksPageComponent},
+  {path: 'admin', loadChildren: './admin-panel/admin-panel.module#AdminPanelModule'},
   {path: '**', component: MainPageComponent}
 ];
 

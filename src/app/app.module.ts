@@ -85,7 +85,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ReactiveFormsModule,
     InViewportModule,
     NgxMaskModule.forRoot(),
-    
   ],
   exports: [
   ],
