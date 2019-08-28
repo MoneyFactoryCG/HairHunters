@@ -145,12 +145,6 @@ export class AppComponent implements AfterViewInit, OnInit {
       if (event instanceof NavigationEnd) {
         // console.log((window as any).ga);
         // console.log((window as any).fbq);
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        (window as any).dataLayer.push({
-          event: 'Pageview'
-        });
-        console.log((window as any).dataLayer);
-        (window as any).fbq('track', 'PageView');
       }
     });
   }
