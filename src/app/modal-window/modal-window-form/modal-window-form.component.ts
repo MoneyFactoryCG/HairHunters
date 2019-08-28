@@ -2,7 +2,7 @@ import { ModalWindowFormService } from './modal-window-form.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
 
 import * as $ from 'jquery';
 import { environment } from 'src/environments/environment';
@@ -140,5 +140,17 @@ export class ModalWindowFormComponent implements OnInit {
           fbq('track', 'Contact');
         }
       );
+    this.modalWindowFormService.createOrder(
+      this.message,
+      this.form.get('name').value,
+      this.form.get('number').value
+    ).subscribe(
+      res => {
+        console.log(res);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

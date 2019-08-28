@@ -16,10 +16,10 @@ const orderSchema = new Schema({
         type: String
       },
       phone: {
-        type: Number
+        type: String
       },
       type: {
-        type: Number
+        type: String
       }
     }
   ]

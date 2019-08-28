@@ -9,13 +9,25 @@ export class ModalWindowFormService {
   constructor(private http: HttpClient) {}
 
   sendMessage(title: string, name: string, phoneNumber: string) {
-    console.log(title)
     return this.http.post(
       environment.api + "/api/telegramNotifications/sendMessage",
       {
         title: title,
         name: name,
         phoneNumber: "+380" + phoneNumber
+      }
+    );
+  }
+
+  createOrder(title: string, name: string, phoneNumber: string) {
+    return this.http.post(
+      environment.api + "/api/order/",
+      {
+        list: {
+          name: name,
+          phone: "+380" + phoneNumber,
+          type: title,
+        }
       }
     );
   }
