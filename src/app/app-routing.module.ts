@@ -8,7 +8,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
-  {path: 'stock', component: AbTestComponent},
+  // {path: 'stock', component: AbTestComponent},
   {path: 'agreement', component: AgreementPageComponent},
   {path: 'cookies', component: CookiesPageComponent},
   {path: 'thanks', component: ThanksPageComponent},

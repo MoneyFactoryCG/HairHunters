@@ -33,8 +33,12 @@
               }
             ],
             "styles": [
-              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss",
+              {
+                "input": "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+                "lazy": true,
+                "bundleName": "admin-style"
+              },
               "./node_modules/swiper/dist/css/swiper.css"
             ],
             "scripts": [

@@ -12,7 +12,7 @@ export class CookiesPageComponent implements OnInit {
 
   ngOnInit() {
     $('.cookies-modal').css({
-      opacity: '0'
+      display: 'none'
     })
   }
 

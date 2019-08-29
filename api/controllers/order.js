@@ -1,7 +1,17 @@
 const Order = require('../models/Order')
 const errorHandler = require('../utils/errorHandler')
 
-module.exports.create = async function(req, res) {
+
+module.exports.getAll = async (req, res) => {
+  try {
+    const orders = Order.find({}).exec();
+    res.status(201).json(orders)
+  } catch (e) {
+    errorHandler(res, e)
+  }
+}
+
+module.exports.create = async (req, res) => {
   try {
     const lastOrder = await Order
       .findOne({})
