@@ -143,8 +143,12 @@ export class AppComponent implements AfterViewInit, OnInit {
   ) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // console.log((window as any).ga);
-        // console.log((window as any).fbq);
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({
+          event: 'Pageview',
+          // pagePath: '/thanks',
+          // pageTitle: 'Thank you' // some arbitrary name for the page/state
+        });
       }
     });
   }

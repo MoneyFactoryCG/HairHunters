@@ -12,13 +12,13 @@ export class ThanksPageComponent implements OnInit {
     @Inject(DOCUMENT) private _document: Document,
     private _renderer2: Renderer2
   ) {
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    (window as any).dataLayer.push({
-      event: 'Pageview',
-      pagePath: '/thanks',
-      pageTitle: 'Thank you' // some arbitrary name for the page/state
-    });
-    console.log((window as any).dataLayer);
+    // (window as any).dataLayer = (window as any).dataLayer || [];
+    // (window as any).dataLayer.push({
+    //   event: 'Pageview',
+    //   pagePath: '/thanks',
+    //   pageTitle: 'Thank you' // some arbitrary name for the page/state
+    // });
+    // console.log((window as any).dataLayer);
   }
 
   ngOnInit() {
