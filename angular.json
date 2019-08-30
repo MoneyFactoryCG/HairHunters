@@ -28,18 +28,18 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "input": "node_modules/@ant-design/icons-angular/src/inline-svg/",
                 "output": "/assets/"
               }
             ],
             "styles": [
               "src/styles.scss",
               {
-                "input": "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-                "lazy": true,
-                "bundleName": "admin-style"
+                "input": "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+                "bundleName": "admin-style",
+                "lazy": true
               },
-              "./node_modules/swiper/dist/css/swiper.css"
+              "node_modules/swiper/dist/css/swiper.css"
             ],
             "scripts": [
               "node_modules/gsap/src/uncompressed/TweenMax.js",

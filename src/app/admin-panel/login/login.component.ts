@@ -24,15 +24,16 @@ export class LoginComponent implements OnInit, OnDestroy {
     private i18n: NzI18nService
   ) {
     this.i18n.setLocale(en_US);
+    
+  }
+
+  ngOnInit() {
     const element = document.createElement('script');
     element.src = 'admin-style.js';
     document.body.appendChild(element);
     $('.cookies-modal').css({
       display: 'none'
     })
-  }
-
-  ngOnInit() {
     this.validateForm = this.fb.group({
       login: [null, [Validators.required]],
       password: [null, [Validators.required]]
