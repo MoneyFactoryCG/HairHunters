@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
+import { en_US, NzI18nService } from 'ng-zorro-antd/i18n';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,7 +10,7 @@ import * as $ from 'jquery';
 
 export class AdminPanelComponent implements OnInit {
 
-  constructor() {
+  constructor(private i18n: NzI18nService) {
     const element = document.createElement('script');
     element.src = 'admin-style.js';
     element.type = 'text/javascript';
@@ -18,6 +18,7 @@ export class AdminPanelComponent implements OnInit {
     $('.cookies-modal').css({
       display: 'none'
     });
+    this.i18n.setLocale(en_US);
    }
 
   ngOnInit() {

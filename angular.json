@@ -30,12 +30,17 @@
                 "glob": "**/*",
                 "input": "node_modules/@ant-design/icons-angular/src/inline-svg/",
                 "output": "/assets/"
+              },
+              {
+                "glob": "ng-zorro-antd.min.css",
+                "input": "node_modules/ng-zorro-antd/",
+                "output": "/assets/"
               }
             ],
             "styles": [
               "src/styles.scss",
               {
-                "input": "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+                "input": "src/assets/ng-zorro-antd.min.css",
                 "bundleName": "admin-style",
                 "lazy": true
               },

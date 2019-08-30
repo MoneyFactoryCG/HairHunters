@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/services/auth.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { en_US, NzI18nService } from 'ng-zorro-antd/i18n';
 
 import * as $ from 'jquery';
 
@@ -21,9 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private auth: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private i18n: NzI18nService
   ) {
-    this.i18n.setLocale(en_US);
     
   }
 
