@@ -5,6 +5,7 @@ export interface User {
 
 export interface Order {
   date?: Date;
+  spam: boolean;
   status?: string;
   order?: number;
   user?: string;
