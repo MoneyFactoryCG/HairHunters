@@ -27,28 +27,34 @@ const orderSchema = new Schema({
         type: String
       },
       type: {
-        type: [[String],[String]]
+        type: [[String],[String]],
+        default: [[' '],[' ']]
       },
       price: {
-        type: Number
+        type: Number,
+        default: 0
       },
       prepay: {
         sum: {
-          type: Number
+          type: Number,
+          default: 0
         },
         method: {
-          type: String
+          type: String,
+          default: ' '
         }
       },
       master: {
-        type: String
+        type: String,
+        default: ' '
       },
       rdate: {
         type: Date,
         default: Date.now
       },
       note: {
-        type: String
+        type: String,
+        default: ' '
       }
     }
   ]
