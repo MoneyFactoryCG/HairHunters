@@ -31,11 +31,11 @@ export class AuthService {
   }
 
   getToken(): string {
-    return this.token;
+    return this.token || localStorage.getItem('auth-token');
   }
 
   isAuthenticated(): boolean {
-    return !!this.token;
+    return !!localStorage.getItem('auth-token');
   }
 
   logout() {

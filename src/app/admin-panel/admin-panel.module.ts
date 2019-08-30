@@ -1,36 +1,30 @@
-
+import { AdminPanelRoutingModule } from './admin-panel-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 
-import {AuthGuard} from './shared/classes/auth.guard'
 import { LoginComponent } from './login/login.component';
 import { OverviewComponent } from './overview/overview.component';
 
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-registerLocaleData(en);
+import { AdminPanelComponent } from './admin-panel.component';
 
-const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'overview', component: OverviewComponent, canActivate: [AuthGuard]}
-];
+
+registerLocaleData(en);
 
 
 @NgModule({
-  declarations: [LoginComponent, OverviewComponent],
+  declarations: [AdminPanelComponent, LoginComponent, OverviewComponent],
   imports: [
-    RouterModule.forChild(routes),
     CommonModule,
     NgZorroAntdModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AdminPanelRoutingModule
   ],
-  providers: [
-    { provide: NZ_I18N, useValue: en_US }
-  ]
+  providers: [{ provide: NZ_I18N, useValue: en_US }]
 })
-export class AdminPanelModule { }
+export class AdminPanelModule {}

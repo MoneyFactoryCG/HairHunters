@@ -1,5 +1,5 @@
 import { OverviewService } from './overview.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Order } from '../shared/interfaces';
 
 @Component({
@@ -7,7 +7,7 @@ import { Order } from '../shared/interfaces';
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss']
 })
-export class OverviewComponent implements OnInit {
+export class OverviewComponent implements OnInit, OnDestroy {
   searchValue = '';
   sortName: string | null = null;
   sortValue: string | null = null;
@@ -20,6 +20,10 @@ export class OverviewComponent implements OnInit {
   listOfDisplayData;
 
   constructor(private overviewService: OverviewService) {
+  }
+
+  ngOnDestroy() {
+    console.log(this)
   }
 
   ngOnInit() {

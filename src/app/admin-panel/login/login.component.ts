@@ -28,12 +28,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const element = document.createElement('script');
-    element.src = 'admin-style.js';
-    document.body.appendChild(element);
-    $('.cookies-modal').css({
-      display: 'none'
-    })
     this.validateForm = this.fb.group({
       login: [null, [Validators.required]],
       password: [null, [Validators.required]]
