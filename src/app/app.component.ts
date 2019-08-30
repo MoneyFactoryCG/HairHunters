@@ -100,37 +100,37 @@ export class AppComponent implements AfterViewInit, OnInit {
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/17.jpg`,
-      code: '#Plat',
+      code: '#1001',
       show: false
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/18.jpg`,
-      code: '#60',
-      show: false
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/19.jpg`,
       code: '#60H',
       show: false
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/20.jpg`,
-      code: '#613',
-      show: false
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/21.jpg`,
-      code: '#100',
-      show: false
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/22.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/19.jpg`,
       code: '#130',
       show: false
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/23.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/20.jpg`,
       code: '#135',
+      show: false
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/21.jpg`,
+      code: '#60',
+      show: false
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/22.jpg`,
+      code: '#613',
+      show: false
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/23.jpg`,
+      code: '#Plat',
       show: false
     }
   ];
