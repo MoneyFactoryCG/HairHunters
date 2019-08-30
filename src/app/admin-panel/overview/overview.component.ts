@@ -14,7 +14,6 @@ export class OverviewComponent implements OnInit, OnDestroy {
   listOfStatus = [
     { text: 'Новый', value: 'new' },
     { text: 'Запись', value: 'sign' },
-    { text: 'Предоплата', value: 'prepay' },
     { text: 'Подумаю', value: 'think' },
     { text: 'Отмена', value: 'cancel' }
   ];
@@ -28,23 +27,6 @@ export class OverviewComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     console.log(this);
-  }
-
-  convertDateToUTC(date) {
-    const utc = new Date(
-      date.getUTCFullYear(),
-      date.getUTCMonth(),
-      date.getUTCDate(),
-      date.getUTCHours(),
-      date.getUTCMinutes(),
-      date.getUTCSeconds()
-    );
-    return utc;
-  }
-
-  convertDateToGMT(utc, local) {
-    const localTime = new Date(utc.getTime() + local * 60 * 60 * 1000);
-    return localTime;
   }
 
   trackByFn(index, item) {

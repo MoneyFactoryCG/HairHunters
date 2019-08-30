@@ -21,6 +21,7 @@ export interface OrderPosition {
     sum: number;
     method: string;
   };
+  master: string;
   note: string;
   _id?: string;
 }

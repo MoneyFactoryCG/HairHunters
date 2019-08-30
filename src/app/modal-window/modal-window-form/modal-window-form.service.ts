@@ -25,12 +25,13 @@ export class ModalWindowFormService {
       list: {
         name,
         phone: '+380' + phoneNumber,
-        type: [' '],
+        type: [[' '],[' ']],
         price: 0,
         prepay: {
           sum: 0,
           method: ' '
         },
+        master: ' ',
         note: title
       }
     });

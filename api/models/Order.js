@@ -23,7 +23,7 @@ const orderSchema = new Schema({
         type: String
       },
       type: {
-        type: [String]
+        type: [[String],[String]]
       },
       price: {
         type: Number
@@ -35,6 +35,13 @@ const orderSchema = new Schema({
         method: {
           type: String
         }
+      },
+      master: {
+        type: String
+      },
+      rdate: {
+        type: Date,
+        default: Date.now
       },
       note: {
         type: String
