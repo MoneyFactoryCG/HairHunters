@@ -1,5 +1,11 @@
 <section class="overview">
-  <nz-table #nzTable nzBordered [nzData]="listOfDisplayData">
+  <nz-table
+    #nzTable
+    nzBordered
+    [nzFrontPagination]="false"
+    [nzShowPagination]="false"
+    [nzData]="listOfDisplayData"
+  >
     <thead>
       <tr>
         <th nzCustomFilter>
@@ -20,23 +26,50 @@
           ></i>
         </th>
         <th>Телефон</th>
-        <th nzShowFilter [nzFilters]="listOfFilterType" (nzFilterChange)="filterTypeChange($event)">Услуга</th>
+        <th>Статус</th>
+        <th>
+          Услуга
+        </th>
         <th>Дата</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of nzTable.data">
+      <tr *ngFor="let data of nzTable.data; trackBy: trackByFn">
         <td>{{ data.list[0].name }}</td>
         <td>{{ data.list[0].phone }}</td>
-        <td>{{ data.list[0].type }}</td>
+        <td>
+          <nz-select
+            style="width: 100%;"
+            [(ngModel)]="data.status"
+            [nzSize]="default"
+          >
+            <nz-option
+              *ngFor="let status of listOfStatus"
+              [nzLabel]="status.text"
+              [nzValue]="status.value"
+            ></nz-option>
+          </nz-select>
+        </td>
+        <td>{{ data.list[0].note }}</td>
         <td>{{ data.date }}</td>
       </tr>
     </tbody>
   </nz-table>
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <div class="search-box">
-      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
-      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">
+      <input
+        type="text"
+        nz-input
+        placeholder="Search name"
+        [(ngModel)]="searchValue"
+      />
+      <button
+        nz-button
+        nzSize="small"
+        nzType="primary"
+        (click)="search()"
+        class="search-button"
+      >
         Search
       </button>
       <button nz-button nzSize="small" (click)="reset()">Reset</button>

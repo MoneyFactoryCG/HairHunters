@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { en_US, NzI18nService } from 'ng-zorro-antd/i18n';
 import * as $ from 'jquery';
 
@@ -7,21 +7,21 @@ import * as $ from 'jquery';
   templateUrl: './admin-panel.component.html',
   styleUrls: ['./admin-panel.component.scss']
 })
-
 export class AdminPanelComponent implements OnInit {
-
   constructor(private i18n: NzI18nService) {
-    const element = document.createElement('script');
-    element.src = 'admin-style.js';
-    element.type = 'text/javascript';
-    document.body.appendChild(element);
+    let head = document.getElementsByTagName('head')[0];
+    let link = document.createElement('link');
+    link.id = 'ng-zorro-css';
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'assets/ng-zorro-antd.min.css';
+    link.media = 'all';
+    head.appendChild(link);
     $('.cookies-modal').css({
       display: 'none'
     });
     this.i18n.setLocale(en_US);
-   }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {}
 }

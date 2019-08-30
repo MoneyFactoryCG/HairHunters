@@ -11,49 +11,82 @@ export class OverviewComponent implements OnInit, OnDestroy {
   searchValue = '';
   sortName: string | null = null;
   sortValue: string | null = null;
-  listOfFilterType = [
-    { text: 'London', value: 'London' },
-    { text: 'Sidney', value: 'Sidney' }
+  listOfStatus = [
+    { text: 'Новый', value: 'new' },
+    { text: 'Запись', value: 'sign' },
+    { text: 'Предоплата', value: 'prepay' },
+    { text: 'Подумаю', value: 'think' },
+    { text: 'Отмена', value: 'cancel' }
   ];
   listOfSearchType: string[] = [];
   listOfData: Order[] = [];
   listOfDisplayData;
 
-  constructor(private overviewService: OverviewService) {
-  }
+  updateInfo;
+
+  constructor(private overviewService: OverviewService) {}
 
   ngOnDestroy() {
-    console.log(this)
+    console.log(this);
   }
 
-  ngOnInit() {
+  convertDateToUTC(date) {
+    const utc = new Date(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      date.getUTCHours(),
+      date.getUTCMinutes(),
+      date.getUTCSeconds()
+    );
+    return utc;
+  }
+
+  convertDateToGMT(utc, local) {
+    const localTime = new Date(utc.getTime() + local * 60 * 60 * 1000);
+    return localTime;
+  }
+
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
+
+  getOrders() {
     this.overviewService.getOrders().subscribe(
       res => {
         this.listOfData = res;
         this.listOfDisplayData = this.listOfData;
+        this.listOfDisplayData.forEach((order, i) => {
+          const d = new Date(this.listOfData[i].date);
+          order.date = d.toLocaleString();
+        });
         console.log(this.listOfData);
       },
       error => {
         console.log(error);
       }
     );
-    setInterval(() => {
-      this.overviewService.getOrders().subscribe(
-        res => {
-          this.listOfData = res;
-          this.listOfDisplayData = this.listOfData;
-          console.log(this.listOfData);
-        },
-        error => {
-          console.log(error);
-        }
-      );
-    }, 30000);
+  }
+
+  startInfoUpdate(time) {
+    return setInterval(() => {
+      this.getOrders();
+    }, time);
+  }
+
+  stopInfoUpdate() {
+    clearInterval(this.updateInfo);
+  }
+
+  ngOnInit() {
+    this.getOrders();
+    this.updateInfo = this.startInfoUpdate(30000);
   }
 
   reset(): void {
     this.searchValue = '';
-    this.search();
+    this.getOrders();
+    this.updateInfo = this.startInfoUpdate(30000);
   }
 
   sort(sortName: string, value: string): void {
@@ -62,12 +95,8 @@ export class OverviewComponent implements OnInit, OnDestroy {
     this.search();
   }
 
-  filterTypeChange(value: string[]): void {
-    this.listOfSearchType = value;
-    this.search();
-  }
-
   search(): void {
+    this.stopInfoUpdate();
     const filterFunc = (item: Order) => {
       return (
         (this.listOfSearchType.length
@@ -78,14 +107,15 @@ export class OverviewComponent implements OnInit, OnDestroy {
       );
     };
     const data = this.listOfData.filter((item: Order) => filterFunc(item));
-    this.listOfDisplayData = data.sort((a, b) =>
-      this.sortValue === 'ascend'
-        ? a[this.sortName!] > b[this.sortName!]
-          ? 1
-          : -1
-        : b[this.sortName!] > a[this.sortName!]
-        ? 1
-        : -1
-    );
+    this.listOfDisplayData = data;
+    // this.listOfDisplayData = data.sort((a, b) =>
+    //   this.sortValue === 'ascend'
+    //     ? a[this.sortName!] > b[this.sortName!]
+    //       ? 1
+    //       : -1
+    //     : b[this.sortName!] > a[this.sortName!]
+    //     ? 1
+    //     : -1
+    // );
   }
 }

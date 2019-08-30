@@ -28,6 +28,7 @@ export class ModalWindowFormComponent implements OnInit {
 
   form: FormGroup;
   isAgree = true;
+  isSubmit = true;
 
   phoneRegex = /^\d{1}\d{1}-\d{3}-\d{2}-\d{2}$/;
 
@@ -99,6 +100,7 @@ export class ModalWindowFormComponent implements OnInit {
   }
 
   onSubmit(e) {
+    this.isSubmit = false;
     console.log(environment.api);
     if (this.link) {
       // let file = new Blob()
@@ -130,8 +132,10 @@ export class ModalWindowFormComponent implements OnInit {
           this.closeWindow();
           fbq('track', 'Contact');
           this.router.navigate(['thanks']);
+          this.isSubmit = true;
         },
         error => {
+          this.isSubmit = true;
           setTimeout(() => {
             this.openWindow(false);
           }, 0);
@@ -148,9 +152,11 @@ export class ModalWindowFormComponent implements OnInit {
       )
       .subscribe(
         res => {
+          this.isSubmit = true;
           console.log(res);
         },
         error => {
+          this.isSubmit = true;
           console.log(error);
         }
       );

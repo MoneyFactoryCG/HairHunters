@@ -66,18 +66,18 @@
   <button
     *ngIf="!link"
     id="contactButton"
-    [disabled]="form.invalid || !isAgree"
+    [disabled]="form.invalid || !isAgree || !isSubmit"
     type="submit"
-    [ngClass]="form.invalid || !isAgree ? 'signup-btn disabled' : 'signup-btn'"
+    [ngClass]="form.invalid || !isAgree || !isSubmit ? 'signup-btn disabled' : 'signup-btn'"
   >
     Записаться
   </button>
   <button
     *ngIf="link"
     id="contactButton"
-    [disabled]="form.invalid || !isAgree"
+    [disabled]="form.invalid || !isAgree || !isSubmit"
     type="submit"
-    [ngClass]="form.invalid || !isAgree ? 'signup-btn disabled' : 'signup-btn'"
+    [ngClass]="form.invalid || !isAgree || !isSubmit ? 'signup-btn disabled' : 'signup-btn'"
   >
     Записаться
   </button>

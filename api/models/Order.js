@@ -10,6 +10,10 @@ const orderSchema = new Schema({
     type: Number,
     required: true
   },
+  status: {
+    type: String,
+    required: true
+  },
   list: [
     {
       name: {
@@ -19,6 +23,20 @@ const orderSchema = new Schema({
         type: String
       },
       type: {
+        type: [String]
+      },
+      price: {
+        type: Number
+      },
+      prepay: {
+        sum: {
+          type: Number
+        },
+        method: {
+          type: String
+        }
+      },
+      note: {
         type: String
       }
     }
