@@ -35,7 +35,7 @@ export class HairPaletteCarouselComponent implements OnInit, AfterViewInit {
     freeModeSticky: true,
     preloadImages: false,
     lazy: true,
-    loop: true,
+    loop: false,
     initialSlide: 8,
     breakpoints: {
       690: {
@@ -249,7 +249,7 @@ export class HairPaletteCarouselComponent implements OnInit, AfterViewInit {
 
   startVideo(index) {
     const figure = $(".hair-palette-carousel .swiper-slide");
-    console.log($(figure[index]).find(".play-ico-desktop"));
+    console.log($(figure[index]));
     $(figure[index])
       .find(".play-ico-desktop")
       .css({
