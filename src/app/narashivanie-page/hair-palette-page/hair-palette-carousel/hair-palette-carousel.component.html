@@ -1,8 +1,17 @@
 <div class="hair-palette-carousel">
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let slide of slides; index as i" (mouseleave)="hideVideo(i)" (click)="startVideo(i)">
-        <img [src]="slide.img" alt="{{slide.alt}}" class="swiper-lazy"/>
+      <div
+        class="swiper-slide"
+        *ngFor="let slide of slides; index as i"
+        (mouseleave)="hideVideo(i)"
+        (click)="startVideo(i)"
+      >
+        <img
+          data-src="{{ slide.img }}"
+          alt="{{ slide.alt }}"
+          class=""
+        />
         <div class="lable">
           <div class="rectangle">
             <p class="code">{{ slide.code }}</p>
@@ -17,8 +26,17 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="18" cy="18" r="17" stroke="#474747" stroke-width="2" />
-            <path d="M30 18L12 28.3923L12 7.60769L30 18Z" fill="#474747" />
+            <circle
+              cx="18"
+              cy="18"
+              r="17"
+              stroke="#474747"
+              stroke-width="2"
+            />
+            <path
+              d="M30 18L12 28.3923L12 7.60769L30 18Z"
+              fill="#474747"
+            />
           </svg>
         </div>
         <div class="play-ico-desktop" (click)="startVideo(i)">
@@ -48,7 +66,8 @@
           width="100%"
           height="100%"
           loop
-          webkit-playsinline="true" 
+          preload="none"
+          webkit-playsinline="true"
           playsinline="true"
           id="video"
         >
