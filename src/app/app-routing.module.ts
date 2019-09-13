@@ -1,23 +1,41 @@
-import { AbTestComponent } from './ab-test/ab-test.component';
-import { ThanksPageComponent } from './thanks-page/thanks-page.component';
 import { CookiesPageComponent } from './cookies-page/cookies-page.component';
 import { AgreementPageComponent } from './agreement-page/agreement-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
-  {path: '', component: MainPageComponent},
-  {path: 'stock', component: AbTestComponent},
-  {path: 'agreement', component: AgreementPageComponent},
-  {path: 'cookies', component: CookiesPageComponent},
-  {path: 'thanks', component: ThanksPageComponent},
-  {path: 'admin', loadChildren: () => import('./admin-panel/admin-panel.module').then(mod => mod.AdminPanelModule)},
-  {path: '**', component: MainPageComponent}
+  {
+    path: '',
+    redirectTo: '/narashivanie',
+    pathMatch: 'full',
+  },
+  {
+    path: 'narashivanie',
+    loadChildren: () =>
+      import('./narashivanie-page/narashivanie-page.module').then(
+        mod => mod.NarashivaniePageModule,
+      ),
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin-panel/admin-panel.module').then(
+        mod => mod.AdminPanelModule,
+      ),
+  },
+  { path: 'agreement', component: AgreementPageComponent },
+  { path: 'cookies', component: CookiesPageComponent },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./narashivanie-page/narashivanie-page.module').then(
+        mod => mod.NarashivaniePageModule,
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

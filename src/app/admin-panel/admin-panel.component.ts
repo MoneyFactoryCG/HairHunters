@@ -5,12 +5,12 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-admin-panel',
   templateUrl: './admin-panel.component.html',
-  styleUrls: ['./admin-panel.component.scss']
+  styleUrls: ['./admin-panel.component.scss'],
 })
 export class AdminPanelComponent implements OnInit {
   constructor(private i18n: NzI18nService) {
-    let head = document.getElementsByTagName('head')[0];
-    let link = document.createElement('link');
+    const head = document.getElementsByTagName('head')[0];
+    const link = document.createElement('link');
     link.id = 'ng-zorro-css';
     link.rel = 'stylesheet';
     link.type = 'text/css';
@@ -18,7 +18,7 @@ export class AdminPanelComponent implements OnInit {
     link.media = 'all';
     head.appendChild(link);
     $('.cookies-modal').css({
-      display: 'none'
+      display: 'none',
     });
     this.i18n.setLocale(en_US);
   }
