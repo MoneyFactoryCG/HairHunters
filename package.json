@@ -51,6 +51,8 @@
     "@types/swiper": "^4.4.4",
     "codelyzer": "^5.0.0",
     "generate-robotstxt": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-purifycss": "^0.2.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
