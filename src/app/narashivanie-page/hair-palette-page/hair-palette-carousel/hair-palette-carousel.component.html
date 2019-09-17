@@ -4,8 +4,8 @@
       <div
         class="swiper-slide"
         *ngFor="let slide of slides; index as i"
-        (mouseleave)="hideVideo(i)"
-        (click)="startVideo(i)"
+        (mouseleave)="hideVideo(i, $event)"
+        (click)="startVideo(i, $event)"
       >
         <img
           data-src="{{ slide.img }}"
@@ -39,7 +39,7 @@
             />
           </svg>
         </div>
-        <div class="play-ico-desktop" (click)="startVideo(i)">
+        <div class="play-ico-desktop">
           <svg
             width="149"
             height="149"

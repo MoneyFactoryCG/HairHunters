@@ -1,5 +1,14 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+} from '@angular/core';
+import {
+  SwiperConfigInterface,
+  SwiperDirective,
+  SwiperComponent,
+} from 'ngx-swiper-wrapper';
 
 import * as $ from 'jquery';
 
@@ -29,7 +38,7 @@ export class HairPaletteCarouselComponent
     freeModeMomentumVelocityRatio: 0.4,
     freeModeSticky: true,
     preloadImages: false,
-    lazy: true,
+    lazy: false,
     loop: false,
     initialSlide: 8,
     breakpoints: {
@@ -52,175 +61,157 @@ export class HairPaletteCarouselComponent
     {
       img: `assets/imgs/hair-palette-page/carousel/1.jpg`,
       code: '#1B',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/1B.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/1B.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/2.jpg`,
       code: '#1',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/1.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/1.mp4',
       alt: 'Натуральные славянские волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/3.jpg`,
       code: '#2',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/2.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/2.mp4',
       alt: 'Натуральные южнорусские волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/4.jpg`,
       code: '#3',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/3.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/3.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/5.jpg`,
       code: '#4',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/4.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/4.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/6.jpg`,
       code: '#5',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/5.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/5.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/7.jpg`,
       code: '#6',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/6.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/6.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/8.jpg`,
       code: '#8',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/8.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/8.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/9.jpg`,
       code: '#10',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/10.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/10.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/10.jpg`,
       code: '#12',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/12.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/12.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/11.jpg`,
       code: '#14',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/14.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/14.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/12.jpg`,
       code: '#16',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/16.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/16.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/13.jpg`,
       code: '#18',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/18.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/18.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/14.jpg`,
       code: '#22',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/22.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/22.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/15.jpg`,
       code: '#24',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/24.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/24.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/16.jpg`,
       code: '#27',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/27.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/27.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/17.jpg`,
       code: '#1001',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/1001.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/1001.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/18.jpg`,
       code: '#60H',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/60H.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/60H.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/19.jpg`,
       code: '#130',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/130.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/130.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/20.jpg`,
       code: '#135',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/135.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/135.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/21.jpg`,
       code: '#613',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/613.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/613.mp4',
       alt: 'Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/22.jpg`,
       code: '#60',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/60.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/60.mp4',
       alt:
         'Интернет магазин натуральных славянских волос для наращивания в срезе',
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/23.jpg`,
       code: '#Plat',
-      video:
-        'https://moneyfactorycg.github.io/HairHunters/assets/imgs/hair-palette-page/carousel/Plat.mp4',
+      video: 'assets/imgs/hair-palette-page/carousel/Plat.mp4',
       alt: 'Натуральные славянские волосы для наращивания в срезе',
     },
   ];
 
   video;
+
+  @ViewChild(SwiperComponent, { static: false })
+  componentRef?: SwiperComponent;
+  @ViewChild(SwiperDirective, { static: false })
+  directiveRef?: SwiperDirective;
 
   customProgressBar(current: number, total: number): string {
     const ratio: number = current / total;
@@ -242,29 +233,49 @@ export class HairPaletteCarouselComponent
     return progressBarContainer;
   }
 
-  startVideo(index) {
-    const figure = $('.hair-palette-carousel .swiper-slide');
-    console.log($(figure[index]));
-    $(figure[index])
-      .find('.play-ico-desktop')
-      .css({
-        opacity: '0',
+  startVideo(index, event) {
+    // const figure = $('.hair-palette-carousel .swiper-slide');
+    // console.log(event);
+    // $(figure[index])
+    //   .find('.play-ico-desktop')
+    //   .css({
+    //     opacity: '0',
+    //     cursor: 'auto',
+    //   });
+    if (event.target.classList.value !== 'play-ico-desktop') {
+      $(event.target.parentElement.children[3]).css({
+        display: 'none',
         cursor: 'auto',
       });
-    this.video = figure.find('video');
-    this.video[index].play();
+      event.target.play();
+    } else {
+      $(event.target).css({
+        display: 'none',
+        cursor: 'auto',
+      });
+      event.target.parentElement.children[4].play();
+    }
+
+    // this.video = figure.find('video');
+    // this.video[index].play();
   }
 
-  hideVideo(index) {
+  hideVideo(index, event) {
     const figure = $('.hair-palette-carousel .swiper-slide');
     $(figure[index])
       .find('.play-ico-desktop')
       .css({
-        opacity: '1',
+        display: 'block',
         cursor: 'pointer',
       });
+    $(event.target.children[3]).css({
+      display: 'block',
+      cursor: 'pointer',
+    });
     this.video = figure.find('video');
     this.video[index].pause();
+    event.target.children[4].pause();
+    console.log(event);
   }
 
   constructor() {}
