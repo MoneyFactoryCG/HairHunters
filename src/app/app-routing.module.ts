@@ -17,6 +17,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'obucheniye',
+    loadChildren: () =>
+      import('./obucheniye-page/obucheniye-page.module').then(
+        mod => mod.ObucheniyePageModule,
+      ),
+  },
+  {
     path: 'admin',
     loadChildren: () =>
       import('./admin-panel/admin-panel.module').then(

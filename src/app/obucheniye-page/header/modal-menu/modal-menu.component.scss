@@ -1,0 +1,184 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+@include media('>=lg') {
+  .modal-menu {
+    display: none;
+  }
+}
+
+@include media('>=md', '<lg') {
+  .modal-menu {
+    display: none;
+  }
+}
+
+@include media('>=sm', '<md') {
+  .modal-menu {
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: fixed;
+    height: 100vh;
+    width: 405px;
+    background: #fff;
+    overflow-y: auto;
+    box-shadow: -4px 0px 11px rgba(0, 0, 0, 0.12);
+
+    transform: translateX(103%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    app-hamburger-menu {
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .first {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      font-size: 22px;
+      font-weight: 600;
+      color: $title-text-color;
+    }
+    .first-anchor {
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+    }
+    .second {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: $title-text-color;
+    }
+    .hair {
+      margin-bottom: 23px;
+      margin-right: -60px;
+    }
+    .address {
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    .phone {
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    .messengers {
+      display: flex;
+      margin-bottom: 40px;
+      a {
+        margin-left: 5px;
+        cursor: pointer;
+        object {
+          border-radius: 3px;
+          pointer-events: none;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .modal-menu.is-active {
+    transform: translateX(0);
+  }
+}
+
+@include media('<sm') {
+  .modal-menu {
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: -4px 0px 11px rgba(0, 0, 0, 0.12);
+
+    transform: translateX(103%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+    app-hamburger-menu {
+      margin-top: 20px;
+      margin-right: -5px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .first {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-size: 22px;
+      font-weight: 600;
+      color: $title-text-color;
+    }
+    .first-anchor {
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+    }
+    .second {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      color: $title-text-color;
+    }
+    .hair {
+      margin-bottom: 23px;
+      margin-right: -10px;
+      width: 285px;
+    }
+    .address {
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    .phone {
+      font-size: 18px;
+      font-weight: 500;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    .messengers {
+      display: flex;
+      margin-bottom: 40px;
+      a {
+        margin-left: 5px;
+        cursor: pointer;
+        object {
+          pointer-events: none;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .modal-menu.is-active {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,101 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+@include media('>=lg') {
+  .main-block {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #fff;
+    .wrapper {
+      width: $lg-content;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+      .left {
+        height: inherit;
+        width: 638px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          font-size: 24px;
+          font-weight: 800;
+          color: $prime-color;
+          margin-bottom: 32px;
+          line-height: 130%;
+          letter-spacing: 0.03em;
+          width: 491px;
+        }
+        h1 {
+          font-size: 48px;
+          font-weight: 800;
+          line-height: 110%;
+          letter-spacing: 0.01em;
+          color: $title-text-color;
+          margin-bottom: 90px;
+        }
+        .icons {
+          align-self: flex-start;
+          display: flex;
+          justify-content: space-between;
+          width: 540px;
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            object {
+              width: 70px;
+              height: auto;
+              margin-bottom: 13px;
+            }
+            p {
+              text-align: center;
+              font-size: 24px;
+              font-weight: 800;
+              color: $title-text-color;
+              width: 160px;
+            }
+          }
+        }
+      }
+      .right {
+        height: inherit;
+        width: 477px;
+        position: relative;
+        .blur {
+        }
+        .bg {
+          width: 600px;
+          position: absolute;
+          bottom: 0;
+          margin: auto;
+          left: 0;
+          right: 0;
+        }
+        p {
+        }
+        button {
+        }
+      }
+    }
+    .goop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-left: -2.5%;
+      width: 105%;
+      height: 93px;
+    }
+  }
+}
+
+@include media('>=md', '<lg') {
+}
+
+@include media('>=sm', '<md') {
+}
+
+@include media('<sm') {
+}

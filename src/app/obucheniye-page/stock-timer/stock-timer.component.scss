@@ -1,0 +1,77 @@
+.timer {
+  display: flex;
+  #days {
+    margin-left: 0;
+  }
+  #minutes {
+    margin-right: 0;
+  }
+  .wrapper {
+    margin: 0 5px;
+    border: 1px solid #9b9b9b;
+    width: 58px;
+    height: 54px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    .lines-wrapper {
+      position: absolute;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      top: -1px;
+      left: -1px;
+      border-radius: 3px;
+      overflow: hidden;
+      z-index: 3;
+      .line-top {
+        transition: width 1s linear;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        // background: #942fe5;
+      }
+      .line-left {
+        transition: height 1s linear;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 2px;
+        // background: #942fe5;
+        display: block;
+      }
+      .line-right {
+        transition: height 1s linear;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 0;
+        width: 2px;
+        // background: #942fe5;
+      }
+      .line-bottom {
+        transition: width 1s linear;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        // background: #942fe5;
+        display: block;
+      }
+    }
+    span {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .lable {
+      font-size: 12px;
+    }
+  }
+}
