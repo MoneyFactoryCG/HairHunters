@@ -1,4 +1,10 @@
 User-agent: *
 Disallow: /cookies
 Disallow: /agreement
+Disallow: /admin
+Allow: /assets/*
+Allow: /assets/*
+Allow: /assets/*
+Allow: /assets/*
 Host: narashivanie-volos.club
+Sitemap: https://narashivanie-volos.club/assets/sitemap.xml
