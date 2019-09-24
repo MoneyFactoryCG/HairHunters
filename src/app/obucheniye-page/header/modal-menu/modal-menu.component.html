@@ -1,0 +1,65 @@
+<section class="modal-menu">
+  <app-hamburger-menu [status]="true"></app-hamburger-menu>
+  <a (click)="scroll('')" class="first">Обучение</a>
+  <a (click)="scroll('')" class="first-anchor">Преподаватель</a>
+  <a (click)="scroll('')" class="first-anchor">Программа курса</a>
+  <a (click)="scroll('')" class="first-anchor">Что выбрать?</a>
+  <a (click)="scroll('')" class="first-anchor">Выгоды</a>
+  <a href="/narashivanie" class="second">Наращивание волос</a>
+  <object
+    class="hair"
+    data="assets/obucheniye/icons/hair.svg"
+    type="image/svg+xml"
+  ></object>
+  <p class="address">г. Харьков ул. Каразина, 1</p>
+  <a class="phone" href="tel:+380634746018">0 (63) 474 60 18</a>
+  <div class="messengers">
+    <!-- telegram @HairHuntersKharkov -->
+    <a
+      class="telegram"
+      title="Telegram"
+      href="tg://resolve?domain=@HairHuntersKharkov"
+    >
+      <object
+        data="assets/obucheniye/icons/telegram.svg"
+        type="image/svg+xml"
+      ></object>
+    </a>
+    <!-- viber desktop -->
+    <a
+      class="viber"
+      title="Viber"
+      *ngIf="!isMobileDevice"
+      href="viber://chat?number=+380634746018"
+    >
+      <object
+        data="assets/obucheniye/icons/viber.svg"
+        type="image/svg+xml"
+      ></object>
+    </a>
+    <!-- viber phone -->
+    <a
+      class="viber"
+      title="Viber"
+      *ngIf="isMobileDevice"
+      href="viber://add?number=380634746018"
+    >
+      <object
+        data="assets/obucheniye/icons/viber.svg"
+        type="image/svg+xml"
+      ></object>
+    </a>
+    <!-- whatsApp -->
+    <a
+      class="whatsapp"
+      title="WhatsApp"
+      href="https://wa.me/380633003060"
+      target="_blank"
+    >
+      <object
+        data="assets/obucheniye/icons/whatsapp.svg"
+        type="image/svg+xml"
+      ></object>
+    </a>
+  </div>
+</section>

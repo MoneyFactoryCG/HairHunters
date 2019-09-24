@@ -1,23 +1,32 @@
-import { Component, OnInit, ViewChild, ViewChildren, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ViewChildren,
+  AfterViewInit,
+} from '@angular/core';
 // import { SwiperOptions } from 'swiper';
 import {
-  SwiperConfigInterface, SwiperComponent, SwiperDirective,
-} from "ngx-swiper-wrapper";
+  SwiperConfigInterface,
+  SwiperComponent,
+  SwiperDirective,
+} from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-stock-carousel',
   templateUrl: './stock-carousel.component.html',
-  styleUrls: ['./stock-carousel.component.scss']
+  styleUrls: ['./stock-carousel.component.scss'],
 })
 export class StockCarouselComponent implements OnInit, AfterViewInit {
-
   @ViewChildren('stock') childQuery;
 
   isStock: boolean[] = [true, true, true];
   isStocks: boolean = true;
 
-  @ViewChild(SwiperComponent, { static: false }) componentRef?: SwiperComponent;
-  @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
+  @ViewChild(SwiperComponent, { static: false })
+  componentRef?: SwiperComponent;
+  @ViewChild(SwiperDirective, { static: false })
+  directiveRef?: SwiperDirective;
 
   config: SwiperConfigInterface = {
     pagination: { el: '.stock-swiper-pagination', clickable: true },
@@ -27,12 +36,15 @@ export class StockCarouselComponent implements OnInit, AfterViewInit {
     freeMode: false,
     spaceBetween: 30,
     slidesPerView: 'auto',
-    centeredSlides: true
+    centeredSlides: true,
   };
 
   checkStock() {
     for (let i = 0; i < this.childQuery.length; i++) {
-      if (this.childQuery._results[i].isActive || this.childQuery._results[i].isActiveCookie) {
+      if (
+        this.childQuery._results[i].isActive ||
+        this.childQuery._results[i].isActiveCookie
+      ) {
         this.isStock[i] = true;
       } else {
         this.isStock[i] = false;
@@ -42,7 +54,10 @@ export class StockCarouselComponent implements OnInit, AfterViewInit {
 
   checkStocks() {
     for (let i = 0; i < this.childQuery.length; i++) {
-      if (this.childQuery._results[i].isActive || this.childQuery._results[i].isActiveCookie) {
+      if (
+        this.childQuery._results[i].isActive ||
+        this.childQuery._results[i].isActiveCookie
+      ) {
         return true;
       }
     }
@@ -51,8 +66,7 @@ export class StockCarouselComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.checkStock();

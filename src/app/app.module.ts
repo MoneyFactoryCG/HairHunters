@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NarashivaniePageModule } from './narashivanie-page/narashivanie-page.module';
+import { ObucheniyePageModule } from './obucheniye-page/obucheniye-page.module';
 
 import { AppComponent } from './app.component';
 
@@ -20,6 +21,7 @@ import { CookiesPageComponent } from './cookies-page/cookies-page.component';
     AppRoutingModule,
     HttpClientModule,
     NarashivaniePageModule,
+    ObucheniyePageModule,
   ],
   exports: [],
   bootstrap: [AppComponent],

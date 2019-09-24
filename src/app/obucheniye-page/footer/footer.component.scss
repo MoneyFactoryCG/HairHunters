@@ -1,0 +1,287 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+@include media('>=lg') {
+  .footer {
+    background: #000;
+    height: 141px;
+    position: relative;
+    object {
+      pointer-events: none;
+    }
+    .wrapper {
+      height: 100%;
+      width: $lg-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      .left {
+        display: flex;
+        flex-direction: column;
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .social {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+        .copyrights {
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 323px;
+      }
+      .right {
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .messengers {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:first-child) {
+            margin-left: 15px;
+          }
+        }
+        .phone {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include media('>=md', '<lg') {
+  .footer {
+    background: #000;
+    height: 141px;
+    position: relative;
+    object {
+      pointer-events: none;
+    }
+    .wrapper {
+      height: 100%;
+      width: $md-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      .left {
+        display: flex;
+        flex-direction: column;
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .social {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+        .copyrights {
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 323px;
+      }
+      .right {
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .messengers {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:first-child) {
+            margin-left: 15px;
+          }
+        }
+        .phone {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include media('>=sm', '<md') {
+  .footer {
+    background: #000;
+    height: 141px;
+    position: relative;
+    object {
+      pointer-events: none;
+    }
+    .wrapper {
+      height: 100%;
+      width: $sm-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      .left {
+        display: flex;
+        flex-direction: column;
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .social {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+        .copyrights {
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .logo {
+        width: 200px;
+      }
+      .right {
+        height: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .messengers {
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:first-child) {
+            margin-left: 15px;
+          }
+        }
+        .phone {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include media('<sm') {
+  .footer {
+    background: #000;
+    height: 185px;
+    position: relative;
+    object {
+      pointer-events: none;
+    }
+    .wrapper {
+      height: 100%;
+      width: $xs-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      .left {
+        display: flex;
+        flex-direction: column;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .social {
+          position: absolute;
+          left: 0;
+          top: 80px;
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+        .copyrights {
+          font-size: 12px;
+          color: #fff;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 10px;
+          text-align: center;
+        }
+      }
+      .logo {
+        width: 292px;
+        align-self: flex-start;
+        margin-top: 10px;
+      }
+      .right {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .messengers {
+          position: absolute;
+          right: 0;
+          top: 80px;
+          a {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: inline-block;
+          }
+          a:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+        .phone {
+          text-decoration: none;
+          color: #fff;
+          position: absolute;
+          font-size: 18px;
+          font-weight: 500;
+          width: 100%;
+          left: 0;
+          right: 0;
+          bottom: 30px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

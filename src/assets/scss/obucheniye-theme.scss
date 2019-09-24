@@ -1,0 +1,35 @@
+@import './mixins/include-media';
+
+$breakpoints: (
+  lg: 1600px,
+  md: 1160px,
+  sm: 690px,
+);
+
+$lg-content: 1490px;
+$md-content: 1110px;
+$sm-content: 649px;
+$xs-content: 304px;
+
+/*THEME*/
+
+$bg-color: #f8effa;
+$prime-color: #942fe5;
+$border-color: #999999;
+$title-text-color: #414141;
+$text-color: #151515;
+$button-text-color: #ffffff;
+
+@include media('>=lg') {
+}
+
+@include media('>=md', '<lg') {
+}
+
+@include media('>=sm', '<md') {
+}
+
+@include media('<sm') {
+}
+
+/*END-THEME*/

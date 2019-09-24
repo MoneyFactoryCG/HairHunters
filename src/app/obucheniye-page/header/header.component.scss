@@ -1,0 +1,190 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+@include media('>=lg') {
+  header {
+    width: 100%;
+    height: 84px;
+    position: fixed;
+    z-index: 100;
+    transition: background 0.1s ease;
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $lg-content;
+      height: 100%;
+      margin: auto;
+      padding-right: 20px;
+
+      img {
+        width: 224px;
+        height: auto;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 100px;
+        width: 990px;
+        a {
+          color: $title-text-color;
+          font-style: 18px;
+          font-weight: 600;
+          text-decoration: none;
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+            left: 0;
+            background: #942fe5;
+          }
+          &:hover {
+            &:after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+      app-hamburger-menu {
+        display: none;
+      }
+    }
+  }
+  .header.fixed {
+    background: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.11);
+  }
+}
+
+@include media('>=md', '<lg') {
+  header {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    z-index: 100;
+    transition: background 0.1s ease;
+
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $md-content;
+      height: 100%;
+      margin: auto;
+      padding-right: 20px;
+
+      img {
+        width: 224px;
+        height: auto;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 739px;
+        a {
+          color: $title-text-color;
+          font-style: 18px;
+          font-weight: 600;
+          text-decoration: none;
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            transition: transform 0.3s ease;
+            transform: scaleX(0);
+            left: 0;
+            background: #942fe5;
+          }
+          &:hover {
+            &:after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+      app-hamburger-menu {
+        display: none;
+      }
+    }
+  }
+  .header.fixed {
+    background: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.11);
+  }
+}
+
+@include media('>=sm', '<md') {
+  header {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    z-index: 100;
+    transition: background 0.1s ease;
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $sm-content;
+      height: 100%;
+      margin: auto;
+      padding-right: 20px;
+      img {
+        width: 224px;
+        height: auto;
+      }
+      nav {
+        display: none;
+      }
+      app-hamburger-menu {
+        display: unset;
+      }
+    }
+  }
+  .header.fixed {
+    background: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.11);
+  }
+}
+
+@include media('<sm') {
+  header {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    z-index: 100;
+    transition: background 0.1s ease;
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: $xs-content;
+      height: 100%;
+      margin: auto;
+      padding-right: 10px;
+      padding-left: 8px;
+      img {
+        width: 224px;
+        height: auto;
+      }
+      nav {
+        display: none;
+      }
+      app-hamburger-menu {
+        display: unset;
+      }
+    }
+  }
+  .header.fixed {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.11);
+    background: #fff;
+  }
+}

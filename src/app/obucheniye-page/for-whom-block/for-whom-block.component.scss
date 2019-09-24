@@ -1,0 +1,259 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+@include media('>=lg') {
+  .for-whom-block {
+    width: 100%;
+    background: $bg-color;
+    position: relative;
+    overflow: hidden;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .wrapper {
+      margin: auto;
+      width: $lg-content;
+      height: inherit;
+      position: relative;
+      h1 {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        margin-bottom: 80px;
+        color: $title-text-color;
+      }
+      .who-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .who {
+          box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.11),
+            0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+          overflow: hidden;
+          border-radius: 3px;
+          position: relative;
+          width: 477px;
+          background: #fff;
+          .cover {
+            width: 100%;
+            height: 233px;
+            background: #ddd;
+          }
+          .info {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            h2 {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 120%;
+              letter-spacing: -0.02em;
+              color: $prime-color;
+              margin-bottom: 20px;
+            }
+            p {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 150%;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('>=md', '<lg') {
+  .for-whom-block {
+    width: 100%;
+    background: $bg-color;
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .wrapper {
+      margin: auto;
+      width: $md-content;
+      height: inherit;
+      position: relative;
+      h1 {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        margin-bottom: 60px;
+        color: $title-text-color;
+      }
+      .who-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .who {
+          box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.11),
+            0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+          overflow: hidden;
+          border-radius: 3px;
+          position: relative;
+          width: 350px;
+          background: #fff;
+          .cover {
+            width: 100%;
+            height: 233px;
+            background: #ddd;
+          }
+          .info {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            h2 {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 120%;
+              letter-spacing: -0.02em;
+              color: $prime-color;
+              margin-bottom: 20px;
+            }
+            p {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 150%;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('>=sm', '<md') {
+  .for-whom-block {
+    width: 100%;
+    background: $bg-color;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    .wrapper {
+      margin: auto;
+      width: $sm-content;
+      height: inherit;
+      position: relative;
+      h1 {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+        color: $title-text-color;
+      }
+      .who-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .who {
+          box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.11),
+            0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+          overflow: hidden;
+          border-radius: 3px;
+          position: relative;
+          width: 203px;
+          background: #fff;
+          .cover {
+            width: 100%;
+            height: 137px;
+            background: #ddd;
+          }
+          .info {
+            padding-top: 20px;
+            padding-left: 8px;
+            padding-right: 7px;
+            padding-bottom: 20px;
+            h2 {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 110%;
+              letter-spacing: -0.03em;
+              color: $prime-color;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 150%;
+              letter-spacing: -0.01em;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('<sm') {
+  .for-whom-block {
+    width: 100%;
+    background: $bg-color;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    .wrapper {
+      margin: auto;
+      width: $xs-content;
+      height: inherit;
+      position: relative;
+      h1 {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+        color: $title-text-color;
+      }
+      .who-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        .who {
+          box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.11),
+            0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+          overflow: hidden;
+          border-radius: 3px;
+          position: relative;
+          width: 304px;
+          background: #fff;
+          margin-bottom: 15px;
+          .cover {
+            width: 100%;
+            height: 170px;
+            background: #ddd;
+          }
+          .info {
+            padding-top: 20px;
+            padding-left: 15px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+            h2 {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 120%;
+              color: $prime-color;
+              margin-bottom: 15px;
+            }
+            p {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 150%;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
