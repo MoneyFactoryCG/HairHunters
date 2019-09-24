@@ -1,0 +1,18 @@
+<button
+  [ngClass]="{
+    white: theme === 'white',
+    prime: theme === 'prime',
+    'prime-hover': theme === 'prime-hover'
+  }"
+  (mousemove)="puls($event)"
+  (mouseout)="resetPuls($event)"
+>
+  <p class="text"><ng-content></ng-content></p>
+  <div class="circles">
+    <div class="wrapper">
+      <span class="circle _1"></span>
+      <span class="circle _2"></span>
+      <span class="circle _3"></span>
+    </div>
+  </div>
+</button>

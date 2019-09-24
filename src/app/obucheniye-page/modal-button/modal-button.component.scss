@@ -1,0 +1,478 @@
+@import '~src/assets/scss/obucheniye-theme.scss';
+
+button {
+  box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.31),
+    0px 6.4px 14.4px rgba(0, 0, 0, 0.33);
+  transition: box-shadow 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.21),
+      0px 0px 0px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.white {
+  width: 200px;
+  height: 48px;
+  border: none;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .text {
+    color: #000;
+    z-index: 3;
+    position: relative;
+    pointer-events: none;
+  }
+  .circles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    .wrapper {
+      position: relative;
+      width: 700px;
+      height: 700px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .circle {
+      transform-origin: center;
+      pointer-events: none;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      // border: 1px solid #000;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: inset 0px 0px 11px rgba(212, 159, 255, 0.98);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+  &:hover {
+    .circles {
+      .wrapper {
+        ._1 {
+          animation: scale 3s linear 0s infinite;
+        }
+        ._2 {
+          animation: scale 3s linear 0.5s infinite;
+        }
+        ._3 {
+          animation: scale 3s linear 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+.prime {
+  width: 200px;
+  height: 48px;
+  border: none;
+  position: relative;
+  background: #942fe5;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .text {
+    color: #fff;
+    z-index: 3;
+    position: relative;
+    pointer-events: none;
+  }
+  .circles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    .wrapper {
+      position: relative;
+      width: 700px;
+      height: 700px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translate(calc(100px - 50%), calc(100px - 50%));
+      transition: transform 0.2s linear;
+    }
+    .circle {
+      transform-origin: center;
+      pointer-events: none;
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      // border: 1px solid #000;
+      border-radius: 50%;
+      background: #942fe5;
+      box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+    ._1 {
+      animation: scale 3s linear 0s infinite;
+    }
+    ._2 {
+      animation: scale 3s linear 0.5s infinite;
+    }
+    ._3 {
+      animation: scale 3s linear 1s infinite;
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.75;
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+  }
+}
+
+@include media('>=lg') {
+  .prime-hover {
+    width: 200px;
+    height: 48px;
+    border: none;
+    position: relative;
+    background: #942fe5;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .text {
+      color: #fff;
+      z-index: 3;
+      position: relative;
+      pointer-events: none;
+    }
+    .circles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      .wrapper {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translate(calc(100px - 50%), calc(100px - 50%));
+        transition: transform 0.2s linear;
+      }
+      .circle {
+        transform-origin: center;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        // border: 1px solid #000;
+        border-radius: 50%;
+        background: #942fe5;
+        box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    &:hover {
+      .circles {
+        .wrapper {
+          ._1 {
+            animation: scale 3s linear 0s infinite;
+          }
+          ._2 {
+            animation: scale 3s linear 0.5s infinite;
+          }
+          ._3 {
+            animation: scale 3s linear 1s infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('>=md', '<lg') {
+  .prime-hover {
+    width: 200px;
+    height: 48px;
+    border: none;
+    position: relative;
+    background: #942fe5;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .text {
+      color: #fff;
+      z-index: 3;
+      position: relative;
+      pointer-events: none;
+    }
+    .circles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      .wrapper {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translate(calc(100px - 50%), calc(100px - 50%));
+        transition: transform 0.2s linear;
+      }
+      .circle {
+        transform-origin: center;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        // border: 1px solid #000;
+        border-radius: 50%;
+        background: #942fe5;
+        box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    &:hover {
+      .circles {
+        .wrapper {
+          ._1 {
+            animation: scale 3s linear 0s infinite;
+          }
+          ._2 {
+            animation: scale 3s linear 0.5s infinite;
+          }
+          ._3 {
+            animation: scale 3s linear 1s infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('>=sm', '<md') {
+  .prime-hover {
+    width: 200px;
+    height: 48px;
+    border: none;
+    position: relative;
+    background: #942fe5;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .text {
+      color: #fff;
+      z-index: 3;
+      position: relative;
+      pointer-events: none;
+    }
+    .circles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      .wrapper {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translate(calc(100px - 50%), calc(100px - 50%));
+        transition: transform 0.2s linear;
+      }
+      .circle {
+        transform-origin: center;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        // border: 1px solid #000;
+        border-radius: 50%;
+        background: #942fe5;
+        box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+    &:hover {
+      .circles {
+        .wrapper {
+          ._1 {
+            animation: scale 3s linear 0s infinite;
+          }
+          ._2 {
+            animation: scale 3s linear 0.5s infinite;
+          }
+          ._3 {
+            animation: scale 3s linear 1s infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media('<sm') {
+  .prime-hover {
+    width: 200px;
+    height: 48px;
+    border: none;
+    position: relative;
+    background: #942fe5;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .text {
+      color: #fff;
+      z-index: 3;
+      position: relative;
+      pointer-events: none;
+    }
+    .circles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      .wrapper {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translate(calc(100px - 50%), calc(100px - 50%));
+        transition: transform 0.2s linear;
+      }
+      .circle {
+        transform-origin: center;
+        pointer-events: none;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        // border: 1px solid #000;
+        border-radius: 50%;
+        background: #942fe5;
+        box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+      ._1 {
+        animation: scale 3s linear 0s infinite;
+      }
+      ._2 {
+        animation: scale 3s linear 0.5s infinite;
+      }
+      ._3 {
+        animation: scale 3s linear 1s infinite;
+      }
+    }
+  }
+}

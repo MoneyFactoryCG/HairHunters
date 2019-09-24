@@ -25,13 +25,13 @@
           display: block;
           top: 50%;
           margin-top: -1.5px;
-          transition-duration: 0.22s;
-          transition-timing-function: cubic-bezier(
-            0.55,
-            0.055,
-            0.675,
-            0.19
-          );
+          // transition-duration: 0.22s;
+          // transition-timing-function: cubic-bezier(
+          //   0.55,
+          //   0.055,
+          //   0.675,
+          //   0.19
+          // );
           &::before,
           &::after {
             content: '';
@@ -121,13 +121,13 @@
           display: block;
           top: 50%;
           margin-top: -1.5px;
-          transition-duration: 0.22s;
-          transition-timing-function: cubic-bezier(
-            0.55,
-            0.055,
-            0.675,
-            0.19
-          );
+          // transition-duration: 0.22s;
+          // transition-timing-function: cubic-bezier(
+          //   0.55,
+          //   0.055,
+          //   0.675,
+          //   0.19
+          // );
           &::before,
           &::after {
             content: '';
@@ -148,7 +148,7 @@
         .hamburger-inner::after {
           width: 38px;
           height: 3px;
-          background: #fff;
+          background: $prime-color;
           border-radius: 3px;
           position: absolute;
         }

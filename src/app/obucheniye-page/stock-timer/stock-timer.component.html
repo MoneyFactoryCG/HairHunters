@@ -15,8 +15,8 @@
         [ngStyle]="{ background: color }"
       ></span>
     </div>
-    <span class="days"></span>
-    <p class="lable">День</p>
+    <span class="days" [ngStyle]="{ color: color }"></span>
+    <p class="lable" [ngStyle]="{ color: color }">День</p>
   </div>
   <div class="wrapper" id="hours">
     <div class="lines-wrapper">
@@ -34,8 +34,8 @@
         [ngStyle]="{ background: color }"
       ></span>
     </div>
-    <span class="hours"></span>
-    <p class="lable">Часы</p>
+    <span class="hours" [ngStyle]="{ color: color }"></span>
+    <p class="lable" [ngStyle]="{ color: color }">Часы</p>
   </div>
   <div class="wrapper" id="minutes">
     <div class="lines-wrapper">
@@ -53,7 +53,7 @@
         [ngStyle]="{ background: color }"
       ></span>
     </div>
-    <span class="minutes"></span>
-    <p class="lable">Мин.</p>
+    <span class="minutes" [ngStyle]="{ color: color }"></span>
+    <p class="lable" [ngStyle]="{ color: color }">Мин.</p>
   </div>
 </div>

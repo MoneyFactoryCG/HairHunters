@@ -28,20 +28,44 @@
       </div>
     </section>
     <section class="right">
-      <!-- <div class="blur"></div>
-      <img
-        src="assets/obucheniye/main-block/master-transparent.png"
-        alt=""
-        class="bg"
-      />
-      <p>До начала курсов осталось:</p>
-      <app-stock-timer
-        date="2019-09-30"
-        timerId="t1"
-      ></app-stock-timer>
-      <button>Записаться</button> -->
+      <div class="circles">
+        <div class="wrapper">
+          <span class="circle _1"></span>
+          <span class="circle _2"></span>
+          <span class="circle _3"></span>
+        </div>
+      </div>
+      <div class="bg-wrapper">
+        <div class="blur"></div>
+        <img
+          src="assets/obucheniye/main-block/student.jpeg"
+          alt=""
+          class="bg"
+        />
+      </div>
+      <div class="timer">
+        <p>До начала курсов осталось:</p>
+        <app-stock-timer
+          date="2019-09-30"
+          timerId="t1"
+          color="#fff"
+        ></app-stock-timer>
+        <app-modal-button style="margin-top: 50px;" theme="white"
+          >Записаться</app-modal-button
+        >
+      </div>
     </section>
   </div>
+  <div class="static-circles">
+    <span class="circle _1"></span>
+    <span class="circle _2"></span>
+    <span class="circle _3"></span>
+  </div>
+  <img
+    src="assets/obucheniye/main-block/cert.png"
+    alt=""
+    class="certificate"
+  />
   <object
     class="goop"
     data="assets/obucheniye/main-block/main-block-goop.svg"

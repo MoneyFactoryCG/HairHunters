@@ -11,11 +11,11 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   fixedHeader() {
     if ($(window).scrollTop() > 30) {
-      $('.header').addClass('.fixed');
-      $('.hamburger-menu').addClass('.fixed');
+      $('.header').addClass('fixed');
+      $('.hamburger-menu').addClass('fixed');
     } else {
       $('.header').removeClass('fixed');
-      $('.hamburger-menu').removeClass('.fixed');
+      $('.hamburger-menu').removeClass('fixed');
     }
   }
 

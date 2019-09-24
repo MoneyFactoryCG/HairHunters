@@ -14,7 +14,7 @@
 
 @include media('>=sm', '<md') {
   .modal-menu {
-    z-index: 2;
+    z-index: 101;
     position: fixed;
     right: 0;
     top: 0;
@@ -31,7 +31,7 @@
     box-shadow: -4px 0px 11px rgba(0, 0, 0, 0.12);
 
     transform: translateX(103%);
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.5s ease;
 
     app-hamburger-menu {
       margin-top: 20px;
@@ -99,7 +99,7 @@
 
 @include media('<sm') {
   .modal-menu {
-    z-index: 2;
+    z-index: 101;
     position: fixed;
     right: 0;
     top: 0;
@@ -117,7 +117,7 @@
     box-shadow: -4px 0px 11px rgba(0, 0, 0, 0.12);
 
     transform: translateX(103%);
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.5s ease;
 
     app-hamburger-menu {
       margin-top: 20px;
@@ -135,7 +135,7 @@
       color: $title-text-color;
     }
     .first-anchor {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       font-size: 18px;
       font-weight: 500;
       color: $text-color;
@@ -148,7 +148,7 @@
       color: $title-text-color;
     }
     .hair {
-      margin-bottom: 23px;
+      margin-bottom: 10px;
       margin-right: -10px;
       width: 285px;
     }
