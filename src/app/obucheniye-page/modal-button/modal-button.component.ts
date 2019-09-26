@@ -1,4 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  HostListener,
+} from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -9,22 +14,36 @@ import * as $ from 'jquery';
 })
 export class ModalButtonComponent implements OnInit {
   @Input() theme = 'white';
+  @Input() windowId: string;
   BG_COLOR: string;
   TEXT_COLOR: string;
+
+  @HostListener('click') onClick() {
+    this.openWindow();
+  }
 
   constructor() {}
 
   puls(event) {
     console.log(event);
-    $(event.target).css({
-      transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`,
-    });
+    if (event.target.localName !== 'button') {
+      $(event.target).css({
+        transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`,
+      });
+    }
   }
 
   resetPuls(event) {
-    $(event.target).css({
-      transform: `translate(calc(100px - 50%), calc(100px - 50%))`,
-    });
+    if (event.target.localName !== 'button') {
+      $(event.target).css({
+        transform: `translate(calc(100px - 50%), calc(100px - 50%))`,
+      });
+    }
+  }
+
+  openWindow() {
+    const el = document.getElementById(this.windowId);
+    el.className = el.className + ' is-active';
   }
 
   ngOnInit() {

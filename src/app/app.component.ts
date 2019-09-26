@@ -38,8 +38,9 @@ export class AppComponent implements AfterViewInit, OnInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      $('.app-loading').fadeOut();
-    }, 500);
+    // setTimeout(() => {
+    //   $('.app-loading').fadeOut();
+    // }, 500);
+    $('.app-loading').fadeOut();
   }
 }

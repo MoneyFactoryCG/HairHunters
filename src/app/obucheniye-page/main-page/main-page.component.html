@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [isNav]="true"></app-header>
 <app-main-block></app-main-block>
 <app-for-whom-block></app-for-whom-block>
 <app-teacher-block></app-teacher-block>
@@ -6,3 +6,35 @@
 <app-what-choose-block></app-what-choose-block>
 <app-bottom-block></app-bottom-block>
 <app-footer></app-footer>
+
+<app-modal-window
+  windowId="mw1"
+  cover="assets/obucheniye/courses/keratin.jpg"
+  [formInfo]="{
+    title: 'Записаться на курс',
+    type: 'Испанская техника на биогель',
+    button: 'Записаться',
+    message: 'Предварительная регистрация на курс КЕРАТИН'
+  }"
+></app-modal-window>
+<app-modal-window
+  windowId="mw2"
+  cover="assets/obucheniye/courses/bio.jpg"
+  [formInfo]="{
+    title: 'Записаться на курс',
+    type: 'Итальянская техника на кератин',
+    button: 'Записаться',
+    message: 'Предварительная регистрация на курс БИОГЕЛЬ'
+  }"
+></app-modal-window>
+
+<app-modal-window
+  windowId="mw3"
+  cover="assets/obucheniye/modal/student.jpg"
+  [formInfo]="{
+    title: 'Предварительная регистрация',
+    type: '',
+    button: 'Регистрация',
+    message: 'Предварительная регистрация на курсы'
+  }"
+></app-modal-window>

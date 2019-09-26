@@ -1,0 +1,16 @@
+<div id="{{ windowId }}" class="container">
+  <div class="bg"></div>
+  <div class="modal-window">
+    <span class="close" (click)="close()">
+      <object
+        data="assets/obucheniye/icons/close.svg"
+        type="image/svg+xml"
+      ></object>
+    </span>
+    <img class="cover" src="{{ cover }}" alt="" />
+    <app-modal-window-form
+      [windowId]="windowId"
+      [info]="formInfo"
+    ></app-modal-window-form>
+  </div>
+</div>

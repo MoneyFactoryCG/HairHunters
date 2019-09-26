@@ -1,6 +1,7 @@
 <section class="bottom-block">
   <div class="wrapper">
     <div class="info">
+      <h1>Обучись модной высокооплачиваемой профессии!</h1>
       <p class="common-master-text">
         Месячный доход мастера по наращиванию волос в г.Харьков:
       </p>
@@ -36,14 +37,22 @@
     <div class="order">
       <div class="bg"></div>
       <div class="card">
-        <h1>Обучись модной высокооплачиваемой профессии!</h1>
-        <p>До начала курсов осталось:</p>
+        <h1>
+          Получи <span>20% скидку</span> за предварительную
+          регистрацию
+        </h1>
+        <p>
+          Всего 1 ученик на курс
+          <br /><br />
+          Дата начала курса: <span>{{ course?.courses_date }}</span>
+        </p>
         <app-stock-timer
-          date="2019-09-30"
+          *ngIf="course?.courses_date"
+          [date]="course.courses_date"
           timerId="t2"
           color="#000"
         ></app-stock-timer>
-        <app-modal-button theme="prime-hover"
+        <app-modal-button theme="prime-hover" windowId="mw3"
           >Записаться</app-modal-button
         >
       </div>

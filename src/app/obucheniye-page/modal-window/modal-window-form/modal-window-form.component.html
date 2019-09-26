@@ -1,0 +1,151 @@
+<form
+  class="modal-window-form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit($event)"
+>
+  <h1 class="title">{{ info.title }}</h1>
+  <h2 class="type">{{ info.type }}</h2>
+
+  <div class="name-box">
+    <input
+      formControlName="name"
+      name="name"
+      type="text"
+      (change)="onChange()"
+      [ngClass]="
+        form.get('name').invalid && form.get('name').touched
+          ? 'name invalid'
+          : 'name'
+      "
+      placeholder="Имя"
+      autocomplete="off"
+      maxlength="21"
+    />
+    <span
+      *ngIf="form.get('name').invalid && form.get('name').touched"
+      class="helper-text"
+    >
+      <span *ngIf="form.get('name').errors['required']"
+        >*Введите имя</span
+      >
+    </span>
+  </div>
+  <div class="phone-box">
+    <input
+      formControlName="phone"
+      name="phone"
+      (change)="onChange()"
+      [ngClass]="
+        form.get('phone').invalid && form.get('phone').touched
+          ? 'phone invalid'
+          : 'phone'
+      "
+      type="text"
+      mask="00-000-00-00"
+      placeholder="__-___-__-__"
+    />
+    <span class="code">+380</span>
+    <span
+      *ngIf="form.get('phone').invalid && form.get('phone').touched"
+      class="helper-text"
+    >
+      <span *ngIf="form.get('phone').errors['required']"
+        >*Введите номер телефона</span
+      >
+    </span>
+  </div>
+  <div class="data-proc">
+    <span
+      [ngClass]="
+        isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'
+      "
+      (click)="isAgree = !isAgree"
+    ></span>
+    <p class="info">
+      Я даю
+      <a href="/agreement" target="_blank"
+        >согласие на обработку<br />персональных данных</a
+      >
+    </p>
+  </div>
+  <button
+    id="contactButton"
+    [disabled]="form.invalid || !isAgree || !isSubmit"
+    type="submit"
+    [ngClass]="
+      form.invalid || !isAgree || !isSubmit
+        ? 'signup-btn disabled'
+        : 'signup-btn'
+    "
+  >
+    {{ info.button }}
+  </button>
+</form>
+
+<div id="{{ windowId }}-error" class="error-modal">
+  <span class="close" (click)="errorWindowClose()">
+    <object
+      data="assets/obucheniye/icons/close.svg"
+      type="image/svg+xml"
+    ></object>
+  </span>
+  <h1>Ошибка сервера!</h1>
+  <p>
+    Ваша заявка не отправлена. Попробуйте в другое время или
+    свяжитесть с нашим менеджером.
+  </p>
+  <div class="messengers">
+    <a class="phone" href="tel:+380634746018"
+      ><object
+        data="../../../../assets/obucheniye/icons/phone.svg"
+        type=""
+      ></object
+      >+38 (063) 474 60 18</a
+    >
+    <div class="wrapper">
+      <a
+        class="telegram"
+        title="Telegram"
+        href="tg://resolve?domain=@HairHuntersKharkov"
+      >
+        <object
+          data="assets/obucheniye/icons/telegram.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+      <a
+        class="viber"
+        title="Viber"
+        *ngIf="!isMobileDevice"
+        href="viber://chat?number=+380634746018"
+      >
+        <object
+          data="assets/obucheniye/icons/viber.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+      <a
+        class="viber"
+        title="Viber"
+        *ngIf="isMobileDevice"
+        href="viber://add?number=380634746018"
+      >
+        <object
+          data="assets/obucheniye/icons/viber.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+      <a
+        class="whatsapp"
+        title="WhatsApp"
+        href="https://wa.me/380634746018"
+        target="_blank"
+      >
+        <object
+          data="assets/obucheniye/icons/whatsapp.svg"
+          type="image/svg+xml"
+        ></object>
+      </a>
+    </div>
+  </div>
+</div>

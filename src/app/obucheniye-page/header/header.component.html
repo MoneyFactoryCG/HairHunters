@@ -1,5 +1,5 @@
 <app-modal-menu></app-modal-menu>
-<header class="header">
+<header class="header" *ngIf="isNav">
   <div class="header-wrapper">
     <img src="assets/imgs/logo.png" alt="hair hunters" class="logo" />
     <nav>
@@ -10,5 +10,15 @@
       <a href="/narashivanie" class="">Наращивание волос</a>
     </nav>
     <app-hamburger-menu [status]="false"></app-hamburger-menu>
+  </div>
+</header>
+<header class="header block" *ngIf="!isNav">
+  <div class="header-wrapper">
+    <img
+      src="assets/imgs/logo.png"
+      alt="hair hunters"
+      [routerLink]="['/obucheniye']"
+      class="logo"
+    />
   </div>
 </header>

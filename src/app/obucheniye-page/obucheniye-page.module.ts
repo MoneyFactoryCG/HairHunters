@@ -21,9 +21,13 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { TypeCoursesCarouselComponent } from './what-choose-block/type-courses-carousel/type-courses-carousel.component';
+import { NgxMaskModule } from 'ngx-mask';
 import { InViewportModule } from '@thisissoon/angular-inviewport';
 import { BottomBlockComponent } from './bottom-block/bottom-block.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModalWindowComponent } from './modal-window/modal-window.component';
+import { ModalWindowFormComponent } from './modal-window/modal-window-form/modal-window-form.component';
+import { ThanksPageComponent } from './thanks-page/thanks-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -47,6 +51,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     TypeCoursesCarouselComponent,
     BottomBlockComponent,
     FooterComponent,
+    ModalWindowComponent,
+    ModalWindowFormComponent,
+    ThanksPageComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +63,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ReactiveFormsModule,
     SwiperModule,
     InViewportModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [
     {
