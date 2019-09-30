@@ -128,8 +128,19 @@
             в нашем салоне.
           </h2>
           <span class="line l4"></span>
-          <p class="price">Стоимость:</p>
-          <div class="sale">
+          <p class="date">
+            Дата начала курса:
+            <span>{{ course?.courses_date }}</span>
+          </p>
+          <app-stock-timer
+            style="margin: 0 auto;"
+            *ngIf="course?.courses_date"
+            date="{{ course?.courses_date }}"
+            timerId="t3"
+            color="#000"
+          ></app-stock-timer>
+          <p class="price" *ngIf="isPrice">Стоимость:</p>
+          <div class="sale" *ngIf="isPrice">
             <span class="old">
               <span class="old-line"></span>
               12500грн
@@ -139,6 +150,7 @@
           <app-modal-button
             style="margin-left: calc(50% - 100px); margin-top: 30px;"
             theme="prime"
+            windowId="mw1"
             >Записаться</app-modal-button
           >
         </div>
@@ -283,17 +295,29 @@
             Вы научитесь делать самые изящные и дорогостоящие работы.
           </h2>
           <span class="line l4"></span>
-          <p class="price">Стоимость:</p>
-          <div class="sale">
+          <p class="date">
+            Дата начала курса:
+            <span>{{ course?.courses_date }}</span>
+          </p>
+          <app-stock-timer
+            style="margin: 0 auto;"
+            *ngIf="course?.courses_date"
+            date="{{ course?.courses_date }}"
+            timerId="t4"
+            color="#000"
+          ></app-stock-timer>
+          <p class="price" *ngIf="isPrice">Стоимость:</p>
+          <div class="sale" *ngIf="isPrice">
             <span class="old">
               30600грн
               <span class="old-line"></span>
             </span>
-            <span class="new">25500грн</span>
+            <span class="new">24480грн</span>
           </div>
           <app-modal-button
             style="margin-left: calc(50% - 100px); margin-top: 30px;"
             theme="prime"
+            windowId="mw2"
             >Записаться</app-modal-button
           >
         </div>

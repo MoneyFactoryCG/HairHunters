@@ -137,6 +137,14 @@ export class StockTimerComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
+    const date = this.date.split('.');
+
+    const day = date[0];
+    const month = date[1];
+    const year = date[2];
+
+    this.date = `${year}-${month}-${day}`;
+
     if (this.date && this.isActive) {
       this.initializeTimer(this.timerId, this.date);
     }

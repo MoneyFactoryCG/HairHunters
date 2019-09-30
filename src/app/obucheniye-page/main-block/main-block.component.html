@@ -44,13 +44,24 @@
         />
       </div>
       <div class="timer">
-        <p>До начала курсов осталось:</p>
+        <p>
+          Всего 1 ученик на курс
+          <br /><br />
+          Получи 20% скидку за предварительную регистрацию
+          <br /><br />
+          Дата начала курса:<br />
+          {{ course?.courses_date }}
+        </p>
         <app-stock-timer
-          date="2019-09-30"
+          *ngIf="course?.courses_date"
+          date="{{ course?.courses_date }}"
           timerId="t1"
           color="#fff"
         ></app-stock-timer>
-        <app-modal-button style="margin-top: 50px;" theme="white"
+        <app-modal-button
+          style="margin-top: 50px;"
+          theme="white"
+          windowId="mw3"
           >Записаться</app-modal-button
         >
       </div>

@@ -18,6 +18,15 @@
         font-size: 24px;
         font-weight: 700;
         color: $text-color;
+        h1 {
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 48px;
+          letter-spacing: 0.02em;
+          color: $title-text-color;
+          margin-bottom: 50px;
+          width: 857px;
+        }
         p {
           margin-bottom: 30px;
           span {
@@ -49,7 +58,7 @@
       }
       .order {
         width: 603px;
-        height: 891px;
+        height: 1050px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -131,19 +140,25 @@
           position: relative;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           h1 {
-            margin-bottom: 50px;
-            color: $prime-color;
+            margin-bottom: 30px;
+            color: $text-color;
             font-weight: 700;
             font-size: 24px;
+            span {
+              color: $prime-color;
+            }
           }
           p {
-            width: 200px;
+            width: 310px;
             font-weight: 800;
             font-size: 18px;
             color: #000;
             letter-spacing: 0.03em;
             line-height: 120%;
             margin-bottom: 40px;
+            span {
+              color: $prime-color;
+            }
           }
           app-stock-timer {
             align-self: center;
@@ -200,6 +215,15 @@
         font-size: 24px;
         font-weight: 700;
         color: $text-color;
+        h1 {
+          font-size: 40px;
+          font-weight: 900;
+          line-height: 48px;
+          letter-spacing: 0.02em;
+          color: $title-text-color;
+          margin-bottom: 50px;
+          width: 540px;
+        }
         p {
           margin-bottom: 30px;
           width: 507px;
@@ -235,7 +259,7 @@
         background: url(../../../assets/obucheniye/main-block/student.jpeg)
           no-repeat 0% 50%;
         background-size: cover;
-        height: 891px;
+        height: 1050px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -324,19 +348,25 @@
           position: relative;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           h1 {
-            margin-bottom: 50px;
-            color: $prime-color;
+            margin-bottom: 30px;
+            color: $text-color;
             font-weight: 700;
             font-size: 24px;
+            span {
+              color: $prime-color;
+            }
           }
           p {
-            width: 200px;
+            width: 310px;
             font-weight: 800;
             font-size: 18px;
             color: #000;
             letter-spacing: 0.03em;
             line-height: 120%;
             margin-bottom: 40px;
+            span {
+              color: $prime-color;
+            }
           }
           app-stock-timer {
             align-self: center;
@@ -405,6 +435,15 @@
         font-size: 18px;
         font-weight: 700;
         color: $text-color;
+        h1 {
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: $title-text-color;
+          margin-bottom: 50px;
+          width: 262px;
+        }
         p {
           margin-bottom: 20px;
           width: 286px;
@@ -445,7 +484,7 @@
         background: url(../../../assets/obucheniye/main-block/student.jpeg)
           no-repeat 0% 50%;
         background-size: cover;
-        height: 723px;
+        height: 900px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -534,10 +573,13 @@
           position: relative;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           h1 {
-            margin-bottom: 30px;
-            color: $prime-color;
+            margin-bottom: 20px;
+            color: $text-color;
             font-weight: 700;
             font-size: 18px;
+            span {
+              color: $prime-color;
+            }
           }
           p {
             width: 200px;
@@ -547,6 +589,9 @@
             letter-spacing: 0.03em;
             line-height: 120%;
             margin-bottom: 20px;
+            span {
+              color: $prime-color;
+            }
           }
           app-stock-timer {
             align-self: center;
@@ -615,6 +660,15 @@
         font-size: 18px;
         font-weight: 700;
         color: $text-color;
+        h1 {
+          font-size: 20px;
+          font-weight: 900;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: $title-text-color;
+          margin-bottom: 50px;
+          width: 262px;
+        }
         p {
           margin-bottom: 20px;
           width: 286px;
@@ -746,10 +800,13 @@
           position: relative;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           h1 {
-            margin-bottom: 30px;
-            color: $prime-color;
+            margin-bottom: 20px;
+            color: $text-color;
             font-weight: 700;
             font-size: 18px;
+            span {
+              color: $prime-color;
+            }
           }
           p {
             width: 200px;
@@ -759,6 +816,9 @@
             letter-spacing: 0.03em;
             line-height: 120%;
             margin-bottom: 20px;
+            span {
+              color: $prime-color;
+            }
           }
           app-stock-timer {
             align-self: center;

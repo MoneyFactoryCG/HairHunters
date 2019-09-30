@@ -1,4 +1,9 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostListener,
+  Input,
+} from '@angular/core';
 
 import * as $ from 'jquery';
 
@@ -8,6 +13,8 @@ import * as $ from 'jquery';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() isNav = true; // prettier-ignore
+
   @HostListener('window:scroll', ['$event'])
   fixedHeader() {
     if ($(window).scrollTop() > 30) {
@@ -17,6 +24,11 @@ export class HeaderComponent implements OnInit {
       $('.header').removeClass('fixed');
       $('.hamburger-menu').removeClass('fixed');
     }
+  }
+
+  scroll(el) {
+    const element = document.getElementById(el);
+    element.scrollIntoView({ behavior: 'smooth', inline: 'start' });
   }
 
   constructor() {}
