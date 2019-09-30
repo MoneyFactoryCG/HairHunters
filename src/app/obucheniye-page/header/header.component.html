@@ -3,10 +3,10 @@
   <div class="header-wrapper">
     <img src="assets/imgs/logo.png" alt="hair hunters" class="logo" />
     <nav>
-      <a href="" class="">Преподаватель</a>
-      <a href="" class="">Программа курса</a>
-      <a href="" class="">Что выбрать?</a>
-      <a href="" class="">Выгоды</a>
+      <a (click)="scroll('teacher')" class="">Преподаватель</a>
+      <a (click)="scroll('courses')" class="">Программа курса</a>
+      <a (click)="scroll('what')" class="">Что выбрать?</a>
+      <a (click)="scroll('profit')" class="">Выгоды</a>
       <a href="/narashivanie" class="">Наращивание волос</a>
     </nav>
     <app-hamburger-menu [status]="false"></app-hamburger-menu>

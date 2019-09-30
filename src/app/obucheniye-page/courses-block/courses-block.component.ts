@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ObucheniyeService } from '../services/obucheniye.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { ObucheniyeService } from '../services/obucheniye.service';
   styleUrls: ['./courses-block.component.scss'],
 })
 export class CoursesBlockComponent implements OnInit {
+  @Input() isPrice: boolean = true;
+
   course;
   constructor(private obucheniyeService: ObucheniyeService) {}
 

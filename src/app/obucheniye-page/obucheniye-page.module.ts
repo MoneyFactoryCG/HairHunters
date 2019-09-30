@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalWindowComponent } from './modal-window/modal-window.component';
 import { ModalWindowFormComponent } from './modal-window/modal-window-form/modal-window-form.component';
 import { ThanksPageComponent } from './thanks-page/thanks-page.component';
+import { AbNoPricePageComponent } from './ab-no-price-page/ab-no-price-page.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -54,6 +55,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ModalWindowComponent,
     ModalWindowFormComponent,
     ThanksPageComponent,
+    AbNoPricePageComponent,
   ],
   imports: [
     CommonModule,

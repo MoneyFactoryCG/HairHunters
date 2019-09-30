@@ -32,6 +32,7 @@
           font-weight: 600;
           text-decoration: none;
           position: relative;
+          cursor: pointer;
           &:after {
             content: '';
             position: absolute;
@@ -95,6 +96,7 @@
         align-items: center;
         width: 739px;
         a {
+          cursor: pointer;
           color: $title-text-color;
           font-style: 18px;
           font-weight: 600;

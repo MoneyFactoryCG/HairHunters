@@ -108,6 +108,7 @@
               height: 1px;
               border: 0.5px solid $prime-color;
               border-radius: 50%;
+              opacity: 0;
             }
             ._1 {
               animation: scalelg 2.9s infinite linear 0s;
@@ -237,13 +238,16 @@
 
   @keyframes scalelg {
     0% {
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 1px;
       opacity: 0.75;
     }
-    100% {
+    90% {
       width: 1000px;
       height: 1000px;
+      opacity: 0.05;
+    }
+    100% {
       opacity: 0;
     }
   }

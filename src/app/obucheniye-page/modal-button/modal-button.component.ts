@@ -25,7 +25,6 @@ export class ModalButtonComponent implements OnInit {
   constructor() {}
 
   puls(event) {
-    console.log(event);
     if (event.target.localName !== 'button') {
       $(event.target).css({
         transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`,

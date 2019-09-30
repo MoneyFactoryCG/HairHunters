@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit, OnDestroy {
   validateForm: FormGroup;
@@ -20,14 +20,12 @@ export class LoginComponent implements OnInit, OnDestroy {
     private auth: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-  ) {
-    
-  }
+  ) {}
 
   ngOnInit() {
     this.validateForm = this.fb.group({
       login: [null, [Validators.required]],
-      password: [null, [Validators.required]]
+      password: [null, [Validators.required]],
     });
   }
 
@@ -42,11 +40,11 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.validateForm.controls[i].markAsDirty();
       this.validateForm.controls[i].updateValueAndValidity();
     }
-    this.aSub = this.auth.login(this.validateForm.value).subscribe(
-      () => this.router.navigate(['/admin/overview']),
-      error => {
-        console.log(error);
-      }
-    );
+    this.aSub = this.auth
+      .login(this.validateForm.value)
+      .subscribe(
+        () => this.router.navigate(['/admin/overview']),
+        error => console.log(error),
+      );
   }
 }

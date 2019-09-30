@@ -139,8 +139,8 @@
             timerId="t3"
             color="#000"
           ></app-stock-timer>
-          <p class="price">Стоимость:</p>
-          <div class="sale">
+          <p class="price" *ngIf="isPrice">Стоимость:</p>
+          <div class="sale" *ngIf="isPrice">
             <span class="old">
               <span class="old-line"></span>
               12500грн
@@ -306,8 +306,8 @@
             timerId="t4"
             color="#000"
           ></app-stock-timer>
-          <p class="price">Стоимость:</p>
-          <div class="sale">
+          <p class="price" *ngIf="isPrice">Стоимость:</p>
+          <div class="sale" *ngIf="isPrice">
             <span class="old">
               30600грн
               <span class="old-line"></span>
