@@ -1,10 +1,14 @@
 <section class="modal-menu">
   <app-hamburger-menu [status]="true"></app-hamburger-menu>
-  <a (click)="scroll('')" class="first">Обучение</a>
-  <a (click)="scroll('')" class="first-anchor">Преподаватель</a>
-  <a (click)="scroll('')" class="first-anchor">Программа курса</a>
-  <a (click)="scroll('')" class="first-anchor">Что выбрать?</a>
-  <a (click)="scroll('')" class="first-anchor">Выгоды</a>
+  <a (click)="scroll('main')" class="first">Обучение</a>
+  <a (click)="scroll('teacher')" class="first-anchor"
+    >Преподаватель</a
+  >
+  <a (click)="scroll('courses')" class="first-anchor"
+    >Программа курса</a
+  >
+  <a (click)="scroll('what')" class="first-anchor">Что выбрать?</a>
+  <a (click)="scroll('profit')" class="first-anchor">Выгоды</a>
   <a href="/narashivanie" class="second">Наращивание волос</a>
   <object
     class="hair"
