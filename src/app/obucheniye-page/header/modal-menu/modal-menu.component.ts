@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-modal-menu',
@@ -14,6 +15,9 @@ export class ModalMenuComponent implements OnInit {
   closeMenu() {
     const element = document.querySelector('.modal-menu');
     element.className = 'modal-menu';
+    $('body').css({
+      overflow: 'auto',
+    });
   }
 
   scroll(el) {
