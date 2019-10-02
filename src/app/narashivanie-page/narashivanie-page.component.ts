@@ -125,6 +125,16 @@ export class NarashivaniePageComponent
       code: '#Plat',
       show: false,
     },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/24.jpg`,
+      code: '#pink',
+      show: false,
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/25.jpg`,
+      code: '#1/60',
+      show: false,
+    },
   ];
   isMobileDevice: boolean;
 
