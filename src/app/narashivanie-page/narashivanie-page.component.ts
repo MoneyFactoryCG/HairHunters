@@ -166,7 +166,9 @@ export class NarashivaniePageComponent
   }
 
   ngAfterViewInit() {
-    $('.app-loading').fadeOut();
+    setTimeout(() => {
+      $('.app-loading').fadeOut();
+    }, 700);
   }
 
   ngOnInit() {
