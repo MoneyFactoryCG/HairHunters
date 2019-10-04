@@ -17,6 +17,8 @@ export class ObucheniyePageComponent
   ) {}
   ngOnInit() {}
   ngAfterViewInit() {
-    $('.app-loading').fadeOut();
+    setTimeout(() => {
+      $('.app-loading').fadeOut();
+    }, 700);
   }
 }
