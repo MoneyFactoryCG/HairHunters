@@ -5,7 +5,7 @@
     width: 100%;
     height: 100vh;
     min-height: 930px;
-    max-height: 1300px;
+    max-height: 1100px;
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -22,13 +22,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: -100px;
+        margin-top: 0px;
         z-index: 3;
         h2 {
           font-size: 24px;
           font-weight: 800;
           color: $prime-color;
-          margin-bottom: 32px;
+          margin-bottom: 90px;
           line-height: 130%;
           letter-spacing: 0.03em;
           width: 491px;
@@ -38,8 +38,8 @@
           font-weight: 800;
           line-height: 110%;
           letter-spacing: 0.01em;
-          color: $title-text-color;
-          margin-bottom: 90px;
+          color: #000000;
+          margin-bottom: 100px;
         }
         .icons {
           align-self: flex-start;
@@ -110,15 +110,17 @@
               border-radius: 50%;
               opacity: 0;
             }
-            ._1 {
-              animation: scalelg 2.9s infinite linear 0s;
-            }
-            ._2 {
-              animation: scalelg 2.9s infinite linear 0.5s;
-            }
-            ._3 {
-              animation: scalelg 2.9s infinite linear 1s;
-            }
+          }
+        }
+        .circles.active {
+          ._1 {
+            animation: scalelg 2.9s infinite linear 0s;
+          }
+          ._2 {
+            animation: scalelg 2.9s infinite linear 0.5s;
+          }
+          ._3 {
+            animation: scalelg 2.9s infinite linear 1s;
           }
         }
         .bg-wrapper {
@@ -176,11 +178,17 @@
             color: #fff;
             margin-bottom: 30px;
             width: 322px;
-            font-size: 24px;
+            font-size: 21px;
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.02em;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            span {
+              font-size: 24px;
+              b {
+                font-weight: 800;
+              }
+            }
           }
           app-modal-button {
             // html
@@ -224,6 +232,8 @@
       bottom: 0;
       width: 753px;
       top: unset;
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
     .goop {
       position: absolute;
@@ -422,11 +432,17 @@
             color: #fff;
             margin-bottom: 30px;
             width: 260px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.02em;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            span {
+              font-size: 18px;
+              b {
+                font-weight: 800;
+              }
+            }
           }
           button {
             margin-top: 50px;
@@ -668,11 +684,17 @@
             color: #fff;
             margin-bottom: 30px;
             width: 209px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.02em;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            span {
+              font-size: 16px;
+              b {
+                font-weight: 800;
+              }
+            }
           }
           button {
             margin-top: 40px;
@@ -776,20 +798,20 @@
         justify-content: center;
         z-index: 3;
         h2 {
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 800;
           color: $prime-color;
-          margin-bottom: 32px;
+          margin-bottom: 45px;
           line-height: 130%;
-          width: 304px;
+          width: 280px;
         }
         h1 {
           font-size: 24px;
           font-weight: 800;
           line-height: 110%;
           letter-spacing: -0.02em;
-          color: $title-text-color;
-          margin-bottom: 30px;
+          color: #000000;
+          margin-bottom: 50px;
         }
         .icons {
           align-self: flex-start;
@@ -806,6 +828,7 @@
               margin-bottom: 13px;
             }
             p {
+              margin-top: 5px;
               text-align: center;
               font-size: 14px;
               font-weight: 800;
@@ -872,11 +895,17 @@
             color: #fff;
             margin-bottom: 30px;
             width: 260px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             line-height: 120%;
             letter-spacing: 0.02em;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            span {
+              font-size: 16px;
+              b {
+                font-weight: 800;
+              }
+            }
           }
           button {
             margin-top: 40px;

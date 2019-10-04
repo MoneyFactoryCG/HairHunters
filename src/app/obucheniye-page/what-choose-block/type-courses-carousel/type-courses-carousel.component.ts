@@ -23,10 +23,16 @@ export class TypeCoursesCarouselComponent implements OnInit {
     slidesPerView: 'auto',
     centeredSlides: false,
     freeMode: false,
+    simulateTouch: false,
     breakpoints: {
       649: {
         centeredSlides: true,
         freeMode: true,
+        freeModeMomentumRatio: 0.6,
+        freeModeMomentumBounceRatio: 0.6,
+        resistance: true,
+        resistanceRatio: 0,
+        simulateTouch: true,
       },
     },
   };

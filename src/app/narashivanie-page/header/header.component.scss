@@ -97,8 +97,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 1160px) {
   .header-mask {
     height: 96px;
@@ -201,7 +199,8 @@
             margin-top: 35px;
             margin-bottom: 45px;
           }
-          .address, .p-number {
+          .address,
+          .p-number {
             // font-family: montserrat, sans-serif;
             font-size: 24px;
             font-weight: 500;
@@ -215,7 +214,6 @@
             margin-bottom: 10px;
           }
         }
-        
       }
     }
     &.fixed {
@@ -227,7 +225,6 @@
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 690px) {
@@ -330,15 +327,29 @@
               }
             }
           }
+          .narashivanie {
+            a {
+              font-weight: 700;
+            }
+          }
+          .obucheniye {
+            a {
+              font-weight: 700;
+            }
+          }
           .line {
             height: 4px;
             border-radius: 1.5px;
-            width: 331px;
+            width: 280px;
             background: #942fe5;
             margin-top: 25px;
             margin-bottom: 35px;
           }
-          .address, .p-number {
+          .hair {
+            width: 280px;
+          }
+          .address,
+          .p-number {
             // font-family: montserrat, sans-serif;
             font-size: 20px;
             font-weight: 500;
@@ -359,7 +370,6 @@
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 375px) {
@@ -468,7 +478,8 @@
             margin-top: 25px;
             margin-bottom: 35px;
           }
-          .address, .p-number {
+          .address,
+          .p-number {
             // font-family: montserrat, sans-serif;
             font-size: 20px;
             font-weight: 500;
@@ -478,7 +489,6 @@
             margin-bottom: 10px;
           }
         }
-        
       }
     }
     &.fixed {
@@ -490,5 +500,4 @@
       }
     }
   }
-  
 }

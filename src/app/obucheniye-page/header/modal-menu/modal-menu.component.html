@@ -10,11 +10,12 @@
   <a (click)="scroll('what')" class="first-anchor">Что выбрать?</a>
   <a (click)="scroll('profit')" class="first-anchor">Выгоды</a>
   <a href="/narashivanie" class="second">Наращивание волос</a>
-  <object
+  <!-- <object
     class="hair"
     data="assets/obucheniye/icons/hair.svg"
     type="image/svg+xml"
-  ></object>
+  ></object> -->
+  <img class="hair" src="assets/obucheniye/icons/hair.svg"/>
   <p class="address">г. Харьков ул. Каразина, 1</p>
   <a class="phone" href="tel:+380634746018">0 (63) 474 60 18</a>
   <div class="messengers">
@@ -24,10 +25,11 @@
       title="Telegram"
       href="tg://resolve?domain=@HairHuntersKharkov"
     >
-      <object
+      <!-- <object
         data="assets/obucheniye/icons/telegram.svg"
         type="image/svg+xml"
-      ></object>
+      ></object> -->
+      <img src="assets/obucheniye/icons/telegram.svg"/>
     </a>
     <!-- viber desktop -->
     <a
@@ -36,10 +38,11 @@
       *ngIf="!isMobileDevice"
       href="viber://chat?number=+380634746018"
     >
-      <object
+      <!-- <object
         data="assets/obucheniye/icons/viber.svg"
         type="image/svg+xml"
-      ></object>
+      ></object> -->
+      <img src="assets/obucheniye/icons/viber.svg"/>
     </a>
     <!-- viber phone -->
     <a
@@ -48,10 +51,11 @@
       *ngIf="isMobileDevice"
       href="viber://add?number=380634746018"
     >
-      <object
+      <!-- <object
         data="assets/obucheniye/icons/viber.svg"
         type="image/svg+xml"
-      ></object>
+      ></object> -->
+      <img src="assets/obucheniye/icons/viber.svg"/>
     </a>
     <!-- whatsApp -->
     <a
@@ -60,10 +64,11 @@
       href="https://wa.me/380633003060"
       target="_blank"
     >
-      <object
+      <!-- <object
         data="assets/obucheniye/icons/whatsapp.svg"
         type="image/svg+xml"
-      ></object>
+      ></object> -->
+      <img src="assets/obucheniye/icons/whatsapp.svg"/>
     </a>
   </div>
 </section>

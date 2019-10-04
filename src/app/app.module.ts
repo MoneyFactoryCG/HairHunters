@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NarashivaniePageModule } from './narashivanie-page/narashivanie-page.module';
 import { ObucheniyePageModule } from './obucheniye-page/obucheniye-page.module';
-
 import { AppComponent } from './app.component';
 
 import { AgreementPageComponent } from './agreement-page/agreement-page.component';
