@@ -165,7 +165,9 @@ export class NarashivaniePageComponent
     });
   }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+    $('.app-loading').fadeOut();
+  }
 
   ngOnInit() {
     setTimeout(() => {

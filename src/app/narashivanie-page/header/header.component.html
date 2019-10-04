@@ -47,6 +47,9 @@
     </div>
     <nav class="nav-hamburger">
       <div class="nav-wrapper">
+        <li class="narashivanie">
+          <a (click)="scroll('')">Наращивание волос</a>
+        </li>
         <li class="works">
           <a (click)="scroll('worksPage')">Работы</a>
         </li>
@@ -65,10 +68,15 @@
         <li class="contacts">
           <a (click)="scroll('contactsPage')">Контакты</a>
         </li>
-        <li class="how">
+        <li class="obucheniye">
           <a href="/obucheniye">Обучение</a>
         </li>
-        <span class="line"></span>
+        <!-- <span class="line"></span> -->
+        <object
+          class="hair"
+          data="assets/obucheniye/icons/hair.svg"
+          type="image/svg+xml"
+        ></object>
         <p class="address">г. Харьков ул. Каразина, 1</p>
         <p class="p-number">
           <a href="tel:+380633003060">+38 (063) 300 30 60</a>
