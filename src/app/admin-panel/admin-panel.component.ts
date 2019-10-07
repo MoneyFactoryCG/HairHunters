@@ -23,5 +23,7 @@ export class AdminPanelComponent implements OnInit {
     this.i18n.setLocale(en_US);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    $('.app-loading').fadeOut();
+  }
 }
