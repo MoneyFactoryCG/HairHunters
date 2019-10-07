@@ -97,16 +97,6 @@ export class WorksCarouselComponent implements OnInit {
       alt:
         'наращивание волос Итальянское наращивание микрокапсулами натуральных славянских волос на кератин',
     },
-    {
-      img: 'assets/imgs/works-page/narashchivaniye-volos-11.JPG',
-      alt:
-        'наращивание волос Итальянское наращивание микрокапсулами натуральных славянских волос на кератин',
-    },
-    {
-      img: 'assets/imgs/works-page/narashchivaniye-volos-12.JPG',
-      alt:
-        'наращивание волос Итальянское наращивание микрокапсулами натуральных славянских волос на кератин',
-    },
   ];
 
   constructor() {}
