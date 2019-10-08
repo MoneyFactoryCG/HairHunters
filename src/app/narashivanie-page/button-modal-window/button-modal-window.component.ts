@@ -29,16 +29,25 @@ export class ButtonModalWindowComponent implements OnInit {
   }
 
   puls(event) {
-    console.log(event);
-    $(event.target.children[1]).css({
-      transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`,
-    });
+    if (event.target.localName !== 'button') {
+      $(event.target).css({
+        transform: `translate(calc(${event.layerX}px - 50%), calc(${event.layerY}px - 50%))`,
+      });
+    }
   }
 
   resetPuls(event) {
-    $(event.target.children[1]).css({
-      transform: `translate(0, 0)`,
-    });
+    if (event.target.localName !== 'button') {
+      if (window.innerWidth <= 1160) {
+        $(event.target).css({
+          transform: `translate(calc(68.5px - 50%), calc(68.5px - 50%))`,
+        });
+      } else {
+        $(event.target).css({
+          transform: `translate(calc(100px - 50%), calc(100px - 50%))`,
+        });
+      }
+    }
   }
 
   constructor() {}
