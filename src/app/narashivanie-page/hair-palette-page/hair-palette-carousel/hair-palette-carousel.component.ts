@@ -143,7 +143,7 @@ export class HairPaletteCarouselComponent
         'наращивание волос Натуральные южнорусские волосы для наращивания в срезе',
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/13.jpg`,
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-13.jpg`,
       code: '#18',
       video: 'assets/imgs/hair-palette-page/carousel/18.mp4',
       alt:

@@ -1,5 +1,8 @@
 .button-modal-window,
 .button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: #942fe5;
@@ -31,11 +34,22 @@
     text-align: center;
     padding-top: 12px;
   }
+  .wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    transition: transform 0.2s linear;
+  }
   .puls-wrapper {
     // display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: 600px;
+    height: 600px;
     top: 0;
     left: 0;
     right: 0;
@@ -44,28 +58,28 @@
     pointer-events: none;
     transform-origin: center center;
     transition: transform 0.3s linear;
+    transform: translate(calc(100px - 50%), calc(100px - 50%));
     .puls,
     .puls-2 {
+      transform-origin: center;
       pointer-events: none;
       position: absolute;
-      border-radius: 100px;
-      background: radial-gradient(34.2px at 50% 50%, #942fe5 0%, #ffffff 100%);
-      display: block;
+      border-radius: 50%;
+      background: #942fe5;
+      box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
       margin: auto;
-      width: 34px;
-      height: 34px;
+      width: 1px;
+      height: 1px;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 0;
-      filter: blur(0px);
       opacity: 0;
-      content: "";
-      animation: bounce 2.7s ease infinite;
+      animation: bounce 2.7s linear infinite;
     }
     .puls-2 {
-      animation: bounce 2.7s 300ms ease infinite;
+      animation: bounce 2.7s 300ms linear infinite;
     }
   }
 }
@@ -92,38 +106,52 @@
       text-align: center;
       padding-top: 8px;
     }
-    .puls-wrapper {
+    .wrapper {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 137px;
+      height: 137px;
+      margin: auto;
+      transition: transform 0.2s linear;
+    }
+    .puls-wrapper {
+      // display: none;
+      position: relative;
+      width: 600px;
+      height: 600px;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       pointer-events: none;
       transform-origin: center center;
       transition: transform 0.3s linear;
+      transform: translate(calc(68.5px - 50%), calc(68.5px - 50%));
       .puls,
       .puls-2 {
+        transform-origin: center;
         pointer-events: none;
         position: absolute;
-        border-radius: 100px;
-        background: radial-gradient(34.2px at 50% 50%, #942fe5 0%, #ffffff 100%);
-        display: block;
+        border-radius: 50%;
+        background: #942fe5;
+        box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.98);
         margin: auto;
-        width: 24px;
-        height: 24px;
+        width: 1px;
+        height: 1px;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 0;
-        filter: blur(0px);
         opacity: 0;
-        content: "";
-        transform: scale(0);
-        animation: bounce-m 2.5s ease infinite;
+        animation: bounce 2.7s linear infinite;
       }
       .puls-2 {
-        animation: bounce-m 2.5s 200ms ease infinite;
+        animation: bounce 2.7s 300ms linear infinite;
       }
     }
   }
@@ -131,30 +159,26 @@
 
 @keyframes bounce {
   0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(12);
+    width: 0;
+    height: 0;
+    opacity: 0.75;
   }
   100% {
+    width: 600px;
+    height: 600px;
     opacity: 0;
-    transform: scale(12);
   }
 }
 
 @keyframes bounce-m {
   0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(8);
+    width: 0;
+    height: 0;
+    opacity: 0.75;
   }
   100% {
+    width: 600px;
+    height: 600px;
     opacity: 0;
-    transform: scale(8);
   }
 }
