@@ -4,6 +4,7 @@ import {
   ViewChild,
   ViewChildren,
   AfterViewInit,
+  Input,
 } from '@angular/core';
 // import { SwiperOptions } from 'swiper';
 import {
@@ -19,6 +20,7 @@ import {
 })
 export class StockCarouselComponent implements OnInit, AfterViewInit {
   @ViewChildren('stock') childQuery;
+  @Input() isPrice = true;
 
   isStock: boolean[] = [true, true, true];
   isStocks: boolean = true;

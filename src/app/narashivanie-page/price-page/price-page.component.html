@@ -107,7 +107,10 @@
     >
       Акции
     </p>
-    <app-stock-carousel *ngIf="!isDesktop"></app-stock-carousel>
+    <app-stock-carousel
+      *ngIf="!isDesktop"
+      [isPrice]="isPrice"
+    ></app-stock-carousel>
     <div class="stock-scroll">
       <div class="stock-wrapper">
         <!-- Без цены -->
@@ -243,26 +246,26 @@
         <app-stock-card
           *ngIf="isPrice"
           #stock
-          deadline="2019-09-30"
+          deadline="2019-10-30"
           cookieDeadline="0"
           counterId="counter3"
         >
           <div class="stock-card certificate">
             <div class="cover">
               <img src="assets/imgs/stocks/s1.jpg" alt="" />
-              <div class="lable">
+              <!-- <div class="lable">
                 <div class="triangle"></div>
                 <div class="rectangle">
-                  <p class="text">Получи сертификат</p>
+                  <p class="text">Сэкономь 1000грн</p>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="stock-info">
               <div class="info">
                 <!-- <span class="sale">50%</span> -->
                 <p class="title">
-                  С 01.09 по 30.09<br />Дарим сертификат на
-                  наращивание волос
+                  Только первым троим записавшимя скидка 1000грн. на
+                  наращивание
                 </p>
               </div>
               <div class="counter-container">
@@ -311,26 +314,26 @@
         <app-stock-card
           *ngIf="!isPrice"
           #stock
-          deadline="2019-09-30"
+          deadline="2019-10-30"
           cookieDeadline="0"
           counterId="counter4"
         >
           <div class="stock-card certificate">
             <div class="cover">
               <img src="assets/imgs/stocks/s1.jpg" alt="" />
-              <div class="lable">
+              <!-- <div class="lable">
                 <div class="triangle"></div>
                 <div class="rectangle">
-                  <p class="text">Получи сертификат</p>
+                  <p class="text">Сэкономь 1000грн</p>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="stock-info">
               <div class="info">
                 <!-- <span class="sale">50%</span> -->
                 <p class="title">
-                  С 01.09 по 30.09<br />Дарим сертификат на
-                  наращивание волос
+                  Только первым троим записавшимя скидка 1000грн. на
+                  наращивание
                 </p>
               </div>
               <div class="counter-container">

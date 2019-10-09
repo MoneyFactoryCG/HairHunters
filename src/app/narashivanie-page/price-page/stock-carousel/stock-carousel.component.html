@@ -135,20 +135,21 @@
       <div class="swiper-slide" *ngIf="isStock[0]">
         <!-- сертификат -->
         <app-stock-card
+          *ngIf="isPrice"
           #stock
-          deadline="2019-09-30"
+          deadline="2019-10-30"
           cookieDeadline="0"
           counterId="counter3"
         >
           <div class="stock-card certificate">
             <div class="cover">
               <img src="assets/imgs/stocks/s1.jpg" alt="" />
-              <div class="lable">
+              <!-- <div class="lable">
                 <div class="triangle"></div>
                 <div class="rectangle">
                   <p class="text">Получи сертификат</p>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="stock-info">
               <div class="info">
@@ -160,6 +161,73 @@
               </div>
               <div class="counter-container">
                 <div class="counter" id="counter3">
+                  <div class="wrapper" id="days">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="days"></span>
+                    <p class="lable">День</p>
+                  </div>
+                  <div class="wrapper" id="hours">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="hours"></span>
+                    <p class="lable">Часы</p>
+                  </div>
+                  <div class="wrapper" id="minutes">
+                    <div class="lines-wrapper">
+                      <span class="line-top"></span>
+                      <span class="line-left"></span>
+                      <span class="line-right"></span>
+                      <span class="line-bottom"></span>
+                    </div>
+                    <span class="minutes"></span>
+                    <p class="lable">Мин.</p>
+                  </div>
+                </div>
+                <app-button-modal-window
+                  text="Получить"
+                  windowId="stock-3-modal"
+                ></app-button-modal-window>
+              </div>
+            </div>
+          </div>
+        </app-stock-card>
+
+        <app-stock-card
+          *ngIf="!isPrice"
+          #stock
+          deadline="2019-10-30"
+          cookieDeadline="0"
+          counterId="counter4"
+        >
+          <div class="stock-card certificate">
+            <div class="cover">
+              <img src="assets/imgs/stocks/s1.jpg" alt="" />
+              <!-- <div class="lable">
+                <div class="triangle"></div>
+                <div class="rectangle">
+                  <p class="text">Получи сертификат</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="stock-info">
+              <div class="info">
+                <!-- <span class="sale">50%</span> -->
+                <p class="title">
+                  <b>C 01.09 по 30.09</b><br />Дарим сертификат<br />на
+                  наращивание<br />волос
+                </p>
+              </div>
+              <div class="counter-container">
+                <div class="counter" id="counter4">
                   <div class="wrapper" id="days">
                     <div class="lines-wrapper">
                       <span class="line-top"></span>
