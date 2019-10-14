@@ -114,6 +114,7 @@
         }
         article {
           width: 760px;
+          position: relative;
           h2 {
             font-size: 24px;
             line-height: 130%;
@@ -128,6 +129,14 @@
             color: $text-color;
             margin-bottom: 26px;
           }
+          div.line {
+            position: absolute;
+            top: 120px;
+            left: -18px;
+            width: 2px;
+            height: 400px;
+            background: transparent;
+          }
           .text {
             font-size: 16px;
             font-weight: normal;
@@ -135,13 +144,19 @@
             letter-spacing: -0.03em;
             color: $text-color;
             margin-bottom: 15px;
+            position: relative;
             .line {
+              position: absolute;
+              z-index: 3;
               display: inline-block;
-              width: 6px;
-              height: 2px;
-              background: $prime-color;
-              margin-right: 5px;
-              margin-bottom: 4px;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              border: 2px solid #d49fff;
+              background: #f4e7ff;
+              margin-left: -28px;
+              margin-right: 10px;
+              top: 3px;
             }
           }
           .text.important {
@@ -289,13 +304,19 @@
             letter-spacing: -0.03em;
             color: $text-color;
             margin-bottom: 15px;
+            position: relative;
             .line {
+              position: absolute;
+              z-index: 3;
               display: inline-block;
-              width: 6px;
-              height: 2px;
-              background: $prime-color;
-              margin-right: 5px;
-              margin-bottom: 4px;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              border: 2px solid #d49fff;
+              background: #f4e7ff;
+              margin-left: -28px;
+              margin-right: 10px;
+              top: 3px;
             }
           }
           .text.important {
@@ -441,13 +462,20 @@
             letter-spacing: -0.03em;
             color: $text-color;
             margin-bottom: 15px;
+            position: relative;
+            margin-left: 20px;
             .line {
+              position: absolute;
+              z-index: 3;
               display: inline-block;
-              width: 6px;
-              height: 2px;
-              background: $prime-color;
-              margin-right: 5px;
-              margin-bottom: 4px;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              border: 2px solid #d49fff;
+              background: #f4e7ff;
+              margin-left: -26px;
+              margin-right: 10px;
+              top: 3px;
             }
           }
           .text.important {
@@ -566,13 +594,20 @@
             letter-spacing: -0.03em;
             color: $text-color;
             margin-bottom: 10px;
+            position: relative;
+            margin-left: 20px;
             .line {
+              position: absolute;
+              z-index: 3;
               display: inline-block;
-              width: 6px;
-              height: 2px;
-              background: $prime-color;
-              margin-right: 5px;
-              margin-bottom: 4px;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              border: 2px solid #d49fff;
+              background: #f4e7ff;
+              margin-left: -22px;
+              margin-right: 0px;
+              top: 3px;
             }
           }
           .text.important {

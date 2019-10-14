@@ -5,6 +5,7 @@
         class="swiper-slide"
         *ngFor="let slide of slides; index as i"
         (mouseleave)="hideVideo(i, $event)"
+        (mouseover)="startVideo(i, $event)"
         (click)="startVideo(i, $event)"
       >
         <img
