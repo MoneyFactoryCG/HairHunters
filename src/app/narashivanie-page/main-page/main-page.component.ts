@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import * as $ from 'jquery';
 
 @Component({
@@ -7,7 +9,7 @@ import * as $ from 'jquery';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngAfterViewInit() {
     $(window).bind('load', () => {
@@ -15,6 +17,15 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         $('video')[i].load();
       }
     });
+    setTimeout(() => {
+      this.scroll();
+    }, 2000);
+  }
+
+  scroll() {
+    let path = this.router.url.split('#');
+    const element = document.getElementById(path[path.length - 1]);
+    element.scrollIntoView();
   }
 
   ngOnInit() {}
