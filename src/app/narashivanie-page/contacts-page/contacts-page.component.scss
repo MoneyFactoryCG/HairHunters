@@ -52,6 +52,13 @@
         color: #333;
         .adress {
           margin-bottom: 30px;
+          a {
+            text-decoration: none;
+            color: #333;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
         .work-time {
           margin-bottom: 30px;

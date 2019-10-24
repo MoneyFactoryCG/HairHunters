@@ -74,8 +74,8 @@
     type="submit"
     [ngClass]="
       form.invalid || !isAgree || !isSubmit
-        ? 'signup-btn disabled'
-        : 'signup-btn'
+        ? 'signup-btn-obucheniye disabled'
+        : 'signup-btn-obucheniye'
     "
   >
     {{ info.button }}
@@ -95,13 +95,12 @@
     свяжитесть с нашим менеджером.
   </p>
   <div class="messengers">
-    <a class="phone" href="tel:+380634746018"
-      >
+    <a class="phone" href="tel:+380634746018">
       <!-- <object
         data="../../../../assets/obucheniye/icons/phone.svg"
         type=""
       ></object> -->
-      <img src="assets/obucheniye/icons/phone.svg"/>
+      <img src="assets/obucheniye/icons/phone.svg" />
       +38 (063) 474 60 18</a
     >
     <div class="wrapper">
@@ -114,7 +113,7 @@
           data="assets/obucheniye/icons/telegram.svg"
           type="image/svg+xml"
         ></object> -->
-        <img src="assets/obucheniye/icons/telegram.svg"/>
+        <img src="assets/obucheniye/icons/telegram.svg" />
       </a>
       <a
         class="viber"
@@ -126,7 +125,7 @@
           data="assets/obucheniye/icons/viber.svg"
           type="image/svg+xml"
         ></object> -->
-        <img src="assets/obucheniye/icons/viber.svg"/>
+        <img src="assets/obucheniye/icons/viber.svg" />
       </a>
       <a
         class="viber"
@@ -138,7 +137,7 @@
           data="assets/obucheniye/icons/viber.svg"
           type="image/svg+xml"
         ></object> -->
-        <img src="assets/obucheniye/icons/viber.svg"/>
+        <img src="assets/obucheniye/icons/viber.svg" />
       </a>
       <a
         class="whatsapp"
@@ -150,7 +149,7 @@
           data="assets/obucheniye/icons/whatsapp.svg"
           type="image/svg+xml"
         ></object> -->
-        <img src="assets/obucheniye/icons/whatsapp.svg"/>
+        <img src="assets/obucheniye/icons/whatsapp.svg" />
       </a>
     </div>
   </div>

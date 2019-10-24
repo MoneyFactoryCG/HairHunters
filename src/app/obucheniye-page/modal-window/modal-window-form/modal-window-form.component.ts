@@ -100,7 +100,7 @@ export class ModalWindowFormComponent implements OnInit {
       .subscribe(
         res => {
           this.closeWindow();
-          fbq('track', 'Contact');
+          fbq('track', 'Lead');
           this.router.navigate(['obucheniye/thanks']);
           this.isSubmit = true;
         },
@@ -109,7 +109,7 @@ export class ModalWindowFormComponent implements OnInit {
           setTimeout(() => {
             this.errorWindowOpen();
           }, 0);
-          fbq('track', 'Contact');
+          fbq('track', 'Lead');
         },
       );
     this.modalWindowFormService
