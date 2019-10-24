@@ -31,10 +31,10 @@ export class ContactsPageComponent implements OnInit, AfterViewInit {
   scroll() {
     const path = this.router.url.split('#');
     const element = document.getElementById(path[path.length - 1]);
-    console.log(element);
-    console.log(document.body.scrollHeight);
-    for (let i = 0; i < 2; i++) {
-      element.scrollIntoView();
+    if (element) {
+      for (let i = 0; i < 2; i++) {
+        element.scrollIntoView();
+      }
     }
   }
 }
