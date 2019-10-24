@@ -17,9 +17,6 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         $('video')[i].load();
       }
     });
-    setTimeout(() => {
-      this.scroll();
-    }, 2000);
   }
 
   scroll() {
