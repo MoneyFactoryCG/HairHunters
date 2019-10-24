@@ -1,7 +1,13 @@
 <app-modal-menu></app-modal-menu>
 <header class="header" *ngIf="isNav">
   <div class="header-wrapper">
-    <img src="assets/imgs/logo.png" alt="hair hunters" class="logo" />
+    <img
+      style="cursor: pointer;"
+      (click)="scroll('main')"
+      src="assets/imgs/logo.png"
+      alt="hair hunters"
+      class="logo"
+    />
     <nav>
       <a (click)="scroll('teacher')" class="">Преподаватель</a>
       <a (click)="scroll('courses')" class="">Программа курса</a>
