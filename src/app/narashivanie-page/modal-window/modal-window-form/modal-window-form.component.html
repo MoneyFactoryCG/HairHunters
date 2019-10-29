@@ -1,4 +1,8 @@
-<form class="modal-window-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+<form
+  class="modal-window-form"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit($event)"
+>
   <h1 class="title">{{ title }}</h1>
   <p class="stock">{{ stock }}</p>
 
@@ -22,7 +26,9 @@
       *ngIf="form.get('name').invalid && form.get('name').touched"
       class="helper-text"
     >
-      <span *ngIf="form.get('name').errors['required']">*Введите имя</span>
+      <span *ngIf="form.get('name').errors['required']"
+        >*Введите имя</span
+      >
     </span>
   </div>
   <div class="number-box">
@@ -53,7 +59,9 @@
   </div>
   <div class="data-proc">
     <span
-      [ngClass]="isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'"
+      [ngClass]="
+        isAgree ? 'data-proc-checkbox active' : 'data-proc-checkbox'
+      "
       (click)="isAgree = !isAgree"
     ></span>
     <p class="info">
@@ -68,7 +76,11 @@
     id="contactButton"
     [disabled]="form.invalid || !isAgree || !isSubmit"
     type="submit"
-    [ngClass]="form.invalid || !isAgree || !isSubmit ? 'signup-btn disabled' : 'signup-btn'"
+    [ngClass]="
+      form.invalid || !isAgree || !isSubmit
+        ? 'signup-btn disabled'
+        : 'signup-btn'
+    "
   >
     Записаться
   </button>
@@ -77,7 +89,11 @@
     id="contactButton"
     [disabled]="form.invalid || !isAgree || !isSubmit"
     type="submit"
-    [ngClass]="form.invalid || !isAgree || !isSubmit ? 'signup-btn disabled' : 'signup-btn'"
+    [ngClass]="
+      form.invalid || !isAgree || !isSubmit
+        ? 'signup-btn disabled'
+        : 'signup-btn'
+    "
   >
     Записаться
   </button>

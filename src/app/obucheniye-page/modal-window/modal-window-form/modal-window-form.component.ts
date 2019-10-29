@@ -101,7 +101,7 @@ export class ModalWindowFormComponent implements OnInit {
         res => {
           this.closeWindow();
           fbq('track', 'Lead');
-          this.router.navigate(['obucheniye/thanks']);
+          window.location.href = '/obucheniye/thanks';
           this.isSubmit = true;
         },
         error => {
