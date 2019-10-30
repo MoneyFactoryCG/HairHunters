@@ -10,19 +10,23 @@
             data="assets/obucheniye/icons/facebook.svg"
             type="image/svg+xml"
           ></object> -->
-          <img src="assets/obucheniye/icons/facebook.svg"/>
+          <img src="assets/obucheniye/icons/facebook.svg" />
         </a>
         <a
           href="https://www.instagram.com/hairhunterskharkov/"
           target="_blank"
+          class="inst"
         >
           <!-- <object
             data="assets/obucheniye/icons/instagram.svg"
             type="image/svg+xml"
           ></object
         > -->
-        <img src="assets/obucheniye/icons/instagram.svg"/>
-      </a>
+          <img
+            class="inst"
+            src="assets/obucheniye/icons/instagram.svg"
+          />
+        </a>
       </div>
       <p class="copyrights">Copyright © 2019 Hair Hunters</p>
     </div>
@@ -31,7 +35,8 @@
     <div class="right">
       <div class="messengers">
         <a
-          class="telegram"
+          id="telegram"
+          class="telegram mo"
           title="Telegram"
           href="tg://resolve?domain=@HairHuntersKharkov"
         >
@@ -39,10 +44,13 @@
             data="assets/obucheniye/icons/telegram.svg"
             type="image/svg+xml"
           ></object> -->
-          <img src="assets/obucheniye/icons/telegram.svg"/>
+          <img
+            class="telegram mo"
+            src="assets/obucheniye/icons/telegram.svg"
+          />
         </a>
         <a
-          class="viber"
+          class="viber mo"
           title="Viber"
           *ngIf="!isMobileDevice"
           href="viber://chat?number=+380634746018"
@@ -51,10 +59,13 @@
             data="assets/obucheniye/icons/viber.svg"
             type="image/svg+xml"
           ></object> -->
-          <img src="assets/obucheniye/icons/viber.svg"/>
+          <img
+            class="viber mo"
+            src="assets/obucheniye/icons/viber.svg"
+          />
         </a>
         <a
-          class="viber"
+          class="viber mo"
           title="Viber"
           *ngIf="isMobileDevice"
           href="viber://add?number=380634746018"
@@ -63,10 +74,13 @@
             data="assets/obucheniye/icons/viber.svg"
             type="image/svg+xml"
           ></object> -->
-          <img src="assets/obucheniye/icons/viber.svg"/>
+          <img
+            class="viber mo"
+            src="assets/obucheniye/icons/viber.svg"
+          />
         </a>
         <a
-          class="whatsapp"
+          class="whatsapp mo"
           title="WhatsApp"
           href="https://wa.me/380634746018"
           target="_blank"
@@ -75,7 +89,10 @@
             data="assets/obucheniye/icons/whatsapp.svg"
             type="image/svg+xml"
           ></object> -->
-          <img src="assets/obucheniye/icons/whatsapp.svg"/>
+          <img
+            class="whatsapp mo"
+            src="assets/obucheniye/icons/whatsapp.svg"
+          />
         </a>
       </div>
       <a class="phone" href="tel:+380634746018"
