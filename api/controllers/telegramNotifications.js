@@ -70,7 +70,7 @@ module.exports.sendMessageObucheniye = async (req, res) => {
 
   api
     .sendMessage({
-      chat_id: '-358937772', //-289363401
+      chat_id: '-1001246721225', //-289363401
       text: text,
       parse_mode: 'HTML',
     })
