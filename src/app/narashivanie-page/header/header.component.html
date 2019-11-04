@@ -81,6 +81,59 @@
         <p class="p-number">
           <a href="tel:+380633003060">+38 (063) 300 30 60</a>
         </p>
+        <div class="messengers">
+          <!-- telegram @HairHuntersKharkov -->
+          <a
+            class="telegram"
+            title="Telegram"
+            href="tg://resolve?domain=@HairHuntersKharkov"
+          >
+            <!-- <object
+              data="assets/obucheniye/icons/telegram.svg"
+              type="image/svg+xml"
+            ></object> -->
+            <img src="assets/obucheniye/icons/telegram.svg" />
+          </a>
+          <!-- viber desktop -->
+          <a
+            class="viber"
+            title="Viber"
+            *ngIf="!isMobileDevice"
+            href="viber://chat?number=+380633003060"
+          >
+            <!-- <object
+              data="assets/obucheniye/icons/viber.svg"
+              type="image/svg+xml"
+            ></object> -->
+            <img src="assets/obucheniye/icons/viber.svg" />
+          </a>
+          <!-- viber phone -->
+          <a
+            class="viber"
+            title="Viber"
+            *ngIf="isMobileDevice"
+            href="viber://add?number=380633003060"
+          >
+            <!-- <object
+              data="assets/obucheniye/icons/viber.svg"
+              type="image/svg+xml"
+            ></object> -->
+            <img src="assets/obucheniye/icons/viber.svg" />
+          </a>
+          <!-- whatsApp -->
+          <a
+            class="whatsapp"
+            title="WhatsApp"
+            href="https://wa.me/380633003060"
+            target="_blank"
+          >
+            <!-- <object
+              data="assets/obucheniye/icons/whatsapp.svg"
+              type="image/svg+xml"
+            ></object> -->
+            <img src="assets/obucheniye/icons/whatsapp.svg" />
+          </a>
+        </div>
       </div>
     </nav>
   </div>

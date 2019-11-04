@@ -170,6 +170,7 @@
         top: 96px;
         right: 0;
         z-index: 9;
+        overflow-y: auto;
         transform: translateX(105%);
         transition: transform 0.5s ease;
         .nav-wrapper {
@@ -205,6 +206,7 @@
             font-size: 24px;
             font-weight: 500;
             color: #333;
+            margin-bottom: 20px;
             a {
               text-decoration: none;
               color: #333;
@@ -212,6 +214,11 @@
           }
           .address {
             margin-bottom: 10px;
+          }
+          .messengers {
+            a {
+              margin-left: 10px;
+            }
           }
         }
       }
@@ -435,6 +442,7 @@
         position: fixed;
         overflow-y: auto;
         height: calc(100% - 47px);
+        box-sizing: border-box;
         background: #fff;
         max-width: 375px;
         min-width: 320px;
@@ -444,6 +452,7 @@
         justify-content: flex-start;
         align-items: center;
         padding-top: 20px;
+        padding-bottom: 40px;
         padding-right: 0;
         box-shadow: none;
         top: 49px;
@@ -487,6 +496,9 @@
           }
           .address {
             margin-bottom: 10px;
+          }
+          .messengers {
+            margin-bottom: 30px;
           }
         }
       }

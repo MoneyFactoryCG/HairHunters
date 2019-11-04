@@ -15,6 +15,8 @@ import * as $ from 'jquery';
 export class HeaderComponent implements OnInit {
   isOpen: boolean = false;
 
+  isMobileDevice: boolean;
+
   @Input() isAgreement = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -63,5 +65,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const deviceWidth = 480;
+    this.isMobileDevice =
+      navigator.userAgent.match(/iPad|iPhone|iPod/i) != null ||
+      screen.width <= deviceWidth;
+  }
 }

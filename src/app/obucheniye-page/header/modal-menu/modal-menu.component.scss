@@ -33,6 +33,10 @@
     transform: translateX(103%);
     transition: transform 0.5s ease;
 
+    .logo {
+      display: none;
+    }
+
     app-hamburger-menu {
       margin-top: 20px;
     }
@@ -101,6 +105,7 @@
   .modal-menu {
     z-index: 101;
     position: fixed;
+    box-sizing: border-box;
     right: 0;
     top: 0;
     padding-right: 10px;
@@ -109,7 +114,7 @@
     justify-content: flex-start;
     align-items: flex-end;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: #fff;
     overflow-y: auto;
@@ -118,6 +123,15 @@
 
     transform: translateX(103%);
     transition: transform 0.5s ease;
+
+    .logo {
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: 10px;
+      width: 224px;
+      z-index: 102;
+    }
 
     app-hamburger-menu {
       margin-top: 20px;

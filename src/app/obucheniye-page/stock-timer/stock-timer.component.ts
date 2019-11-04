@@ -27,7 +27,6 @@ export class StockTimerComponent implements OnInit, AfterViewInit {
     let time;
 
     time = Date.parse(endtime) - Date.parse('' + new Date());
-
     seconds = Math.floor((time / 1000) % 60);
     minutes = Math.floor((time / 1000 / 60) % 60);
     hours = Math.floor((time / (1000 * 60 * 60)) % 24);
@@ -114,6 +113,9 @@ export class StockTimerComponent implements OnInit, AfterViewInit {
       daysSpan.innerHTML = '' + time.days;
       hoursSpan.innerHTML = ('0' + time.hours).slice(-2);
       minutesSpan.innerHTML = ('0' + time.minutes).slice(-2);
+      // daysSpan.textContent = '' + time.days;
+      // hoursSpan.textContent = ('0' + time.hours).slice(-2);
+      // minutesSpan.textContent = ('0' + time.minutes).slice(-2);
 
       setProgress(time.seconds, 60, '#minutes');
       setProgress(time.minutes, 60, '#hours');
@@ -143,7 +145,7 @@ export class StockTimerComponent implements OnInit, AfterViewInit {
     const month = date[1];
     const year = date[2];
 
-    this.date = `${year}-${month}-${day}`;
+    this.date = `${month}/${day}/${year}`;
 
     if (this.date && this.isActive) {
       this.initializeTimer(this.timerId, this.date);
