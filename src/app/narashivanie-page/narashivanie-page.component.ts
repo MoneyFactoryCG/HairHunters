@@ -91,23 +91,8 @@ export class NarashivaniePageComponent
       show: false,
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-17.jpg`,
-      code: '#1001',
-      show: false,
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-18.jpg`,
-      code: '#60H',
-      show: false,
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-19.jpg`,
-      code: '#130',
-      show: false,
-    },
-    {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-20.jpg`,
-      code: '#135',
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-22.jpg`,
+      code: '#613',
       show: false,
     },
     {
@@ -116,13 +101,23 @@ export class NarashivaniePageComponent
       show: false,
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-22.jpg`,
-      code: '#613',
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-18.jpg`,
+      code: '#60H',
       show: false,
     },
     {
       img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-23.jpg`,
-      code: '#Plat',
+      code: '#Platinum',
+      show: false,
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-17.jpg`,
+      code: '#1001',
+      show: false,
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-25.jpg`,
+      code: '#1/60',
       show: false,
     },
     {
@@ -131,8 +126,13 @@ export class NarashivaniePageComponent
       show: false,
     },
     {
-      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-25.jpg`,
-      code: '#1/60',
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-19.jpg`,
+      code: '#Orange',
+      show: false,
+    },
+    {
+      img: `assets/imgs/hair-palette-page/carousel/volosy-v-sreze-20.jpg`,
+      code: '#Red',
       show: false,
     },
   ];
