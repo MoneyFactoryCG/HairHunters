@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-agreement-page',
@@ -8,5 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AgreementPageComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      $('.app-loading').fadeOut();
+    }, 700);
+  }
 }

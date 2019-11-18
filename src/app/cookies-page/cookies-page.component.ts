@@ -4,16 +4,17 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-cookies-page',
   templateUrl: './cookies-page.component.html',
-  styleUrls: ['./cookies-page.component.scss']
+  styleUrls: ['./cookies-page.component.scss'],
 })
 export class CookiesPageComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     $('.cookies-modal').css({
-      display: 'none'
-    })
+      display: 'none',
+    });
+    setTimeout(() => {
+      $('.app-loading').fadeOut();
+    }, 700);
   }
-
 }
