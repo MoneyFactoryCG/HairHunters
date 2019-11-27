@@ -9,7 +9,7 @@
       position: relative;
       // overflow: hidden;
       border-radius: 4px;
-      
+
       .master-card {
         height: 320px;
         width: 240px;
@@ -109,6 +109,76 @@
     justify-content: center;
     .swiper-pagination-bullet-active {
       border-radius: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .masters-carousel {
+    .swiper-container {
+      .swiper-slide {
+        height: 450px;
+        width: 310px;
+        .master-card {
+          height: 450px;
+          width: 310px;
+          .photo {
+            img {
+              height: 315px;
+              object-fit: cover;
+              width: 100%;
+              object-position: top;
+            }
+          }
+          .lable {
+            height: 38px;
+            width: 199px;
+            position: absolute;
+            right: 0;
+            top: 290px;
+          }
+          .info {
+            .name {
+              margin-top: 25px;
+            }
+          }
+          app-button-modal-window {
+            bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .masters-carousel {
+    .swiper-container {
+      .swiper-slide {
+        height: 330px;
+        width: 240px;
+        .master-card {
+          height: 330px;
+          width: 240px;
+          .photo {
+            position: relative;
+            width: 100%;
+            img {
+              height: 205px;
+              object-fit: cover;
+              width: 100%;
+              object-position: top;
+            }
+          }
+          .lable {
+            height: 38px;
+            width: 199px;
+            position: absolute;
+            right: 0;
+            top: 180px;
+          }
+        }
+      }
     }
   }
 }

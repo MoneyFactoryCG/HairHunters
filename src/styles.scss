@@ -94,7 +94,7 @@ body {
 
 @media screen and (max-width: 690px) {
   .masters-swiper-pagination {
-    margin-top: 0px;
+    margin-top: 15px;
     margin-right: 0px;
   }
 
@@ -104,12 +104,14 @@ body {
     height: 8px;
     border-radius: 0px;
     margin-left: 6px;
+    margin-top: 10px;
     opacity: 1;
     border-radius: 10px;
   }
 
   .masters-swiper-pagination .swiper-pagination-bullet-active {
     background: #942fe5;
+    margin-top: 9px !important;
     width: 9px;
     height: 9px;
   }

@@ -17,6 +17,9 @@
       justify-content: center;
       align-items: flex-start;
       position: relative;
+      .arrow {
+        display: none;
+      }
       h1 {
         font-size: 40px;
         font-weight: 900;
@@ -198,6 +201,13 @@
       justify-content: center;
       align-items: flex-start;
       position: relative;
+      .arrow {
+        display: block;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        animation: arrow-list 2s ease infinite;
+      }
       .carousel-block {
         display: none;
       }
@@ -244,5 +254,24 @@
         }
       }
     }
+  }
+}
+
+@keyframes arrow-list {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  70% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
   }
 }
